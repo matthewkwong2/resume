@@ -18,12 +18,12 @@ const Work = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.work.id));
+      dispatch(updateCurrentSection(nav.work));
     }
   }, [dispatch, inView]);
 
   return (
-    <section id={nav.work.id}>
+    <section id={nav.work}>
       <Container ref={ref}>
         <SectionHeader
           title={work.title}

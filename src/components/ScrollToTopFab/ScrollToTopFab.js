@@ -27,7 +27,7 @@ const ScrollToTopFab = () => {
     disableHysteresis: true,
     threshold: 100,
   });
-  const homeSection = document.getElementById(nav.home.id);
+  const homeSection = document.getElementById(nav.home);
 
   const handleClick = () => {
     homeSection.scrollIntoView();

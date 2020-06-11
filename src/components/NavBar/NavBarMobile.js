@@ -33,7 +33,7 @@ const NavBarMobile = () => {
       </Toolbar>
       <Collapse in={menuOpen} timeout='auto'>
         <List component='nav' aria-label='navigation list'>
-          {Object.values(nav).map(({ id }) => (
+          {Object.values(nav).map(id => (
             <NavListItem
               key={id}
               label={id}

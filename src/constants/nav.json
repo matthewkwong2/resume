@@ -1,26 +1,8 @@
 {
-  "home": {
-    "id": "home",
-    "href": "#home"
-  },
-  "about": {
-    "id": "about",
-    "href": "#about"
-  },
-  "education": {
-    "id": "education",
-    "href": "#education"
-  },
-  "work": {
-    "id": "work",
-    "href": "#work"
-  },
-  "testimonial": {
-    "id": "testimonial",
-    "href": "#testimonial"
-  },
-  "contact": {
-    "id": "contact",
-    "href": "#contact"
-  }
+  "home": "home",
+  "about": "about",
+  "education": "education",
+  "work": "work",
+  "testimonial": "testimonial",
+  "contact": "contact"
 }

@@ -37,12 +37,12 @@ const Testimonial = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.testimonial.id));
+      dispatch(updateCurrentSection(nav.testimonial));
     }
   }, [dispatch, inView]);
 
   return (
-    <section id={nav.testimonial.id} className={classes.root} >
+    <section id={nav.testimonial} className={classes.root} >
       <ThemeProvider theme={darkTheme}>
         <Container ref={ref}>
           <SectionHeader

@@ -29,7 +29,7 @@ const NavBarDesktop = () => {
     <Fragment>
       <Logo />
       <nav>
-        {Object.values(nav).map(({ id }) => (
+        {Object.values(nav).map(id => (
           <NavButton
             key={id}
             id={id}

@@ -46,12 +46,12 @@ const Home = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.home.id));
+      dispatch(updateCurrentSection(nav.home));
     }
   }, [dispatch, inView]);
 
   return (
-    <section id={nav.home.id} className={classes.root}>
+    <section id={nav.home} className={classes.root}>
       <ThemeProvider theme={darkTheme}>
         <Container ref={ref} className={classes.container}>
           <Title />

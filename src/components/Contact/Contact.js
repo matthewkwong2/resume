@@ -27,12 +27,12 @@ const Contact = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.contact.id));
+      dispatch(updateCurrentSection(nav.contact));
     }
   }, [dispatch, inView]);
 
   return (
-    <section id={nav.contact.id}>
+    <section id={nav.contact}>
       <Container ref={ref}>
         <SectionHeader
           title={contact.title}

@@ -20,12 +20,12 @@ const About = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.about.id));
+      dispatch(updateCurrentSection(nav.about));
     }
   }, [dispatch, inView]);
 
   return (
-    <section id={nav.about.id}>
+    <section id={nav.about}>
       <Container ref={ref}>
         <SectionHeader
           title={about.title}

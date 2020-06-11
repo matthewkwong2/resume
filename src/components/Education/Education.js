@@ -24,12 +24,12 @@ const Education = () => {
 
   useEffect(() => {
     if (inView) {
-      dispatch(updateCurrentSection(nav.education.id));
+      dispatch(updateCurrentSection(nav.education));
     }
   }, [dispatch, inView]);
 
   return (
-    <section className={classes.root} id={nav.education.id}>
+    <section className={classes.root} id={nav.education}>
       <Container ref={ref}>
         <SectionHeader
           title={education.title}
