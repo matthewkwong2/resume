@@ -15,10 +15,15 @@ const useStyles = makeStyles(theme => ({
 
 const Logo = () => {
   const classes = useStyles();
+  const homeSection = document.getElementById(nav.home)
+
+  const handleClick = () => {
+    homeSection.scrollIntoView();
+  }
 
   return (
-    <Button className={classes.root} href={nav.home.href}>
-      <Typography className={classes.typography} variant='h5'      >
+    <Button className={classes.root} onClick={handleClick}>
+      <Typography className={classes.typography} variant='h5'>
         {data.firstName}
       </Typography>
     </Button>
