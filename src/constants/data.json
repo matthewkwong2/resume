@@ -1,0 +1,82 @@
+{
+  "firstName": "Matthew",
+  "middleName": "Wang Shun",
+  "lastName": "Kwong",
+  "occupations": [
+    "System DBA",
+    "Frontend Developer"
+  ],
+  "socialMedia": {
+    "facebookHref": "https://www.facebook.com/profile.php?id=1592440345",
+    "linkedinHref": "#",
+    "gitHubHref": "https://github.com/matthewkwong2"
+  },
+  "about": {
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "languages": [
+      {
+        "name": "Cantonese",
+        "rating": 100
+      },
+      {
+        "name": "English",
+        "rating": 70
+      },
+      {
+        "name": "Mandarin",
+        "rating": 80
+      }
+    ],
+    "skills": [
+      {
+        "name": "MySQL",
+        "rating": 80
+      },
+      {
+        "name": "React",
+        "rating": 90
+      },
+      {
+        "name": "MongoDB",
+        "rating": 50
+      },
+      {
+        "name": "React Native",
+        "rating": 80
+      },
+      {
+        "name": "Delphix",
+        "rating": 70
+      },
+      {
+        "name": "Java",
+        "rating": 70
+      }
+    ]
+  },
+  "education": {},
+  "contact": {
+    "phone": "+852 6095 4241",
+    "email": "matthewkwong2@gmail.com",
+    "address": "23C Block 14 City One Shatin, Sha Tin, N.T., Hong Kong"
+  },
+  "testimonial": {
+    "references": [
+      {
+        "name": "Person 1",
+        "company": "Company 1",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      },
+      {
+        "name": "Person 2",
+        "company": "Company 2",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      },
+      {
+        "name": "Person 3",
+        "company": "Company 3",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      }
+    ]
+  }
+}
