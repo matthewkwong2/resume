@@ -23,7 +23,12 @@ const Endorsement = ({ name, company, comment }) => {
   const classes = useStyles();
 
   return (
-    <Box py={3} display='flex' flexDirection='column' alignItems='center' flexGrow={1}>
+    <Box
+      py={3}
+      display='flex'
+      flexDirection='column'
+      alignItems='center'
+    >
       <SvgIcon
         className={classes.accountIcon}
         htmlColor={theme.palette.text.primary}
@@ -36,7 +41,12 @@ const Endorsement = ({ name, company, comment }) => {
       <Typography color='textPrimary' variant='body1'>
         {company}
       </Typography>
-      <Typography className={classes.comment} align='center' color='textPrimary' variant='body1'>
+      <Typography
+        className={classes.comment}
+        align='center'
+        color='textPrimary'
+        variant='body1'
+      >
         {`"${comment}"`}
       </Typography>
     </Box>
