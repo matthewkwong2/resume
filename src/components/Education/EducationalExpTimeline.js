@@ -8,22 +8,17 @@ const EducationalExpTimeline = () => {
   return (
     <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
       <ExpTimeline
-
         data={data.education.experiences.map(({
           period,
           school,
           subject,
-          intro,
-          keyPoints,
-          keyAchievement,
+          description,
           proof
         }) => ({
           period,
           title: subject,
           subheader: school,
-          intro,
-          keyPoints,
-          keyAchievement,
+          description,
           file: require(`assets/document/${proof}`)
         }))}
       />

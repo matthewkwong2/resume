@@ -12,26 +12,16 @@ const ExpTimeline = ({ data = [] }) => {
   return (
     <Box width='100%' maxWidth={948}>
       <Timeline align={smDown ? undefined : 'alternate'}>
-        {data.map(({
-          period,
-          title,
-          subheader,
-          intro,
-          keyPoints,
-          keyAchievement,
-          file
-        }, idx) => (
-            <ExpTimelineItem
-              key={idx}
-              period={period}
-              title={title}
-              subheader={subheader}
-              intro={intro}
-              keyPoints={keyPoints}
-              keyAchievement={keyAchievement}
-              file={file}
-            />
-          ))}
+        {data.map(({ period, title, subheader, description, file }, idx) => (
+          <ExpTimelineItem
+            key={idx}
+            period={period}
+            title={title}
+            subheader={subheader}
+            description={description}
+            file={file}
+          />
+        ))}
       </Timeline>
     </Box>
   );
@@ -42,9 +32,7 @@ ExpTimeline.propTypes = {
     period: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subheader: PropTypes.string,
-    intro: PropTypes.string,
-    keyPoints: PropTypes.arrayOf(PropTypes.string),
-    keyAchievement: PropTypes.string,
+    description: PropTypes.string,
     file: PropTypes.string
   }))
 };

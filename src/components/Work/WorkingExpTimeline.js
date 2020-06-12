@@ -12,17 +12,13 @@ const WorkingExpTimeline = () => {
           period,
           position,
           company,
-          intro,
-          keyPoints,
-          keyAchievement,
+          description,
           proof
         }) => ({
           period,
           title: position,
           subheader: company,
-          intro,
-          keyPoints,
-          keyAchievement,
+          description,
           file: require(`assets/document/${proof}`)
         }))}
       />
