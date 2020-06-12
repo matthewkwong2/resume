@@ -70,6 +70,13 @@ const theme = responsiveFontSizes(createMuiTheme({
             padding: 0
           }
         }
+      },
+      alignAlternate: {
+        '&:nth-child(even)': {
+          '& $content': {
+            textAlign: 'left'
+          }
+        }
       }
     }
   },

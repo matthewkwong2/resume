@@ -3,6 +3,9 @@ import {
   CardActions,
   CardContent,
   IconButton,
+  List,
+  ListItem,
+  ListItemText,
   SvgIcon,
   Typography,
   makeStyles
@@ -18,6 +21,7 @@ import {
 import { ReactComponent as Download } from 'assets/icon/mbri-download.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
+import expTimeline from 'constants/expTimeline';
 
 const useStyles = makeStyles({
   card: {
@@ -26,20 +30,22 @@ const useStyles = makeStyles({
   period: {
     fontSize: 14,
   },
-  subheader: {
-    marginBottom: 12,
-  },
   download: {
     marginLeft: 'auto'
   },
+  prefix: {
+    fontWeight: 500
+  }
 });
 
 const ExpTimelineItem = ({
   period,
   title,
   subheader,
-  description,
-  file = '#'
+  intro,
+  keyPoints,
+  keyAchievement,
+  file
 }) => {
   const classes = useStyles();
 
@@ -63,16 +69,24 @@ const ExpTimelineItem = ({
             <Typography variant='h6' noWrap>
               {title}
             </Typography>
-            <Typography
-              className={classes.subheader}
-              color='textSecondary'
-              variant='body1'
-              noWrap
-            >
+            <Typography color='textSecondary' variant='body1' noWrap>
               {subheader}
             </Typography>
             <Typography color='textPrimary' variant='body2'>
-              {description}
+              {intro}
+            </Typography>
+            <List dense>
+              {keyPoints.map(keyPoint => (
+                <ListItem>
+                  <ListItemText primary={keyPoint} />
+                </ListItem>
+              ))}
+            </List>
+            <Typography color='textPrimary' variant='body2'>
+              <span className={classes.prefix}>
+                {expTimeline.keyAchievementPrefix}
+              </span>
+              {keyAchievement}
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
@@ -98,7 +112,9 @@ ExpTimelineItem.propTypes = {
   period: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subheader: PropTypes.string,
-  description: PropTypes.string,
+  intro: PropTypes.string,
+  keyPoints: PropTypes.arrayOf(PropTypes.string),
+  keyAchievement: PropTypes.string,
   file: PropTypes.string
 };
 
