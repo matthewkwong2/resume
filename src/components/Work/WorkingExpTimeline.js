@@ -3,19 +3,19 @@ import ExpTimeline from 'components/ExpTimeline';
 import React from 'react';
 import data from 'constants/data';
 
-const EducationTimeline = () => {
+const WorkingExpTimeline = () => {
   return (
     <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
       <ExpTimeline
-        data={data.education.schools.map(({
+        data={data.work.experiences.map(({
           period,
-          school,
-          subject,
+          position,
+          company,
           description
         }) => ({
           period,
-          title: subject,
-          subheader: school,
+          title: position,
+          subheader: company,
           description
         }))}
       />
@@ -23,4 +23,4 @@ const EducationTimeline = () => {
   );
 };
 
-export default EducationTimeline;
+export default WorkingExpTimeline;

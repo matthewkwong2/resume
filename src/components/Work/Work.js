@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Companies from './Companies';
 import { HexagonSlice4 } from 'mdi-material-ui'
 import SectionHeader from 'components/SectionHeader';
+import WorkingExpTimeline from './WorkingExpTimeline';
 import nav from 'constants/nav';
 import { updateCurrentSection } from 'actions'
 import { useDispatch } from 'react-redux';
@@ -29,6 +30,7 @@ const Work = () => {
           title={work.title}
           Icon={HexagonSlice4}
         />
+        <WorkingExpTimeline />
         <Companies />
       </Container>
     </section>

@@ -1,7 +1,7 @@
 import { Container, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 import React, { useEffect } from 'react';
 
-import EducationTimeline from './EducationTimeline';
+import EducationalExpTimeline from './EducationalExpTimeline';
 import { HexagonSlice3 } from 'mdi-material-ui'
 import SectionHeader from 'components/SectionHeader';
 import education from 'constants/education';
@@ -36,7 +36,7 @@ const Education = () => {
           title={education.title}
           Icon={HexagonSlice3}
         />
-        <EducationTimeline />
+        <EducationalExpTimeline />
       </Container>
     </section>
   );

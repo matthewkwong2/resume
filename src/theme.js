@@ -69,8 +69,7 @@ const theme = responsiveFontSizes(createMuiTheme({
         '&$missingOppositeContent': {
           '&:before': {
             flex: 0,
-            padding: 0,
-            paddingLeft: lightBaseTheme.spacing(2)
+            padding: 0
           }
         }
       }
