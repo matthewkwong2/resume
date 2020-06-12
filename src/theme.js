@@ -28,6 +28,9 @@ const theme = responsiveFontSizes(createMuiTheme({
           fontWeight: 'normal',
           src: `local('Azonix Regular'), url(${azonix}) format('woff')`
         },
+        '::selection': {
+          background: 'rgba(166, 175, 189, 0.3)'
+        },
         html: {
           scrollBehavior: 'smooth'
         },
