@@ -11,28 +11,16 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
 
   const handleChangeIndex = idx => {
     setIndex(idx);
   };
 
-  const handleMouseEnter = () => {
-    setAutoPlay(false);
-  };
-
-  const handleMouseLeave = () => {
-    setAutoPlay(true);
-  };
-
   return (
     <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
       <AutoPlaySwipeableViews
-        autoPlay={autoPlay}
         index={index}
         onChangeIndex={handleChangeIndex}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         resistance
         interval={10000}
       >

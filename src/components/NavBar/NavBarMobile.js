@@ -31,7 +31,7 @@ const NavBarMobile = () => {
           </SvgIcon>
         </IconButton>
       </Toolbar>
-      <Collapse in={menuOpen} timeout='auto'>
+      <Collapse in={menuOpen} timeout='auto' unmountOnExit>
         <List component='nav' aria-label='navigation list'>
           {Object.values(nav).map(id => (
             <NavListItem

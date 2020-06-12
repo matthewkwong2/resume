@@ -60,7 +60,7 @@ const ExpTimelineItem = ({
             >
               {period}
             </Typography>
-            <Typography variant='h6' noWrap>
+            <Typography variant='h6'>
               {title}
             </Typography>
             <Typography

@@ -13,7 +13,9 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 6,
     marginLeft: theme.spacing(0.5),
     marginRight: theme.spacing(0.5),
-    transition: `all ${theme.transitions.duration.standard}ms`,
+    transition: theme.transitions.create('all', {
+      duration: theme.transitions.duration.standard,
+    }),
     '&:hover': {
       opacity: .87
     }
