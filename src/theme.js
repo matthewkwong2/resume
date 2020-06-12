@@ -58,6 +58,22 @@ const theme = responsiveFontSizes(createMuiTheme({
     },
     MuiContainer: {
       root: lightBaseTheme.mixins.toolbar
+    },
+    MuiTimelineDot: {
+      defaultPrimary: {
+        boxShadow: 'none'
+      }
+    },
+    MuiTimelineItem: {
+      alignLeft: {
+        '&$missingOppositeContent': {
+          '&:before': {
+            flex: 0,
+            padding: 0,
+            paddingLeft: lightBaseTheme.spacing(2)
+          }
+        }
+      }
     }
   },
   props: {
