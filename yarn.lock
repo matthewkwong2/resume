@@ -6808,9 +6808,9 @@ jss@^10.0.3, jss@^10.3.0:
     tiny-warning "^1.0.2"
 
 jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.4.0.tgz#90b61f903850824f776ed354f2fdd735c40b3e36"
-  integrity sha512-OXNyNkAO/haJvlonYturZKaeN3Is7yuYMmELsxQ8za2tvH+WhEdTh8Zm5ydlj2IEPAQgClV6SLqwqLPjoTUqJg==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.4.1.tgz#1114a4c1209481db06c690c2b4f488cc665f657e"
+  integrity sha512-z1xSldJ6imESSzOjd3NNkieVJKRlKYSOtMG8SFyCj2FIrvSaSuli/WjpBkEzCBoR9bYYYFgqJw61Xhu7Lcgk+w==
   dependencies:
     array-includes "^3.1.1"
     object.assign "^4.1.0"

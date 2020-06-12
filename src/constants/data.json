@@ -60,13 +60,15 @@
         "period": "2015 － 2019",
         "school": "The University of Hong Kong",
         "subject": "BEng in Computer Science",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "hku_cs.pdf"
       },
       {
         "period": "2009 － 2015",
         "school": "Evangel College",
         "subject": "Secondary 1 － Secondary 6",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "ec.pdf"
       }
     ]
   },
@@ -76,31 +78,36 @@
         "period": "2019 － Present",
         "position": "Junior Programmer",
         "company": "Hospital Authority",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "ha_jp.pdf"
       },
       {
-        "period": "Jun 2018 － Aug 2018",
+        "period": "Jun － Aug 2018",
         "position": "Summer Internship",
         "company": "Versitech Limited",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "versitech_intern.pdf"
       },
       {
-        "period": "Jul 2017 － Sep 2017",
+        "period": "Jul － Sep 2017",
         "position": "Student Research Assistant",
         "company": "School of Public Health, HKU",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "hku_med_ra.pdf"
       },
       {
-        "period": "Jan 2017 － Apr 2017",
+        "period": "Jan － Apr 2017",
         "position": "Teaching Assistant",
         "company": "Faculty of Engineering, HKU",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "hku_eng_ta.pdf"
       },
       {
         "period": "Aug 2016",
         "position": "Student Research Assistant",
         "company": "Department of IMSE, HKU",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        "proof": "hku_imse_ra.pdf"
       }
     ]
   },

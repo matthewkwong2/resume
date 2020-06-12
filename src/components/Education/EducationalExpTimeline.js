@@ -4,6 +4,7 @@ import React from 'react';
 import data from 'constants/data';
 
 const EducationalExpTimeline = () => {
+
   return (
     <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
       <ExpTimeline
@@ -11,12 +12,14 @@ const EducationalExpTimeline = () => {
           period,
           school,
           subject,
-          description
+          description,
+          proof
         }) => ({
           period,
           title: subject,
           subheader: school,
-          description
+          description,
+          file: require(`assets/document/${proof}`)
         }))}
       />
     </Box>

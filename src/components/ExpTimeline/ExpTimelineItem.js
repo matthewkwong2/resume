@@ -1,4 +1,12 @@
-import { Card, CardContent, Typography, makeStyles } from '@material-ui/core';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  IconButton,
+  SvgIcon,
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 import {
   TimelineConnector,
   TimelineContent,
@@ -7,6 +15,7 @@ import {
   TimelineSeparator
 } from '@material-ui/lab';
 
+import { ReactComponent as Download } from 'assets/icon/mbri-download.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,10 +28,19 @@ const useStyles = makeStyles({
   },
   subheader: {
     marginBottom: 12,
-  }
+  },
+  download: {
+    marginLeft: 'auto'
+  },
 });
 
-const ExpTimelineItem = ({ period, title, subheader, description }) => {
+const ExpTimelineItem = ({
+  period,
+  title,
+  subheader,
+  description,
+  file = '#'
+}) => {
   const classes = useStyles();
 
   return (
@@ -57,6 +75,19 @@ const ExpTimelineItem = ({ period, title, subheader, description }) => {
               {description}
             </Typography>
           </CardContent>
+          <CardActions disableSpacing>
+            <IconButton
+              className={classes.download}
+              aria-label="show more"
+              href={file}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <SvgIcon>
+                <Download />
+              </SvgIcon>
+            </IconButton>
+          </CardActions>
         </Card>
       </TimelineContent>
     </TimelineItem>
@@ -67,7 +98,8 @@ ExpTimelineItem.propTypes = {
   period: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subheader: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  file: PropTypes.string
 };
 
 export default ExpTimelineItem;
