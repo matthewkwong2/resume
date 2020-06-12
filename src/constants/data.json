@@ -54,7 +54,22 @@
       }
     ]
   },
-  "education": {},
+  "education": {
+    "schools": [
+      {
+        "period": "2015 － 2019",
+        "school": "The University of Hong Kong",
+        "subject": "BEng in Computer Science",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      },
+      {
+        "period": "2009 － 2015",
+        "school": "Evangel College",
+        "subject": "Secondary 1 － Secondary 6",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      }
+    ]
+  },
   "contact": {
     "phone": "+852 6095 4241",
     "email": "matthewkwong2@gmail.com",
