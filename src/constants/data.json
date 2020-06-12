@@ -114,19 +114,14 @@
   "testimonial": {
     "references": [
       {
-        "name": "Person 1",
-        "company": "Company 1",
-        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "name": "Dr. Tommy Lam",
+        "company": "School of Public Health, HKU",
+        "comment": "Matthew is a very intelligent, determined and self-motivated young person who is capable to work independently to achieve specific tasks. He also showed good potential as team leader to manage complex projects."
       },
       {
-        "name": "Person 2",
-        "company": "Company 2",
-        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-      },
-      {
-        "name": "Person 3",
-        "company": "Company 3",
-        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+        "name": "Dr. Marian Choy",
+        "company": "Faculty of Engineering, HKU",
+        "comment": "His active involvement allows him to gain communication skills and other soft skills. Besides, his maturity and genuine passion to share knowledge with others lay a solid foundation in his pursuit of a professional engineer."
       }
     ]
   },
