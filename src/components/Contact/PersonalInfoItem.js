@@ -1,10 +1,4 @@
-import {
-  Box,
-  SvgIcon,
-  Typography,
-  makeStyles,
-  useTheme
-} from '@material-ui/core';
+import { Box, SvgIcon, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -23,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const PersonalInfoItem = ({ Icon, title, value }) => {
-  const theme = useTheme();
   const classes = useStyles();
 
   return (
