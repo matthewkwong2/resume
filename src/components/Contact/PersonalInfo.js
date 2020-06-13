@@ -1,7 +1,6 @@
+import { Email, Location, Mobile } from 'components/icons';
+
 import { Box } from '@material-ui/core';
-import { Email } from 'components/icons';
-import { Location } from 'components/icons';
-import { Mobile } from 'components/icons';
 import PersonalInfoItem from './PersonalInfoItem';
 import React from 'react';
 import contact from 'constants/contact';
