@@ -1,10 +1,4 @@
-import {
-  Box,
-  Divider,
-  SvgIcon,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Divider, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -37,15 +31,7 @@ const SectionHeader = ({ title, Icon }) => {
       </Typography>
       <Box display='flex' alignItems='center' justifyContent='center'>
         <Divider className={classes.divider} />
-        {
-          Icon.muiName === 'SvgIcon'
-            ? <Icon />
-            : (
-              <SvgIcon>
-                <Icon />
-              </SvgIcon>
-            )
-        }
+        <Icon />
         <Divider className={classes.divider} />
       </Box>
     </Box>

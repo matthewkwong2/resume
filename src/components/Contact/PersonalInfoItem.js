@@ -1,4 +1,4 @@
-import { Box, SvgIcon, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -21,15 +21,7 @@ const PersonalInfoItem = ({ Icon, title, value }) => {
 
   return (
     <Box display='flex' flexDirection='column' alignItems='center' className={classes.root}>
-      {
-        Icon.muiName === 'SvgIcon'
-          ? <Icon fontSize='large' color='action' />
-          : (
-            <SvgIcon fontSize='large' color='action'>
-              <Icon />
-            </SvgIcon>
-          )
-      }
+      <Icon fontSize='large' color='action' />
       <Typography className={classes.title} color='textPrimary' variant='body1' gutterBottom>
         {title}
       </Typography>

@@ -1,15 +1,8 @@
-import {
-  AppBar,
-  Collapse,
-  IconButton,
-  List,
-  SvgIcon,
-  Toolbar,
-} from '@material-ui/core';
+import { AppBar, Collapse, IconButton, List, Toolbar } from '@material-ui/core';
 import React, { useState } from 'react';
 
 import Logo from './Logo';
-import { ReactComponent as Menu } from 'assets/icon/mbri-menu.svg';
+import { Menu } from 'components/icons';
 import NavListItem from './NavListItem';
 import { getCurrentSection } from 'selectors';
 import nav from 'constants/nav';
@@ -26,9 +19,7 @@ const NavBarMobile = () => {
       <Toolbar>
         <Logo />
         <IconButton onClick={handleMenuButtonClick}>
-          <SvgIcon>
-            <Menu />
-          </SvgIcon>
+          <Menu />
         </IconButton>
       </Toolbar>
       <Collapse in={menuOpen} timeout='auto' unmountOnExit>

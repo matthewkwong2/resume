@@ -1,12 +1,6 @@
-import {
-  Fab,
-  SvgIcon,
-  Zoom,
-  makeStyles,
-  useScrollTrigger
-} from '@material-ui/core';
+import { Fab, Zoom, makeStyles, useScrollTrigger } from '@material-ui/core';
 
-import { ReactComponent as ArrowUp } from 'assets/icon/mbri-arrow-up.svg';
+import { ArrowUp } from 'components/icons';
 import React from 'react';
 import nav from 'constants/nav'
 
@@ -42,9 +36,7 @@ const ScrollToTopFab = () => {
         onClick={handleClick}
         aria-label='scroll back to top'
       >
-        <SvgIcon className={classes.icon}>
-          <ArrowUp />
-        </SvgIcon>
+        <ArrowUp className={classes.icon} />
       </Fab>
     </Zoom>
   );

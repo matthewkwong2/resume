@@ -1,11 +1,11 @@
-import { Box, SvgIcon, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ReactComponent as User } from 'assets/icon/mbri-user.svg';
+import { User } from 'components/icons';
 
 const useStyles = makeStyles(theme => ({
-  accountIcon: {
+  userIcon: {
     fontSize: 60
   },
   name: {
@@ -28,9 +28,7 @@ const Endorsement = ({ name, company, comment }) => {
       flexDirection='column'
       alignItems='center'
     >
-      <SvgIcon className={classes.accountIcon}>
-        <User />
-      </SvgIcon>
+      <User className={classes.userIcon} />
       <Typography className={classes.name} color='textPrimary' variant='h6'>
         {name}
       </Typography>

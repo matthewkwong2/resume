@@ -3,7 +3,6 @@ import {
   CardActions,
   CardContent,
   IconButton,
-  SvgIcon,
   Typography,
   makeStyles
 } from '@material-ui/core';
@@ -15,7 +14,7 @@ import {
   TimelineSeparator
 } from '@material-ui/lab';
 
-import { ReactComponent as Download } from 'assets/icon/mbri-download.svg';
+import { Download } from 'components/icons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -83,9 +82,7 @@ const ExpTimelineItem = ({
               target='_blank'
               rel='noopener noreferrer'
             >
-              <SvgIcon>
-                <Download />
-              </SvgIcon>
+              <Download />
             </IconButton>
           </CardActions>
         </Card>
