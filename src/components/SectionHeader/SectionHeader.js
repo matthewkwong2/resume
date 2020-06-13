@@ -34,9 +34,9 @@ const SectionHeader = ({ title, Icon }) => {
         <Divider className={classes.divider} />
         {
           Icon.muiName === 'SvgIcon'
-            ? <Icon htmlColor={theme.palette.text.primary} />
+            ? <Icon />
             : (
-              <SvgIcon htmlColor={theme.palette.text.primary} >
+              <SvgIcon>
                 <Icon />
               </SvgIcon>
             )

@@ -30,9 +30,9 @@ const PersonalInfoItem = ({ Icon, title, value }) => {
     <Box display='flex' flexDirection='column' alignItems='center' className={classes.root}>
       {
         Icon.muiName === 'SvgIcon'
-          ? <Icon fontSize='large' htmlColor={theme.palette.text.secondary} />
+          ? <Icon fontSize='large' color='action' />
           : (
-            <SvgIcon fontSize='large' htmlColor={theme.palette.text.secondary}>
+            <SvgIcon fontSize='large' color='action'>
               <Icon />
             </SvgIcon>
           )

@@ -29,10 +29,7 @@ const Endorsement = ({ name, company, comment }) => {
       flexDirection='column'
       alignItems='center'
     >
-      <SvgIcon
-        className={classes.accountIcon}
-        htmlColor={theme.palette.text.primary}
-      >
+      <SvgIcon className={classes.accountIcon}>
         <User />
       </SvgIcon>
       <Typography className={classes.name} color='textPrimary' variant='h6'>

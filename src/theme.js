@@ -98,6 +98,11 @@ const darkTheme = createMuiTheme({
       }
     }
   },
+  props: {
+    MuiSvgIcon: {
+      htmlColor: darkBaseTheme.palette.text.primary
+    }
+  },
   palette: {
     type: 'dark'
   }
