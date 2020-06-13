@@ -1,7 +1,7 @@
-import { Container, useMediaQuery, useTheme } from '@material-ui/core';
 import React, { useEffect } from 'react';
 
 import Companies from './Companies';
+import { Container } from '@material-ui/core';
 import { HexagonSlice4 } from 'mdi-material-ui'
 import SectionHeader from 'components/SectionHeader';
 import WorkingExpTimeline from './WorkingExpTimeline';
@@ -12,9 +12,7 @@ import { useInView } from 'react-intersection-observer';
 import work from 'constants/work';
 
 const Work = () => {
-  const theme = useTheme();
-  const xsDown = useMediaQuery(theme.breakpoints.down('xs'));
-  const [ref, inView] = useInView({ threshold: xsDown ? 0.1 : 0.5 });
+  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const dispatch = useDispatch();
 
   useEffect(() => {

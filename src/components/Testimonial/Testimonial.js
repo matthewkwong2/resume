@@ -1,10 +1,4 @@
-import {
-  Container,
-  ThemeProvider,
-  makeStyles,
-  useMediaQuery,
-  useTheme
-} from '@material-ui/core';
+import { Container, ThemeProvider, makeStyles } from '@material-ui/core';
 import React, { useEffect } from 'react';
 
 import Carousel from './Carousel';
@@ -29,9 +23,7 @@ const useStyles = makeStyles({
 });
 
 const Testimonial = () => {
-  const theme = useTheme();
-  const xsDown = useMediaQuery(theme.breakpoints.down('xs'));
-  const [ref, inView] = useInView({ threshold: xsDown ? 0.1 : 0.5 });
+  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const classes = useStyles();
   const dispatch = useDispatch();
 

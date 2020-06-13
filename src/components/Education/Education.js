@@ -1,4 +1,4 @@
-import { Container, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import React, { useEffect } from 'react';
 
 import EducationalExpTimeline from './EducationalExpTimeline';
@@ -17,9 +17,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Education = () => {
-  const theme = useTheme();
-  const xsDown = useMediaQuery(theme.breakpoints.down('xs'));
-  const [ref, inView] = useInView({ threshold: xsDown ? 0.1 : 0.5 });
+  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const classes = useStyles();
   const dispatch = useDispatch();
 
