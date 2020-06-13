@@ -1,4 +1,7 @@
-import 'fontsource-roboto';
+import 'fontsource-roboto/latin-300-normal.css';
+import 'fontsource-roboto/latin-400-normal.css';
+import 'fontsource-roboto/latin-500-normal.css';
+import 'fontsource-roboto/latin-700-normal.css';
 
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core/styles';
 
@@ -15,8 +18,6 @@ const darkBaseTheme = createMuiTheme({
     type: 'dark'
   }
 });
-
-console.log(darkBaseTheme)
 
 const theme = responsiveFontSizes(createMuiTheme({
   overrides: {

@@ -1,4 +1,10 @@
-import { Box, Divider, SvgIcon, Typography, makeStyles, useTheme } from '@material-ui/core';
+import {
+  Box,
+  Divider,
+  SvgIcon,
+  Typography,
+  makeStyles
+} from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -18,7 +24,6 @@ const useStyles = makeStyles(theme => ({
 
 const SectionHeader = ({ title, Icon }) => {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <Box>
