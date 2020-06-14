@@ -1,15 +1,12 @@
 import { Container, Grid, makeStyles } from '@material-ui/core';
-import React, { useEffect } from 'react';
 
 import ContactForm from './ContactForm';
 import { HexagonSlice6 } from 'mdi-material-ui'
 import PersonalInfo from './PersonalInfo';
+import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import contact from 'constants/contact';
 import nav from 'constants/nav';
-import { updateCurrentSection } from 'actions'
-import { useDispatch } from 'react-redux';
-import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(theme => ({
   gridContainer: {
@@ -19,19 +16,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Contact = () => {
-  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const classes = useStyles();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (inView) {
-      dispatch(updateCurrentSection(nav.contact));
-    }
-  }, [dispatch, inView]);
 
   return (
     <section id={nav.contact}>
-      <Container ref={ref}>
+      <Container>
         <SectionHeader
           title={contact.title}
           Icon={HexagonSlice6}

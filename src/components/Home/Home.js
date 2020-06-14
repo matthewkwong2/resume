@@ -1,15 +1,12 @@
 import { Box, Container, ThemeProvider, makeStyles } from '@material-ui/core';
-import React, { useEffect } from 'react';
 
 import DownloadCVButton from './DownloadCVButton';
+import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
 import { darkTheme } from 'theme';
 import dataCenter from 'assets/img/data_center.jpg';
 import nav from 'constants/nav';
-import { updateCurrentSection } from 'actions'
-import { useDispatch } from 'react-redux';
-import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles({
   root: {
@@ -31,20 +28,12 @@ const useStyles = makeStyles({
 
 
 const Home = () => {
-  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const classes = useStyles();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (inView) {
-      dispatch(updateCurrentSection(nav.home));
-    }
-  }, [dispatch, inView]);
 
   return (
     <section id={nav.home} className={classes.root}>
       <ThemeProvider theme={darkTheme}>
-        <Container ref={ref} className={classes.container}>
+        <Container className={classes.container}>
           <Title />
           <Box pt={3}>
             <SocialMedia />

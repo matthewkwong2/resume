@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux';
-import currentSection from './currentSection';
+import dummyState from './dummyState';
 
-export default combineReducers({ currentSection });
+export default combineReducers({ dummyState });

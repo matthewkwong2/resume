@@ -1,1 +1,1 @@
-export const getCurrentSection = store => store.currentSection;
+export const getDummyState = store => store.dummyState;

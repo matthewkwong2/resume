@@ -10,9 +10,8 @@ import React, { Fragment } from 'react';
 import Logo from './Logo';
 import NavButton from './NavButton';
 import { darkTheme } from 'theme';
-import { getCurrentSection } from 'selectors';
 import nav from 'constants/nav';
-import { useSelector } from 'react-redux';
+import useActiveSection from 'hooks/useActiveSection';
 
 const NavBarDesktop = () => {
   const theme = useTheme();
@@ -20,7 +19,7 @@ const NavBarDesktop = () => {
     disableHysteresis: true,
     threshold: 0
   });
-  const currentSection = useSelector(getCurrentSection);
+  const activeSection = useActiveSection();
 
   const color = trigger ? 'inherit' : theme.props?.MuiAppBar?.color;
   const elevation = trigger ? 4 : theme.props?.MuiAppBar?.elevation;
@@ -34,7 +33,7 @@ const NavBarDesktop = () => {
             key={id}
             id={id}
             label={id}
-            active={currentSection === id}
+            active={activeSection === id}
           />
         ))}
       </nav>

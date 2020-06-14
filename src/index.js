@@ -1,5 +1,4 @@
 import 'wdyr';
-import 'intersection-observer';
 
 import * as serviceWorker from 'serviceWorker';
 

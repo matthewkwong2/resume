@@ -4,13 +4,12 @@ import React, { useState } from 'react';
 import Logo from './Logo';
 import { Menu } from 'components/icons';
 import NavListItem from './NavListItem';
-import { getCurrentSection } from 'selectors';
 import nav from 'constants/nav';
-import { useSelector } from 'react-redux';
+import useActiveSection from 'hooks/useActiveSection';
 
 const NavBarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const currentSection = useSelector(getCurrentSection);
+  const activeSection = useActiveSection();
 
   const handleMenuButtonClick = () => setMenuOpen(!menuOpen);
 
@@ -29,7 +28,7 @@ const NavBarMobile = () => {
               key={id}
               label={id}
               id={id}
-              active={currentSection === id}
+              active={activeSection === id}
             />
           ))}
         </List>

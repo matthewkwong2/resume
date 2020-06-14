@@ -1,6 +1,6 @@
-import { UPDATE_CURRENT_SECTION } from './actionTypes';
+import { DUMMY_ACTION } from './actionTypes';
 
-export const updateCurrentSection = sectionId => ({
-  type: UPDATE_CURRENT_SECTION,
-  payload: { currentSection: sectionId }
+export const dummyAction = () => ({
+  type: DUMMY_ACTION,
+  payload: {}
 });

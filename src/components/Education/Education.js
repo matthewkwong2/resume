@@ -1,14 +1,11 @@
 import { Container, makeStyles } from '@material-ui/core';
-import React, { useEffect } from 'react';
 
 import EducationalExpTimeline from './EducationalExpTimeline';
 import { HexagonSlice3 } from 'mdi-material-ui'
+import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import education from 'constants/education';
 import nav from 'constants/nav';
-import { updateCurrentSection } from 'actions'
-import { useDispatch } from 'react-redux';
-import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,19 +14,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Education = () => {
-  const [ref, inView] = useInView({ rootMargin: '-25% 0px' });
   const classes = useStyles();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (inView) {
-      dispatch(updateCurrentSection(nav.education));
-    }
-  }, [dispatch, inView]);
 
   return (
     <section className={classes.root} id={nav.education}>
-      <Container ref={ref}>
+      <Container>
         <SectionHeader
           title={education.title}
           Icon={HexagonSlice3}
