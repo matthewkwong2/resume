@@ -33,20 +33,20 @@
         "rating": 80
       },
       {
-        "name": "React",
-        "rating": 90
-      },
-      {
         "name": "MongoDB",
         "rating": 50
       },
       {
-        "name": "React Native",
-        "rating": 80
+        "name": "MS SQL",
+        "rating": 60
       },
       {
-        "name": "Delphix",
-        "rating": 70
+        "name": "React",
+        "rating": 90
+      },
+      {
+        "name": "React Native",
+        "rating": 80
       },
       {
         "name": "Java",

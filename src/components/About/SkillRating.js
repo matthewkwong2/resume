@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    '&:not(:first-child):not(:last-child)': {
+      paddingTop: theme.spacing(6),
+      paddingBottom: theme.spacing(6)
+    }
+  },
   skillName: {
     flexGrow: 1,
     fontWeight: 'bold'
@@ -20,7 +26,7 @@ const SkillRating = ({ name, rating }) => {
   };
 
   return (
-    <Box>
+    <Box className={classes.root}>
       <Box display='flex'>
         <Typography color='textPrimary' variant='body1' className={classes.skillName}>
           {name}
