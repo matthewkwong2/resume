@@ -19,7 +19,7 @@ const WorkingExpTimeline = () => {
           title: position,
           subheader: company,
           description,
-          file: require(`assets/document/${proof}`)
+          file: proof ? require(`assets/document/${proof}`) : null
         }))}
       />
     </Box>

@@ -74,17 +74,23 @@ const ExpTimelineItem = ({
               {description}
             </Typography>
           </CardContent>
-          <CardActions disableSpacing>
-            <IconButton
-              className={classes.download}
-              aria-label="show more"
-              href={file}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Download />
-            </IconButton>
-          </CardActions>
+          {
+            file
+              ? (
+                <CardActions disableSpacing>
+                  <IconButton
+                    className={classes.download}
+                    aria-label="show more"
+                    href={file}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <Download />
+                  </IconButton>
+                </CardActions>
+              )
+              : null
+          }
         </Card>
       </TimelineContent>
     </TimelineItem>
