@@ -1,6 +1,6 @@
 import { Box, useTheme } from '@material-ui/core';
-import React, { memo } from 'react';
 
+import React from 'react';
 import { ResponsiveRadar } from '@nivo/radar';
 import data from 'constants/data';
 
@@ -32,4 +32,4 @@ const Languages = () => {
   );
 };
 
-export default memo(Languages);
+export default Languages;
