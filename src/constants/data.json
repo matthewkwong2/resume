@@ -83,7 +83,7 @@
     "experiences": [
       {
         "period": "2019 － Present",
-        "position": "Junior Programmer",
+        "position": "Junior Programmer (Database Management Support)",
         "company": "Hospital Authority",
         "description": "Right after I graduated, I started working for the Hospital Authority. Despite what my job title suggests, my role is, in fact, a junior system database administrator. I am maintaining 2 architectures of MySQL server instances and provide support to the project teams. Recently, I get my hands on Delphix, a data virtualization platform, which allows provisioning databases in a few minutes with minimal storage overhead."
       },

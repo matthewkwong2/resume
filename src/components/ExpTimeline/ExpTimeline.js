@@ -10,7 +10,7 @@ const ExpTimeline = ({ data = [] }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Box width='100%' maxWidth={1000}>
+    <Box width='100%' maxWidth={1200}>
       <Timeline align={smDown ? undefined : 'alternate'}>
         {data.map(({ period, title, subheader, description, file }, idx) => (
           <ExpTimelineItem
