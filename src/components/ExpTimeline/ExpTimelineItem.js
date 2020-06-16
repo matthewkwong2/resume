@@ -20,7 +20,8 @@ import React from 'react';
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 265
+    minWidth: 265,
+    backgroundColor: 'transparent'
   },
   period: {
     fontSize: 14,
