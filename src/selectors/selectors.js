@@ -1,0 +1,1 @@
+export const getDummyState = store => store.dummyState;
