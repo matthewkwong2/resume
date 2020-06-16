@@ -3,29 +3,30 @@ import { useEffect, useState } from 'react';
 import nav from 'constants/nav';
 import { throttle } from 'lodash-es';
 
-const isScrollToBottom = () =>
-  window.innerHeight + window.scrollY >= document.body.offsetHeight;
-
 const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState(nav.home);
 
   useEffect(() => {
-    const sections = Object.values(nav);
+    const isScrollToBottom = () =>
+      window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+    const isSectionActive = section =>
+      section
+      && section.offsetTop <
+      document.documentElement.scrollTop
+      + document.documentElement.clientHeight / 8;
+
+    const sections = Object.values(nav).reverse();
+
     const handleScroll = () => {
       let active = nav.home;
       if (isScrollToBottom()) {
         setActiveSection(nav.contact);
       } else {
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const sectionId = sections[i];
+        for (let sectionId of sections) {
           const section = document.getElementById(sectionId);
 
-          if (
-            section
-            && section.offsetTop <
-            document.documentElement.scrollTop
-            + document.documentElement.clientHeight / 8
-          ) {
+          if (isSectionActive(section)) {
             active = sectionId;
             break;
           }
