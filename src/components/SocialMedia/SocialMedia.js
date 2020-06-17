@@ -22,6 +22,7 @@ const SocialMedia = () => {
       <IconButton
         className={classes.iconButton}
         href={data.socialMedia.facebookHref}
+        aria-label='navigate to Facebook profile'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -30,6 +31,7 @@ const SocialMedia = () => {
       <IconButton
         className={classes.iconButton}
         href={data.socialMedia.linkedinHref}
+        aria-label='navigate to Linkedin profile'
         target='_blank'
         rel='noopener noreferrer'
       >
@@ -38,6 +40,7 @@ const SocialMedia = () => {
       <IconButton
         className={classes.iconButton}
         href={data.socialMedia.gitHubHref}
+        aria-label='navigate to Github profile'
         target='_blank'
         rel='noopener noreferrer'
       >

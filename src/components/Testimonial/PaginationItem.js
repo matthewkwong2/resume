@@ -26,11 +26,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PaginationItem = ({ active = false, onClick }) => {
+const PaginationItem = ({ active = false, key, onClick }) => {
   const classes = useStyles();
+  const ariaLabel = 'show tab' + key;
 
   return (
     <ButtonBase
+      aria-label={ariaLabel}
       className={clsx(classes.root, { [classes.active]: active })}
       onClick={onClick}
     />
