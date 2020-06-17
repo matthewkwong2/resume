@@ -17,7 +17,10 @@ const NavBarMobile = () => {
     <AppBar color='inherit' elevation={4}>
       <Toolbar>
         <Logo />
-        <IconButton onClick={handleMenuButtonClick}>
+        <IconButton
+          onClick={handleMenuButtonClick}
+          aria-label={menuOpen ? 'close menu' : 'open menu'}
+        >
           <Menu />
         </IconButton>
       </Toolbar>
