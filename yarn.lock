@@ -1591,7 +1591,7 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@testing-library/dom@^7.9.0":
+"@testing-library/dom@^7.14.2":
   version "7.16.2"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.16.2.tgz#f7a20b5548817e5c7ed26077913372d977be90af"
   integrity sha512-4fT5l5L+5gfNhUZVCg0wnSszbRJ7A1ZHEz32v7OzH3mcY5lUsK++brI3IB2L9F5zO4kSDc2TRGEVa8v2hgl9vA==
@@ -1616,13 +1616,13 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^10.2.1":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.2.1.tgz#f0c5ac9072ad54c29672150943f35d6617263f26"
-  integrity sha512-pv2jZhiZgN1/alz1aImhSasZAOPg3er2Kgcfg9fzuw7aKPLxVengqqR1n0CJANeErR1DqORauQaod+gGUgAJOQ==
+"@testing-library/react@^10.3.0":
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.3.0.tgz#d615385b8d86ef4d76142a423755d471b3673295"
+  integrity sha512-Rhn5uJK6lYHWzlGVbK6uAvheAW8AUoFYxTLGdDxgsJDaK/PYy5drWfW/6YpMMOKMw+u6jHHl4MNHlt5qLHnm0Q==
   dependencies:
     "@babel/runtime" "^7.10.2"
-    "@testing-library/dom" "^7.9.0"
+    "@testing-library/dom" "^7.14.2"
 
 "@testing-library/user-event@^12.0.2":
   version "12.0.2"
@@ -4159,14 +4159,14 @@ ejs@^3.0.2:
     jake "^10.6.1"
 
 electron-to-chromium@^1.3.378, electron-to-chromium@^1.3.413:
-  version "1.3.475"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.475.tgz#67688cc82c342f39594a412286e975eda45d8412"
-  integrity sha512-vcTeLpPm4+ccoYFXnepvkFt0KujdyrBU19KNEO40Pnkhta6mUi2K0Dn7NmpRcNz7BvysnSqeuIYScP003HWuYg==
+  version "1.3.477"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.477.tgz#7e6b931d0c1a2572101a6e9a835128c50fd49323"
+  integrity sha512-81p6DZ/XmHDD7O0ITJMa7ESo9bSCfE+v3Fny3MIYR0y77xmhoriu2ShNOLXcPS4eowF6dkxw6d2QqxTkS3DjBg==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.3.tgz#cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6"
+  integrity sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==
   dependencies:
     bn.js "^4.4.0"
     brorand "^1.0.1"
@@ -4966,9 +4966,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.3.6"
 
 follow-redirects@^1.0.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.0.tgz#ff0ccf85cf2c867c481957683b5f91b75b25e240"
-  integrity sha512-JgawlbfBQKjbKegPn8vUsvJqplE7KHJuhGO4yPcb+ZOIYKSr+xobMVlfRBToZwZUUxy7lFiKBdFNloz9ui368Q==
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
+  integrity sha512-tmRv0AVuR7ZyouUHLeNSiO6pqulF7dYa3s19c6t+wz9LD69/uSzdMxJ2S91nTI9U3rt/IldxpzMOFejp6f0hjg==
 
 fontsource-roboto@^2.1.4:
   version "2.1.4"
