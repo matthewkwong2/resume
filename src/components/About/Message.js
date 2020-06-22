@@ -5,9 +5,6 @@ import about from 'constants/about';
 import data from 'constants/data';
 
 const useStyles = makeStyles({
-  lastName: {
-    textTransform: 'uppercase'
-  },
   occupations: {
     fontWeight: 'normal'
   },
@@ -28,9 +25,7 @@ const Message = () => {
         gutterBottom
       >
         {about.helloPrefix}
-        <span className={classes.lastName}>{data.lastName + ', '}</span>
-        {data.firstName + ' '}
-        {data.middleName}
+        {data.firstName + ' ' + data.lastName}
         {about.helloSuffix}
       </Typography>
       <Typography
