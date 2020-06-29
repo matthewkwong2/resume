@@ -28,10 +28,10 @@ const theme = responsiveFontSizes(createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         '@font-face': {
-          fontFamily: 'Azonix Regular',
+          fontFamily: 'Azonix',
           fontStyle: 'normal',
           fontWeight: 'normal',
-          src: `local('Azonix Regular'), url(${azonix}) format('woff')`,
+          src: `local('Azonix'), url(${azonix}) format('woff')`,
           fontDisplay: 'swap'
         },
         '::selection': {

@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: 'auto'
   },
   typography: {
-    fontFamily: 'Azonix Regular',
+    fontFamily: 'Azonix',
   }
 }));
 
