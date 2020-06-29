@@ -3,7 +3,11 @@ import 'fontsource-roboto/latin-400-normal.css';
 import 'fontsource-roboto/latin-500-normal.css';
 import 'fontsource-roboto/latin-700-normal.css';
 
-import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core/styles';
+import {
+  createMuiTheme,
+  fade,
+  responsiveFontSizes
+} from '@material-ui/core/styles';
 
 import azonix from 'assets/font/Azonix.woff';
 
