@@ -1,4 +1,8 @@
 import { combineReducers } from 'redux';
-import dummyState from './dummyState';
+import swRegistration from './swRegistration';
+import swStatus from './swStatus';
 
-export default combineReducers({ dummyState });
+export default combineReducers({
+  swStatus,
+  swRegistration
+});

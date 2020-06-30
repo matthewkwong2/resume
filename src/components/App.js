@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Home from './Home';
 import NavBar from './NavBar';
 import ScrollToTopFab from './ScrollToTopFab';
+import SwSnackbar from './SwSnackbar';
 import Testimonial from './Testimonial';
 import Work from './Work';
 
@@ -20,6 +21,7 @@ const App = () => (
     <Testimonial />
     <Contact />
     <Footer />
+    <SwSnackbar />
     <ScrollToTopFab />
   </Fragment>
 );

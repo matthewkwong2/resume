@@ -65,8 +65,10 @@ const theme = responsiveFontSizes(createMuiTheme({
         }
       }
     },
-    MuiContainer: {
-      root: lightBaseTheme.mixins.toolbar
+    MuiSnackbarContent: {
+      root: {
+        backgroundColor: darkBaseTheme.palette.background.default
+      }
     },
     MuiTimelineItem: {
       alignLeft: {

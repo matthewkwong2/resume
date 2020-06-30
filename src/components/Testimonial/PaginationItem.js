@@ -28,10 +28,10 @@ const useStyles = makeStyles(theme => ({
 
 const PaginationItem = ({ active = false, onClick }) => {
   const classes = useStyles();
-
+  const className = clsx(classes.root, { [classes.active]: active });
   return (
     <ButtonBase
-      className={clsx(classes.root, { [classes.active]: active })}
+      className={className}
       onClick={onClick}
       component='div'
     />
