@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Snackbar,
-  makeStyles,
-  useMediaQuery,
-  useScrollTrigger,
-  useTheme
-} from '@material-ui/core';
+import { Snackbar, makeStyles, useScrollTrigger } from '@material-ui/core';
 import { isSwContentCached, isSwNewContentAvail } from 'selectors';
 
 import ReloadButton from './ReloadButton';
@@ -20,13 +14,13 @@ const useStyles = makeStyles(theme => ({
     })
   },
   hasFab: {
-    bottom: theme.spacing(9)
+    [theme.breakpoints.down('xs')]: {
+      bottom: theme.spacing(9)
+    }
   }
 }));
 
 const SwSnackbar = () => {
-  const theme = useTheme();
-  const xsDown = useMediaQuery(theme.breakpoints.down('xs'));
   const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -53,9 +47,8 @@ const SwSnackbar = () => {
     swNewContentAvail
       ? <ReloadButton onClose={handleClose} />
       : null;
-  const className = clsx({
-    [classes.root]: xsDown,
-    [classes.hasFab]: xsDown && trigger
+  const className = clsx(classes.root, {
+    [classes.hasFab]: trigger
   });
   const anchorOrigin = {
     vertical: 'bottom',
