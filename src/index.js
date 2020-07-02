@@ -17,8 +17,6 @@ import theme from 'theme';
 
 smoothscroll.polyfill();
 
-console.log()
-
 render(
   <StrictMode>
     <ThemeProvider theme={theme}>
