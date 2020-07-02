@@ -73,7 +73,7 @@ const theme = responsiveFontSizes(createMuiTheme({
     MuiTimelineItem: {
       alignLeft: {
         '&$missingOppositeContent': {
-          '&:before': {
+          '&::before': {
             flex: 0,
             padding: 0
           }

@@ -4,7 +4,7 @@ import React from 'react';
 import home from 'constants/home';
 import resume from 'assets/document/resume.pdf'
 
-const DownloadCVButton = () => (
+const DownloadResumeButton = () => (
   <Box mt={4}>
     <Button
       variant='outlined'
@@ -18,4 +18,4 @@ const DownloadCVButton = () => (
   </Box>
 );
 
-export default DownloadCVButton;
+export default DownloadResumeButton;

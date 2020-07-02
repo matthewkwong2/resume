@@ -1,6 +1,6 @@
 import { Box, Container, ThemeProvider, makeStyles } from '@material-ui/core';
 
-import DownloadCVButton from './DownloadCVButton';
+import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
@@ -38,7 +38,7 @@ const Home = () => {
           <Box pt={3}>
             <SocialMedia />
           </Box>
-          <DownloadCVButton />
+          <DownloadResumeButton />
         </Container>
       </ThemeProvider>
     </section>

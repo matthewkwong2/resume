@@ -7,7 +7,7 @@ import {
   InputLabel,
   OutlinedInput
 } from '@material-ui/core';
-import React, { createRef, useMemo, useState } from 'react';
+import React, { createRef, useState } from 'react';
 
 import contact from 'constants/contact';
 import data from 'constants/data';
@@ -16,10 +16,7 @@ import validate from 'validate.js';
 const ContactForm = () => {
   const emailInputRef = createRef();
   const [emailInputErrorMessage, setEmailInputErrorMessage] = useState(null);
-  const invalidEmail = useMemo(
-    () => Boolean(emailInputErrorMessage),
-    [emailInputErrorMessage]
-  );
+  const invalidEmail = Boolean(emailInputErrorMessage);
 
   const [messageData, setMessageData] = useState(Object.freeze({
     name: '',
@@ -96,18 +93,9 @@ const ContactForm = () => {
               onChange={handleChange}
               aria-describedby='email-text'
             />
-            {
-              invalidEmail
-                ? (
-                  <FormHelperText id='email-text'>
-                    {emailInputErrorMessage}
-                  </FormHelperText>
-                ) : (
-                  <FormHelperText id='email-text'>
-                    {contact.required}
-                  </FormHelperText>
-                )
-            }
+            <FormHelperText id='email-text'>
+              {invalidEmail ? emailInputErrorMessage : contact.required}
+            </FormHelperText>
           </FormControl>
         </Grid>
         <Grid item xs={12}>
