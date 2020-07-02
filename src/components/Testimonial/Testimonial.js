@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    backgroundColor: darkTheme.palette.background.default
   }
 });
 
@@ -23,7 +24,7 @@ const Testimonial = () => {
   const classes = useStyles();
 
   return (
-    <section id={nav.testimonial} className={classes.root} >
+    <section id={nav.testimonial} className={classes.root}>
       <ThemeProvider theme={darkTheme}>
         <Container>
           <SectionHeader

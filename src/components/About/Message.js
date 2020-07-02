@@ -22,6 +22,7 @@ const Message = () => {
         align='center'
         color='textPrimary'
         variant='h5'
+        component='h1'
         gutterBottom
       >
         {about.helloPrefix}

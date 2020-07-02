@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    backgroundColor: darkTheme.palette.background.default
   },
   container: {
     display: 'flex',
