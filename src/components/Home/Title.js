@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     },
     '@media (max-width: 360px)': {
       height: `${theme.typography.h3.lineHeight * 3}em`
-    },
+    }
   },
   importantText: {
     [theme.breakpoints.up('sm')]: {
