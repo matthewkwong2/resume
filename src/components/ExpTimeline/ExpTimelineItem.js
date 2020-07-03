@@ -20,7 +20,6 @@ import React from 'react';
 
 const useStyles = makeStyles({
   card: {
-    minWidth: 265,
     backgroundColor: 'transparent'
   },
   period: {
@@ -67,7 +66,6 @@ const ExpTimelineItem = ({
               className={classes.subheader}
               color='textSecondary'
               variant='body1'
-              noWrap
             >
               {subheader}
             </Typography>
