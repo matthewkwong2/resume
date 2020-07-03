@@ -6,13 +6,14 @@ import data from 'constants/data';
 import home from 'constants/home';
 
 const useStyles = makeStyles(theme => ({
-  '@media (min-width: 360px)': {
-    height: `${theme.typography.h3.lineHeight * 3}em`
-  },
+
   title: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       height: `${theme.typography.h3.lineHeight * 2}em`
-    }
+    },
+    '@media (max-width: 360px)': {
+      height: `${theme.typography.h3.lineHeight * 3}em`
+    },
   },
   importantText: {
     [theme.breakpoints.up('sm')]: {
