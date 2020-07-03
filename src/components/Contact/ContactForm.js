@@ -57,7 +57,7 @@ const ContactForm = () => {
     if (invalidEmail) {
       setEmailInputErrorMessage(emailErrorMessage);
       emailInputRef.current.focus();
-      emailInputRef.current.scrollIntoView();
+      emailInputRef.current.scrollIntoView({ behavior: 'smooth' });
       return false;
     }
 

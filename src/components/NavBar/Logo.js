@@ -18,7 +18,7 @@ const Logo = () => {
   const homeSection = document.getElementById(nav.home)
 
   const handleClick = () => {
-    homeSection.scrollIntoView();
+    homeSection.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
