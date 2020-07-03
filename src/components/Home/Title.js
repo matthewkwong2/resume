@@ -6,6 +6,14 @@ import data from 'constants/data';
 import home from 'constants/home';
 
 const useStyles = makeStyles(theme => ({
+  '@media (min-width: 360px)': {
+    height: `${theme.typography.h3.lineHeight * 3}em`
+  },
+  title: {
+    [theme.breakpoints.down('xs')]: {
+      height: `${theme.typography.h3.lineHeight * 2}em`
+    }
+  },
   importantText: {
     [theme.breakpoints.up('sm')]: {
       fontWeight: 400,
@@ -41,6 +49,7 @@ const Title = () => {
         align='center'
         color='textPrimary'
         variant={smUp ? 'h2' : 'h3'}
+        className={classes.title}
       >
         {home.titlePrefix}
         <span className={classes.importantText}>
