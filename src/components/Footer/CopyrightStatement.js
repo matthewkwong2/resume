@@ -4,18 +4,23 @@ import React from 'react';
 import data from 'constants/data';
 import footer from 'constants/footer';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  root: {
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center'
+    }
+  },
   lastName: {
     textTransform: 'uppercase'
   }
-});
+}));
 
 const CopyrightStatement = () => {
   const classes = useStyles();
   const today = new Date();
 
   return (
-    <Typography color='textSecondary' variant='body2'>
+    <Typography className={classes.root} color='textSecondary' variant='body2'>
       {footer.copyrightStatementPrefix}
       {today.getFullYear() + ' '}
       <span className={classes.lastName}>{data.lastName + ', '}</span>
