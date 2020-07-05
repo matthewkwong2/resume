@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core/styles';
 
 import azonix from 'assets/font/Azonix.woff';
+import { blue } from '@material-ui/core/colors';
 
 const lightBaseTheme = createMuiTheme({
   palette: {
@@ -93,7 +94,7 @@ const theme = responsiveFontSizes(createMuiTheme({
       main: darkBaseTheme.palette.background.default
     },
     secondary: {
-      main: darkBaseTheme.palette.background.default
+      main: blue['A700']
     }
   }
 }));

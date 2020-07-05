@@ -16,7 +16,7 @@ const ReloadButton = ({ onClose }) => {
   };
 
   return (
-    <Button color='inherit' size='small' onClick={handleClick}>
+    <Button color='secondary' size='small' onClick={handleClick}>
       {app.reload}
     </Button>
   );
