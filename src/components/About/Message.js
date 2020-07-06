@@ -34,6 +34,7 @@ const Message = () => {
         className={classes.occupations}
         color='textSecondary'
         variant='h6'
+        component='h2'
         gutterBottom
       >
         {data.occupations.join('　•　')}
