@@ -111,6 +111,10 @@ const darkTheme = createMuiTheme({
     }
   },
   palette: {
+    primary: {
+      main: darkBaseTheme.palette.common.white
+    },
+    secondary: blue,
     type: 'dark'
   }
 });
