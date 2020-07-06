@@ -93,9 +93,7 @@ const theme = responsiveFontSizes(createMuiTheme({
     primary: {
       main: darkBaseTheme.palette.background.default
     },
-    secondary: {
-      main: blue['A700']
-    }
+    secondary: blue
   }
 }));
 
