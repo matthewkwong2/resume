@@ -71,6 +71,12 @@ const theme = responsiveFontSizes(createMuiTheme({
         backgroundColor: darkBaseTheme.palette.background.default
       }
     },
+    MuiTimeline: {
+      root: {
+        paddingLeft: 0,
+        paddingRight: 0
+      }
+    },
     MuiTimelineItem: {
       alignLeft: {
         '&$missingOppositeContent': {
