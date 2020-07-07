@@ -4,8 +4,8 @@ import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
+import bg from 'assets/img/bg_home.jpg';
 import { darkTheme } from 'theme';
-import dataCenter from 'assets/img/data_center.jpg';
 import nav from 'constants/nav';
 
 const useStyles = makeStyles({
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     height: '100vh',
     background: `
     linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-    url(${dataCenter})
+    url(${bg})
     `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
