@@ -4,7 +4,7 @@ import Languages from './Languages'
 import Message from './Message';
 import React from 'react';
 import SectionHeader from 'components/SectionHeader';
-import Skills from './Skills';
+import SkillSet from './SkillSet';
 import about from 'constants/about';
 import nav from 'constants/nav';
 
@@ -17,7 +17,7 @@ const About = () => (
       />
       <Message />
       <Languages />
-      <Skills />
+      <SkillSet />
     </Container>
   </section>
 );

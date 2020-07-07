@@ -6,8 +6,8 @@ import React from 'react';
 const useStyles = makeStyles(theme => ({
   root: {
     '&:not(:first-child):not(:last-child)': {
-      paddingTop: theme.spacing(6),
-      paddingBottom: theme.spacing(6)
+      marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(6)
     }
   },
   skillName: {

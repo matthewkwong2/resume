@@ -4,7 +4,7 @@ import React from 'react';
 import SkillRating from './SkillRating';
 import data from 'constants/data';
 
-const Skills = () => {
+const SkillSet = () => {
   const mid = Math.ceil(data.about.skills.length / 2);
 
   return (
@@ -37,4 +37,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillSet;
