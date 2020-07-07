@@ -58,6 +58,12 @@
       }
     ]
   },
+  "funFact": {
+    "completedCourses": 13,
+    "completedProjects": 5,
+    "happySupervisors": 2,
+    "commitment": "100%"
+  },
   "education": {
     "experiences": [
       {

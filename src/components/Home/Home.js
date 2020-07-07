@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     padding: 0,
     height: '100vh',
     background: `
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
     url(${dataCenter})
     `,
     backgroundAttachment: 'fixed',

@@ -4,6 +4,7 @@ import About from './About';
 import Contact from './Contact';
 import Education from './Education';
 import Footer from './Footer';
+import FunFact from './FunFact';
 import Home from './Home';
 import NavBar from './NavBar';
 import ScrollToTopFab from './ScrollToTopFab';
@@ -16,6 +17,7 @@ const App = () => (
     <NavBar />
     <Home />
     <About />
+    <FunFact />
     <Education />
     <Work />
     <Testimonial />

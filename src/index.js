@@ -1,5 +1,6 @@
 import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/stable';
+import 'intersection-observer';
 import 'wdyr';
 
 import * as serviceWorker from 'serviceWorker';

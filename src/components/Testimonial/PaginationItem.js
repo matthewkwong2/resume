@@ -11,8 +11,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.text.primary,
     opacity: 0.5,
     borderRadius: 6,
-    marginLeft: theme.spacing(0.5),
-    marginRight: theme.spacing(0.5),
+    marginLeft: theme.spacing(.5),
+    marginRight: theme.spacing(.5),
     transition: theme.transitions.create('all', {
       duration: theme.transitions.duration.standard,
     }),

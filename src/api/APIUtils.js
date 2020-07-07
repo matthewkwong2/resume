@@ -1,0 +1,1 @@
+export const isPercentage = text => /^\d+(\.\d+)?%$/.test(text);

@@ -36,7 +36,7 @@ const theme = responsiveFontSizes(createMuiTheme({
           fontDisplay: 'swap'
         },
         '::selection': {
-          background: 'rgba(166, 175, 189, 0.3)'
+          background: 'rgba(166, 175, 189, .3)'
         },
         html: {
           scrollBehavior: 'smooth'

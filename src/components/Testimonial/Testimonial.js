@@ -4,14 +4,17 @@ import Carousel from './Carousel';
 import { HexagonSlice5 } from 'mdi-material-ui'
 import React from 'react';
 import SectionHeader from 'components/SectionHeader';
-import city from 'assets/img/city.jpg';
+import bg from 'assets/img/bg_testimonial.jpg';
 import { darkTheme } from 'theme';
 import nav from 'constants/nav';
 import testimonial from 'constants/testimonial';
 
 const useStyles = makeStyles({
   root: {
-    background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${city})`,
+    background: `
+    linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+    url(${bg})
+    `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
