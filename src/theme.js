@@ -97,7 +97,7 @@ const theme = responsiveFontSizes(createMuiTheme({
   }
 }));
 
-const darkTheme = createMuiTheme({
+const darkTheme = responsiveFontSizes(createMuiTheme({
   overrides: {
     MuiDivider: {
       root: {
@@ -117,7 +117,7 @@ const darkTheme = createMuiTheme({
     secondary: blue,
     type: 'dark'
   }
-});
+}));
 
 export default theme;
 export { darkTheme };

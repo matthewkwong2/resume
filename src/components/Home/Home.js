@@ -1,4 +1,4 @@
-import { Box, Container, ThemeProvider, makeStyles } from '@material-ui/core';
+import { Box, Container, ThemeProvider, Toolbar, makeStyles } from '@material-ui/core';
 
 import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
@@ -10,8 +10,14 @@ import nav from 'constants/nav';
 
 const useStyles = makeStyles({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 0,
     height: '100vh',
-    background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${dataCenter})`,
+    background: `
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(${dataCenter})
+    `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
@@ -23,7 +29,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100%'
+    flex: 1
   }
 });
 
@@ -33,6 +39,7 @@ const Home = () => {
 
   return (
     <section id={nav.home} className={classes.root}>
+      <Toolbar />
       <ThemeProvider theme={darkTheme}>
         <Container className={classes.container}>
           <Title />

@@ -8,25 +8,19 @@ import home from 'constants/home';
 const useStyles = makeStyles(theme => ({
 
   title: {
-    [theme.breakpoints.down('sm')]: {
-      height: `${theme.typography.h3.lineHeight * 2}em`
-    },
-    '@media (max-width: 360px)': {
-      height: `${theme.typography.h3.lineHeight * 3}em`
+    '@media (max-width: 520px)': {
+      height: `${theme.typography.h2.lineHeight * 2}em`
     }
   },
   importantText: {
-    [theme.breakpoints.up('sm')]: {
-      fontWeight: 400,
-    },
-    fontWeight: 500
+    fontWeight: 400
   }
 }));
 
 const Title = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const smUp = useMediaQuery(theme.breakpoints.up('sm'));
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const typewriterOptions = {
     strings: [
@@ -41,7 +35,7 @@ const Title = () => {
     <Box display='flex' flexDirection='column' alignItems='center'>
       <Typography
         color='textPrimary'
-        variant={smUp ? 'h5' : 'h6'}
+        variant={smDown ? 'h5' : 'h6'}
         gutterBottom
       >
         {home.greetings}
@@ -49,7 +43,7 @@ const Title = () => {
       <Typography
         align='center'
         color='textPrimary'
-        variant={smUp ? 'h2' : 'h3'}
+        variant='h2'
         className={classes.title}
       >
         {home.titlePrefix}
