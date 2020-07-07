@@ -31,6 +31,7 @@ render(
 );
 
 if (process.env.NODE_ENV === 'development') {
+  store.dispatch(swNewContentAvail(null));
   serviceWorker.unregister();
 } else {
   const swConfig = {

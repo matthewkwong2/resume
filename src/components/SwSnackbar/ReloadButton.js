@@ -1,7 +1,9 @@
-import { Button } from '@material-ui/core';
+import { Button, ThemeProvider } from '@material-ui/core';
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import app from 'constants/app';
+import { darkTheme } from 'theme';
 import { getSwRegistration } from 'selectors';
 import { useSelector } from 'react-redux';
 
@@ -16,9 +18,11 @@ const ReloadButton = ({ onClose }) => {
   };
 
   return (
-    <Button variant='outlined' color='inherit' size='small' onClick={handleClick}>
-      {app.reload}
-    </Button>
+    <ThemeProvider theme={darkTheme}>
+      <Button color='primary' size='small' onClick={handleClick}>
+        {app.reload}
+      </Button>
+    </ThemeProvider>
   );
 };
 
