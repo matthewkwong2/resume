@@ -12,6 +12,9 @@ import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
 import bg from 'assets/img/bg_home.jpg';
+import bgLg from 'assets/img/bg_home_lg.jpg';
+import bgMd from 'assets/img/bg_home_md.jpg';
+import bgSm from 'assets/img/bg_home_sm.jpg';
 import { darkTheme } from 'theme';
 import nav from 'constants/nav';
 
@@ -21,6 +24,48 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: 0,
     height: '100vh',
+    [theme.breakpoints.down('xs')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgSm})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
+    [theme.breakpoints.up('sm')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgMd})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
+    [theme.breakpoints.up('md')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgLg})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
     background: `
       linear-gradient(
         ${fade(theme.palette.common.black, .7)}, 

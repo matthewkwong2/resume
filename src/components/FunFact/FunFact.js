@@ -13,6 +13,9 @@ import HotCup from 'components/icons/HotCup';
 import React from 'react';
 import Users from 'components/icons/Users';
 import bg from 'assets/img/bg_fun_fact.jpg';
+import bgLg from 'assets/img/bg_fun_fact_lg.jpg';
+import bgMd from 'assets/img/bg_fun_fact_md.jpg';
+import bgSm from 'assets/img/bg_fun_fact_sm.jpg';
 import { darkTheme } from 'theme';
 import data from 'constants/data';
 import funFact from 'constants/funFact';
@@ -20,6 +23,48 @@ import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    [theme.breakpoints.down('xs')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgSm})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
+    [theme.breakpoints.up('sm')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgMd})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
+    [theme.breakpoints.up('md')]: {
+      background: `
+        linear-gradient(
+          ${fade(theme.palette.common.black, .7)}, 
+          ${fade(theme.palette.common.black, .7)}
+        ),
+        url(${bgLg})      
+      `,
+      backgroundAttachment: 'fixed',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: darkTheme.palette.background.default,
+    },
     background: `
       linear-gradient(
         ${fade(theme.palette.common.black, .7)}, 
