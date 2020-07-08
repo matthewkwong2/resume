@@ -1,4 +1,10 @@
-import { Card, CardContent, Typography, fade, makeStyles } from '@material-ui/core';
+import {
+  Card,
+  CardContent,
+  Typography,
+  fade,
+  makeStyles
+} from '@material-ui/core';
 
 import CountUp from 'react-countup';
 import PropTypes from 'prop-types';

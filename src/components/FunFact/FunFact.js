@@ -1,4 +1,10 @@
-import { Container, Grid, ThemeProvider, makeStyles } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  ThemeProvider,
+  fade,
+  makeStyles
+} from '@material-ui/core';
 
 import FactCard from './FactCard';
 import Gift from 'components/icons/Gift';
@@ -12,11 +18,14 @@ import data from 'constants/data';
 import funFact from 'constants/funFact';
 import { useInView } from 'react-intersection-observer';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     background: `
-    linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-    url(${bg})
+      linear-gradient(
+        ${fade(theme.palette.common.black, .7)}, 
+        ${fade(theme.palette.common.black, .7)}
+      ),
+      url(${bg})
     `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
@@ -24,7 +33,7 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundColor: darkTheme.palette.background.default
   }
-});
+}));
 
 const FunFact = () => {
   const classes = useStyles();

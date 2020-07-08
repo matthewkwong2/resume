@@ -1,4 +1,4 @@
-import { Container, ThemeProvider, makeStyles } from '@material-ui/core';
+import { Container, ThemeProvider, fade, makeStyles } from '@material-ui/core';
 
 import Carousel from './Carousel';
 import { HexagonSlice5 } from 'mdi-material-ui'
@@ -9,11 +9,14 @@ import { darkTheme } from 'theme';
 import nav from 'constants/nav';
 import testimonial from 'constants/testimonial';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     background: `
-    linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-    url(${bg})
+      linear-gradient(
+        ${fade(theme.palette.common.black, .7)}, 
+        ${fade(theme.palette.common.black, .7)}
+      ),
+      url(${bg})
     `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
@@ -21,7 +24,7 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundColor: darkTheme.palette.background.default
   }
-});
+}));
 
 const Testimonial = () => {
   const classes = useStyles();

@@ -1,4 +1,11 @@
-import { Box, Container, ThemeProvider, Toolbar, makeStyles } from '@material-ui/core';
+import {
+  Box,
+  Container,
+  ThemeProvider,
+  Toolbar,
+  fade,
+  makeStyles
+} from '@material-ui/core';
 
 import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
@@ -8,15 +15,18 @@ import bg from 'assets/img/bg_home.jpg';
 import { darkTheme } from 'theme';
 import nav from 'constants/nav';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     padding: 0,
     height: '100vh',
     background: `
-    linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
-    url(${bg})
+      linear-gradient(
+        ${fade(theme.palette.common.black, .7)}, 
+        ${fade(theme.palette.common.black, .7)}
+      ),
+      url(${bg})
     `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
@@ -31,7 +41,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     flex: 1
   }
-});
+}));
 
 
 const Home = () => {
