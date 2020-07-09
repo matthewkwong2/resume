@@ -3,6 +3,7 @@ export { default as Download } from './Download';
 export { default as Email } from './Email';
 export { default as Gift } from './Gift';
 export { default as Globe } from './Globe';
+export { default as HotCup } from './HotCup';
 export { default as Location } from './Location';
 export { default as Menu } from './Menu';
 export { default as Mobile } from './Mobile';
