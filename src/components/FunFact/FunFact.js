@@ -5,13 +5,10 @@ import {
   fade,
   makeStyles
 } from '@material-ui/core';
+import { Gift, Globe, HotCup, Users } from 'components/icons';
 
 import FactCard from './FactCard';
-import Gift from 'components/icons/Gift';
-import Globe from 'components/icons/Globe';
-import HotCup from 'components/icons/HotCup';
 import React from 'react';
-import Users from 'components/icons/Users';
 import bg from 'assets/img/bg_fun_fact.jpg';
 import bgLg from 'assets/img/bg_fun_fact_lg.jpg';
 import bgMd from 'assets/img/bg_fun_fact_md.jpg';
