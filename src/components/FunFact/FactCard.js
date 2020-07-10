@@ -39,7 +39,7 @@ const FactCard = ({ Icon, title, value = 0, startCountDown = false }) => {
   return (
     <Card className={classes.root} variant='outlined'>
       <CardContent className={classes.cardContent}>
-        {Icon ? <Icon className={classes.icon} /> : null}
+        <Icon className={classes.icon} />
         <Typography color='textPrimary' variant='h3' className={classes.value}>
           {
             startCountDown

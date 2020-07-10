@@ -11,7 +11,7 @@ const ExpTimeline = ({ data = [] }) => {
 
   return (
     <Box width='100%' maxWidth={1200}>
-      <Timeline align={smDown ? undefined : 'alternate'}>
+      <Timeline align={smDown ? 'left' : 'alternate'}>
         {data.map(({ period, title, subheader, description, file }, idx) => (
           <ExpTimelineItem
             key={idx}

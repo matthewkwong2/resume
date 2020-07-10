@@ -20,12 +20,27 @@ const PersonalInfoItem = ({ Icon, title, value }) => {
   const classes = useStyles();
 
   return (
-    <Box display='flex' flexDirection='column' alignItems='center' className={classes.root}>
+    <Box
+      display='flex'
+      flexDirection='column'
+      alignItems='center'
+      className={classes.root}
+    >
       <Icon fontSize='large' color='action' />
-      <Typography className={classes.title} color='textPrimary' variant='body1' gutterBottom>
+      <Typography
+        className={classes.title}
+        color='textPrimary'
+        variant='body1'
+        gutterBottom
+      >
         {title}
       </Typography>
-      <Typography align='center' color='textSecondary' variant='body1' gutterBottom>
+      <Typography
+        align='center'
+        color='textSecondary'
+        variant='body1'
+        gutterBottom
+      >
         {value}
       </Typography>
     </Box>

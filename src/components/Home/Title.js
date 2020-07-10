@@ -6,7 +6,6 @@ import data from 'constants/data';
 import home from 'constants/home';
 
 const useStyles = makeStyles(theme => ({
-
   title: {
     '@media (max-width: 520px)': {
       height: `${theme.typography.h2.lineHeight * 2}em`

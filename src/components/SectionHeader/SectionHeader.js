@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const useStyles = makeStyles(theme => ({
-  titleContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   divider: {
     width: theme.spacing(4),
     marginLeft: theme.spacing(1),
@@ -20,7 +15,7 @@ const SectionHeader = ({ title, Icon }) => {
   const classes = useStyles();
 
   return (
-    <Box>
+    <header>
       <Typography
         gutterBottom
         align='center'
@@ -34,7 +29,7 @@ const SectionHeader = ({ title, Icon }) => {
         <Icon />
         <Divider className={classes.divider} />
       </Box>
-    </Box>
+    </header>
   );
 };
 
