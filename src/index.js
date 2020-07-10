@@ -1,6 +1,4 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-import 'intersection-observer';
+import 'polyfill';
 import 'wdyr';
 
 import * as serviceWorker from 'serviceWorker';
@@ -12,11 +10,8 @@ import { swContentCached, swNewContentAvail } from 'actions';
 import App from 'components/App';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
-import smoothscroll from 'smoothscroll-polyfill';
 import store from 'store';
 import theme from 'theme';
-
-smoothscroll.polyfill();
 
 render(
   <StrictMode>
@@ -41,5 +36,6 @@ if (process.env.NODE_ENV === 'development') {
       store.dispatch(swContentCached(registration));
     }
   };
+
   serviceWorker.register(swConfig);
 }

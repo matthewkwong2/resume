@@ -1,12 +1,16 @@
-import 'fontsource-roboto/latin-300-normal.css';
-import 'fontsource-roboto/latin-400-normal.css';
-import 'fontsource-roboto/latin-500-normal.css';
-import 'fontsource-roboto/latin-700-normal.css';
-
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
 
-import azonix from 'assets/font/Azonix.woff';
+import azonix from 'assets/font/azonix.woff';
+import azonix2 from 'assets/font/azonix.woff2';
 import { blue } from '@material-ui/core/colors';
+import robotoBold from 'assets/font/roboto-bold.woff';
+import robotoBold2 from 'assets/font/roboto-bold.woff2';
+import robotoLight from 'assets/font/roboto-light.woff';
+import robotoLight2 from 'assets/font/roboto-light.woff2';
+import robotoMedium from 'assets/font/roboto-medium.woff';
+import robotoMedium2 from 'assets/font/roboto-medium.woff2';
+import robotoRegular from 'assets/font/roboto-regular.woff';
+import robotoRegular2 from 'assets/font/roboto-regular.woff2';
 
 const lightBaseTheme = createMuiTheme({
   palette: {
@@ -24,13 +28,68 @@ const theme = responsiveFontSizes(createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        '@font-face': {
-          fontFamily: 'Azonix',
-          fontStyle: 'normal',
-          fontWeight: 'normal',
-          src: `local('Azonix'), url(${azonix}) format('woff')`,
-          fontDisplay: 'swap'
-        },
+        '@font-face': [
+          {
+            fontFamily: 'Azonix',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontDisplay: 'swap',
+            src: [
+              ['local("Azonix")'],
+              ['local("Azonix-Regular")'],
+              [`url(${azonix2})`, 'format("woff2")'],
+              [`url(${azonix})`, 'format("woff")']
+            ]
+          },
+          {
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 300,
+            fontDisplay: 'swap',
+            src: [
+              ['local("Roboto Light")'],
+              ['local("Roboto-Light")'],
+              [`url(${robotoLight2})`, 'format("woff2")'],
+              [`url(${robotoLight})`, 'format("woff")']
+            ]
+          },
+          {
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontDisplay: 'swap',
+            src: [
+              ['local("Roboto")'],
+              ['local("Roboto-Regular")'],
+              [`url(${robotoRegular2})`, 'format("woff2")'],
+              [`url(${robotoRegular})`, 'format("woff")']
+            ]
+          },
+          {
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 500,
+            fontDisplay: 'swap',
+            src: [
+              ['local("Roboto Medium")'],
+              ['local("Roboto-Medium")'],
+              [`url(${robotoMedium2})`, 'format("woff2")'],
+              [`url(${robotoMedium})`, 'format("woff")']
+            ]
+          },
+          {
+            fontFamily: 'Roboto',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            fontDisplay: 'swap',
+            src: [
+              ['local("Roboto Bold")'],
+              ['local("Roboto-Bold")'],
+              [`url(${robotoBold2})`, 'format("woff2")'],
+              [`url(${robotoBold})`, 'format("woff")']
+            ]
+          }
+        ],
         '::selection': {
           background: 'rgba(166, 175, 189, .3)'
         },

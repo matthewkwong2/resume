@@ -25,59 +25,55 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     height: '100vh',
     [theme.breakpoints.down('xs')]: {
-      background: `
-        linear-gradient(
-          ${fade(theme.palette.common.black, .7)}, 
-          ${fade(theme.palette.common.black, .7)}
-        ),
-        url(${bgSm})      
-      `,
+      background: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgSm})`
+      ],
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundColor: darkTheme.palette.background.default,
+      fallbacks: {
+        background: darkTheme.palette.background.default
+      }
     },
     [theme.breakpoints.up('sm')]: {
-      background: `
-        linear-gradient(
-          ${fade(theme.palette.common.black, .7)}, 
-          ${fade(theme.palette.common.black, .7)}
-        ),
-        url(${bgMd})      
-      `,
+      background: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgMd})`
+      ],
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundColor: darkTheme.palette.background.default,
+      fallbacks: {
+        background: darkTheme.palette.background.default
+      }
     },
     [theme.breakpoints.up('md')]: {
-      background: `
-        linear-gradient(
-          ${fade(theme.palette.common.black, .7)}, 
-          ${fade(theme.palette.common.black, .7)}
-        ),
-        url(${bgLg})      
-      `,
+      background: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgLg})`
+      ],
       backgroundAttachment: 'fixed',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundColor: darkTheme.palette.background.default,
+      fallbacks: {
+        background: darkTheme.palette.background.default
+      }
     },
-    background: `
-      linear-gradient(
-        ${fade(theme.palette.common.black, .7)}, 
-        ${fade(theme.palette.common.black, .7)}
-      ),
-      url(${bg})
-    `,
+    background: [
+      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+      `url(${bg})`
+    ],
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundColor: darkTheme.palette.background.default
+    fallbacks: {
+      background: darkTheme.palette.background.default
+    }
   },
   container: {
     display: 'flex',
