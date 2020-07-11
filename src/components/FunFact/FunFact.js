@@ -5,7 +5,7 @@ import {
   fade,
   makeStyles
 } from '@material-ui/core';
-import { Gift, Globe, HotCup, Users } from 'components/icons';
+import { Gift, Globe, Heart, HotCup } from 'components/icons';
 
 import FactCard from './FactCard';
 import React from 'react';
@@ -100,7 +100,7 @@ const FunFact = () => {
             </Grid>
             <Grid item md={3} sm={6} xs={12}>
               <FactCard
-                Icon={Users}
+                Icon={Heart}
                 title={funFact.happySupervisors}
                 value={data.funFact.happySupervisors}
                 startCountDown={inView}
