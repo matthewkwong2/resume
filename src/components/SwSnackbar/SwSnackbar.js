@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Snackbar, makeStyles, useScrollTrigger } from '@material-ui/core';
+import {
+  Backdrop,
+  Snackbar,
+  makeStyles,
+  useScrollTrigger
+} from '@material-ui/core';
+import React, { Fragment, useEffect, useState } from 'react';
 import { isSwContentCached, isSwNewContentAvail } from 'selectors';
 
 import ReloadButton from './ReloadButton';
@@ -17,7 +22,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       bottom: theme.spacing(9)
     }
-  }
+  },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1
+  },
 }));
 
 const SwSnackbar = () => {
@@ -29,6 +37,7 @@ const SwSnackbar = () => {
   const swContentCached = useSelector(isSwContentCached);
   const swNewContentAvail = useSelector(isSwNewContentAvail);
   const [open, setOpen] = useState(false);
+  const [openBackdrop, setOpenBackdrop] = useState(false);
 
   useEffect(() => {
     setOpen(swContentCached || swNewContentAvail);
@@ -40,6 +49,7 @@ const SwSnackbar = () => {
     }
 
     setOpen(false);
+    setOpenBackdrop(true);
   };
 
   const autoHideDuration = swContentCached ? 6000 : null;
@@ -61,15 +71,18 @@ const SwSnackbar = () => {
       : null;
 
   return (
-    <Snackbar
-      className={className}
-      anchorOrigin={anchorOrigin}
-      open={open}
-      autoHideDuration={autoHideDuration}
-      onClose={handleClose}
-      message={message}
-      action={action}
-    />
+    <Fragment>
+      <Snackbar
+        className={className}
+        anchorOrigin={anchorOrigin}
+        open={open}
+        autoHideDuration={autoHideDuration}
+        onClose={handleClose}
+        message={message}
+        action={action}
+      />
+      <Backdrop open={openBackdrop} className={classes.backdrop} />
+    </Fragment>
   );
 };
 
