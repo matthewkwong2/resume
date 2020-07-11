@@ -41,7 +41,7 @@ const Endorsement = ({ name, company, comment }) => {
         color='textPrimary'
         variant='body1'
       >
-        {`"${comment}"`}
+        {comment}
       </Typography>
     </Box>
   );
