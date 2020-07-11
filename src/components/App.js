@@ -7,6 +7,7 @@ import Footer from './Footer';
 import FunFact from './FunFact';
 import Home from './Home';
 import NavBar from './NavBar';
+import ReloadBackdrop from './ReloadBackdrop';
 import ScrollToTopFab from './ScrollToTopFab';
 import SwSnackbar from './SwSnackbar';
 import Testimonial from './Testimonial';
@@ -25,6 +26,7 @@ const App = () => (
     <Footer />
     <SwSnackbar />
     <ScrollToTopFab />
+    <ReloadBackdrop />
   </Fragment>
 );
 
