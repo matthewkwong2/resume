@@ -1,8 +1,8 @@
-import React from 'react';
+import { h } from 'preact';
 
 if (process.env.NODE_ENV === 'development') {
   const whyDidYouRender = require('@welldone-software/why-did-you-render');
-  whyDidYouRender(React, {
+  whyDidYouRender(h, {
     trackAllPureComponents: true
   });
 }
