@@ -1,7 +1,7 @@
 import { Backdrop, makeStyles } from '@material-ui/core';
 
 import React from 'react';
-import useBeforeUnloadTrigger from 'hooks/useBeforeUnloadTrigger';
+import useLoadingTrigger from 'hooks/useLoadingTrigger';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 
 const SwSnackbar = () => {
   const classes = useStyles();
-  const trigger = useBeforeUnloadTrigger();
+  const trigger = useLoadingTrigger();
 
   return (
     <Backdrop
