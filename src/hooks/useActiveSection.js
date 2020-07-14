@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import nav from 'constants/nav';
+import { throttle } from 'lodash-es';
 
 const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState(nav.home);
@@ -34,9 +35,12 @@ const useActiveSection = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    const handleThrottledScroll = throttle(handleScroll, 166);
+
+    window.addEventListener('scroll', handleThrottledScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleThrottledScroll);
+      handleThrottledScroll.cancel();
     };
   }, []);
 

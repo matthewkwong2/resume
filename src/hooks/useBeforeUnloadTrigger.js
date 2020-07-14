@@ -8,7 +8,7 @@ const useBeforeUnloadTrigger = () => {
       setBeforeUnload(true);
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('beforeunload', handleBeforeUnload, { passive: true });
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
     };

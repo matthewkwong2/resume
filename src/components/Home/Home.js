@@ -3,9 +3,9 @@ import {
   Container,
   ThemeProvider,
   Toolbar,
-  fade,
   makeStyles
 } from '@material-ui/core';
+import { createFullScreenBackground, darkTheme } from 'theme';
 
 import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
@@ -14,8 +14,8 @@ import Title from './Title';
 import bg from 'assets/img/bg_home.jpg';
 import bgLg from 'assets/img/bg_home_lg.jpg';
 import bgMd from 'assets/img/bg_home_md.jpg';
+import bgPlaceholder from 'assets/img/bg_home_placeholder.jpg';
 import bgSm from 'assets/img/bg_home_sm.jpg';
-import { darkTheme } from 'theme';
 import nav from 'constants/nav';
 
 const useStyles = makeStyles(theme => ({
@@ -24,56 +24,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: 0,
     height: '100vh',
-    [theme.breakpoints.down('xs')]: {
-      background: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgSm})`
-      ],
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      fallbacks: {
-        background: darkTheme.palette.background.default
-      }
-    },
-    [theme.breakpoints.up('sm')]: {
-      background: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgMd})`
-      ],
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      fallbacks: {
-        background: darkTheme.palette.background.default
-      }
-    },
-    [theme.breakpoints.up('md')]: {
-      background: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgLg})`
-      ],
-      backgroundAttachment: 'fixed',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      fallbacks: {
-        background: darkTheme.palette.background.default
-      }
-    },
-    background: [
-      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-      `url(${bg})`
-    ],
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.default
-    }
+    ...createFullScreenBackground(theme, bg, bgLg, bgMd, bgSm, bgPlaceholder)
   },
   container: {
     display: 'flex',

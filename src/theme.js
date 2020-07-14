@@ -180,5 +180,62 @@ const darkTheme = responsiveFontSizes(createMuiTheme({
   }
 }));
 
+const createFullScreenBackground = (theme, bg, bgLg, bgMd, bgSm, bgPlaceholder) => ({
+  [theme.breakpoints.down('xs')]: {
+    background: [
+      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+      `url(${bgSm})`,
+      `url(${bgPlaceholder})`
+    ],
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    fallbacks: {
+      background: darkTheme.palette.background.paper
+    }
+  },
+  [theme.breakpoints.up('sm')]: {
+    background: [
+      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+      `url(${bgMd})`,
+      `url(${bgPlaceholder})`
+    ],
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    fallbacks: {
+      background: darkTheme.palette.background.paper
+    }
+  },
+  [theme.breakpoints.up('md')]: {
+    background: [
+      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+      `url(${bgLg})`,
+      `url(${bgPlaceholder})`
+    ],
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    fallbacks: {
+      background: darkTheme.palette.background.paper
+    }
+  },
+  background: [
+    `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+    `url(${bg})`,
+    `url(${bgPlaceholder})`
+  ],
+  backgroundAttachment: 'fixed',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  fallbacks: {
+    background: darkTheme.palette.background.paper
+  }
+});
+
 export default theme;
-export { darkTheme };
+export { darkTheme, createFullScreenBackground };
