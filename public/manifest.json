@@ -16,5 +16,11 @@
   "start_url": ".",
   "theme_color": "#ffffff",
   "background_color": "#fafafa",
-  "display": "standalone"
+  "categories": [
+    "resume",
+    "personalization"
+  ],
+  "description": "Matthew's Personal Resume Website",
+  "display": "standalone",
+  "lang": "en"
 }
