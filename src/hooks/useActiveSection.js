@@ -15,7 +15,7 @@ const useActiveSection = () => {
       document.documentElement.scrollTop
       + document.documentElement.clientHeight / 8;
 
-    const sections = Object.values(nav).reverse();
+    const sections = Object.keys(nav).map(key => nav[key]).reverse();
 
     const handleScroll = () => {
       let active = nav.home;

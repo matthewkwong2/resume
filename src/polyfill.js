@@ -1,5 +1,7 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
+import 'core-js/features/object/assign';
+import 'core-js/features/symbol';
+import 'core-js/features/array/from';
+import 'core-js/features/string/ends-with';
 import 'intersection-observer';
 
 import smoothscroll from 'smoothscroll-polyfill';

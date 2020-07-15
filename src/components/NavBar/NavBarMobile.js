@@ -26,12 +26,12 @@ const NavBarMobile = () => {
       </Toolbar>
       <Collapse in={menuOpen} timeout='auto' unmountOnExit>
         <List component='nav' aria-label='navigation list'>
-          {Object.values(nav).map(id => (
+          {Object.keys(nav).map(key => (
             <NavListItem
-              key={id}
-              label={id}
-              id={id}
-              active={activeSection === id}
+              key={nav[key]}
+              label={nav[key]}
+              id={nav[key]}
+              active={activeSection === nav[key]}
             />
           ))}
         </List>

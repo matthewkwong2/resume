@@ -28,12 +28,12 @@ const NavBarDesktop = () => {
     <Fragment>
       <Logo />
       <nav>
-        {Object.values(nav).map(id => (
+        {Object.keys(nav).map(key => (
           <NavButton
-            key={id}
-            id={id}
-            label={id}
-            active={activeSection === id}
+            key={nav[key]}
+            id={nav[key]}
+            label={nav[key]}
+            active={activeSection === nav[key]}
           />
         ))}
       </nav>
