@@ -1,10 +1,9 @@
 import React from 'react';
-import { ReactComponent as SvgArrowUp } from 'assets/icon/mbri-arrow-up.svg'
 import { SvgIcon } from '@material-ui/core';
 
 const ArrowUp = props => (
   <SvgIcon {...props}>
-    <SvgArrowUp />
+    <path d='M23.146 17.853l-10-9.988c-.417-.418.19-1.19.708-.707l10 9.99c.447.446-.26 1.153-.708.705zm-23-.707l11-11c.44-.44 1.163.25.707.708l-11 11c-.47.47-1.152-.262-.706-.708z' />
   </SvgIcon>
 );
 
