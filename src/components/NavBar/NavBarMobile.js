@@ -11,7 +11,9 @@ const NavBarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 
-  const handleMenuButtonClick = () => setMenuOpen(!menuOpen);
+  const handleMenuButtonClick = () => {
+    setMenuOpen(!menuOpen)
+  };
 
   return (
     <AppBar color='inherit' elevation={4}>
