@@ -20,7 +20,6 @@ const Languages = () => {
         data={data.about.languages}
         indexBy='name'
         keys={keys}
-        maxValue={100}
         colors={theme.palette.primary.main}
         isInteractive={false}
         enableDots={false}
