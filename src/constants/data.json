@@ -55,6 +55,10 @@
       {
         "name": "Java",
         "rating": 80
+      },
+      {
+        "name": "UI/UX Design",
+        "rating": 60
       }
     ]
   },
