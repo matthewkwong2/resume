@@ -38,7 +38,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -r https://github.com/matthewkwong2/matthewkwong2.github.io.git -b master -d build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "cra-preact start",
+    "start": "react-scripts start",
     "build": "cra-preact build",
     "test": "cra-preact test",
     "eject": "react-scripts eject"
