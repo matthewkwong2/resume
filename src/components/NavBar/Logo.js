@@ -4,14 +4,14 @@ import React from 'react';
 import data from 'constants/data';
 import nav from 'constants/nav';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
     marginRight: 'auto'
   },
   typography: {
     fontFamily: 'Azonix'
   }
-}));
+});
 
 const Logo = () => {
   const classes = useStyles();
