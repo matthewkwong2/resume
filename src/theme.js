@@ -195,7 +195,7 @@ const createFullScreenBackground = (theme, bg, bgLg, bgMd, bgSm, bgPlaceholder) 
       background: darkTheme.palette.background.paper
     }
   },
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.down('sm')]: {
     background: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgMd})`,
@@ -209,7 +209,7 @@ const createFullScreenBackground = (theme, bg, bgLg, bgMd, bgSm, bgPlaceholder) 
       background: darkTheme.palette.background.paper
     }
   },
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.down('md')]: {
     background: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgLg})`,
