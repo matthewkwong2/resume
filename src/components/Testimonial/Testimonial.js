@@ -6,15 +6,15 @@ import { HexagonSlice5 } from 'mdi-material-ui'
 import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import bg from 'assets/img/bg_testimonial.jpg';
-import bgLg from 'assets/img/bg_testimonial_lg.jpg';
 import bgMd from 'assets/img/bg_testimonial_md.jpg';
 import bgPlaceholder from 'assets/img/bg_testimonial_placeholder.jpg';
 import bgSm from 'assets/img/bg_testimonial_sm.jpg';
+import bgXs from 'assets/img/bg_testimonial_xs.jpg';
 import nav from 'constants/nav';
 import testimonial from 'constants/testimonial';
 
 const useStyles = makeStyles(theme => ({
-  root: createFullScreenBackground(theme, bg, bgLg, bgMd, bgSm, bgPlaceholder)
+  root: createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
 }));
 
 const Testimonial = () => {

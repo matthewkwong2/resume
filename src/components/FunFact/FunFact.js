@@ -5,16 +5,16 @@ import { createFullScreenBackground, darkTheme } from 'theme';
 import FactCard from './FactCard';
 import React from 'react';
 import bg from 'assets/img/bg_fun_fact.jpg';
-import bgLg from 'assets/img/bg_fun_fact_lg.jpg';
 import bgMd from 'assets/img/bg_fun_fact_md.jpg';
 import bgPlaceholder from 'assets/img/bg_fun_fact_placeholder.jpg';
 import bgSm from 'assets/img/bg_fun_fact_sm.jpg';
+import bgXs from 'assets/img/bg_fun_fact_xs.jpg';
 import data from 'constants/data';
 import funFact from 'constants/funFact';
 import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(theme => ({
-  root: createFullScreenBackground(theme, bg, bgLg, bgMd, bgSm, bgPlaceholder)
+  root: createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
 }));
 
 const FunFact = () => {

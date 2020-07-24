@@ -12,10 +12,10 @@ import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
 import bg from 'assets/img/bg_home.jpg';
-import bgLg from 'assets/img/bg_home_lg.jpg';
 import bgMd from 'assets/img/bg_home_md.jpg';
 import bgPlaceholder from 'assets/img/bg_home_placeholder.jpg';
 import bgSm from 'assets/img/bg_home_sm.jpg';
+import bgXs from 'assets/img/bg_home_xs.jpg';
 import nav from 'constants/nav';
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: 0,
     height: '100vh',
-    ...createFullScreenBackground(theme, bg, bgLg, bgMd, bgSm, bgPlaceholder)
+    ...createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
   },
   container: {
     display: 'flex',

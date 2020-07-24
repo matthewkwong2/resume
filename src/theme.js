@@ -180,8 +180,22 @@ const darkTheme = responsiveFontSizes(createMuiTheme({
   }
 }));
 
-const createFullScreenBackground = (theme, bg, bgLg, bgMd, bgSm, bgPlaceholder) => ({
-  [theme.breakpoints.down('xs')]: {
+const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) => ({
+  [theme.breakpoints.only('xs')]: {
+    background: [
+      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+      `url(${bgXs})`,
+      `url(${bgPlaceholder})`
+    ],
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    fallbacks: {
+      background: darkTheme.palette.background.paper
+    }
+  },
+  [theme.breakpoints.only('sm')]: {
     background: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgSm})`,
@@ -195,24 +209,10 @@ const createFullScreenBackground = (theme, bg, bgLg, bgMd, bgSm, bgPlaceholder) 
       background: darkTheme.palette.background.paper
     }
   },
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.between('md', 'lg')]: {
     background: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgMd})`,
-      `url(${bgPlaceholder})`
-    ],
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.paper
-    }
-  },
-  [theme.breakpoints.down('md')]: {
-    background: [
-      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-      `url(${bgLg})`,
       `url(${bgPlaceholder})`
     ],
     backgroundAttachment: 'fixed',
