@@ -16,7 +16,7 @@
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.26.2",
-    "react-redux": "^7.2.0",
+    "react-redux": "^7.2.1",
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9",
     "redux": "^4.0.5",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
-    "@testing-library/user-event": "^12.0.13",
+    "@testing-library/user-event": "^12.0.15",
     "@welldone-software/why-did-you-render": "^4.2.7",
     "cra-preact": "^0.4.0",
     "gh-pages": "^3.1.0",
