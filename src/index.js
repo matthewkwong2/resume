@@ -30,10 +30,13 @@ if (process.env.NODE_ENV === 'development') {
 } else {
   const swConfig = {
     onUpdate: registration => {
-      store.dispatch(swNewContentAvail(registration));
+      if (registration && registration.waiting) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+      store.dispatch(swNewContentAvail());
     },
-    onSuccess: registration => {
-      store.dispatch(swContentCached(registration));
+    onSuccess: () => {
+      store.dispatch(swContentCached());
     }
   };
 
