@@ -11,7 +11,7 @@
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
     "intersection-observer": "^0.11.0",
-    "mdi-material-ui": "^6.16.0",
+    "mdi-material-ui": "^6.17.0",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
