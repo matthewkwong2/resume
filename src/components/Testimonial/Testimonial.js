@@ -2,7 +2,7 @@ import { Container, ThemeProvider, makeStyles } from '@material-ui/core';
 import { createFullScreenBackground, darkTheme } from 'theme';
 
 import Carousel from './Carousel';
-import { HexagonSlice5 } from 'mdi-material-ui'
+import { HexagonSlice5 } from 'mdi-material-ui';
 import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import bg from 'assets/img/bg_testimonial.jpg';

@@ -2,7 +2,7 @@ import { Fab, Zoom, makeStyles, useScrollTrigger } from '@material-ui/core';
 
 import { ArrowUp } from 'components/icons';
 import React from 'react';
-import nav from 'constants/nav'
+import nav from 'constants/nav';
 
 const useStyles = makeStyles(theme => ({
   fab: {

@@ -1,4 +1,10 @@
-import { Box, Typography, makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import {
+  Box,
+  Typography,
+  makeStyles,
+  useMediaQuery,
+  useTheme
+} from '@material-ui/core';
 
 import React from 'react';
 import Typewriter from 'typewriter-effect';

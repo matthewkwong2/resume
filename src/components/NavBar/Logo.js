@@ -15,11 +15,11 @@ const useStyles = makeStyles({
 
 const Logo = () => {
   const classes = useStyles();
-  const homeSection = document.getElementById(nav.home)
+  const homeSection = document.getElementById(nav.home);
 
   const handleClick = () => {
     homeSection.scrollIntoView({ behavior: 'smooth' });
-  }
+  };
 
   return (
     <Button className={classes.root} onClick={handleClick}>

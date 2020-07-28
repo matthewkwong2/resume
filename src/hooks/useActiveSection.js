@@ -22,7 +22,7 @@ const useActiveSection = () => {
       if (isScrollToBottom()) {
         setActiveSection(nav.contact);
       } else {
-        for (let sectionId of sections) {
+        for (const sectionId of sections) {
           const section = document.getElementById(sectionId);
 
           if (isSectionActive(section)) {

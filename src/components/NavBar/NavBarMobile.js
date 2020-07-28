@@ -12,7 +12,7 @@ const NavBarMobile = () => {
   const activeSection = useActiveSection();
 
   const handleMenuButtonClick = () => {
-    setMenuOpen(!menuOpen)
+    setMenuOpen(!menuOpen);
   };
 
   return (

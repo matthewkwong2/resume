@@ -46,7 +46,7 @@ const ContactForm = () => {
     setMessageData({
       ...messageData,
       [event.target.id]: event.target.value
-    })
+    });
   };
 
   const handleSubmitMessage = event => {
