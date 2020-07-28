@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   title: {
     '@media (max-width: 520px)': {
       height: `${theme.typography.h2.lineHeight * 2}em`
+    },
+    '@media (max-width: 300px)': {
+      height: `${theme.typography.h2.lineHeight * 3}em`
     }
   },
   importantText: {
