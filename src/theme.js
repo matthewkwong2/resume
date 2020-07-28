@@ -1,9 +1,9 @@
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
+import { isIOS, isWebPSupported } from 'api/APIUtils';
 
 import azonix from 'assets/font/azonix.woff';
 import azonix2 from 'assets/font/azonix.woff2';
 import { blue } from '@material-ui/core/colors';
-import { isIOS } from 'api/APIUtils';
 import robotoBold from 'assets/font/roboto-bold.woff';
 import robotoBold2 from 'assets/font/roboto-bold.woff2';
 import robotoLight from 'assets/font/roboto-light.woff';
@@ -181,41 +181,45 @@ const darkTheme = responsiveFontSizes(createMuiTheme({
   }
 }));
 
-const createBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) => ({
-  [theme.breakpoints.only('xs')]: {
+const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
+  const { bg, bgMd, bgSm, bgXs } = isWebPSupported() ? bgsWebp : bgsFallback;
+
+  return {
+    [theme.breakpoints.only('xs')]: {
+      backgroundImage: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgXs})`,
+        `url(${bgPlaceholder})`
+      ]
+    },
+    [theme.breakpoints.only('sm')]: {
+      backgroundImage: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgSm})`,
+        `url(${bgPlaceholder})`
+      ]
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      backgroundImage: [
+        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+        `url(${bgMd})`,
+        `url(${bgPlaceholder})`
+      ]
+    },
     backgroundImage: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-      `url(${bgXs})`,
+      `url(${bg})`,
       `url(${bgPlaceholder})`
-    ]
-  },
-  [theme.breakpoints.only('sm')]: {
-    backgroundImage: [
-      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-      `url(${bgSm})`,
-      `url(${bgPlaceholder})`
-    ]
-  },
-  [theme.breakpoints.between('md', 'lg')]: {
-    backgroundImage: [
-      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-      `url(${bgMd})`,
-      `url(${bgPlaceholder})`
-    ]
-  },
-  backgroundImage: [
-    `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-    `url(${bg})`,
-    `url(${bgPlaceholder})`
-  ],
-  backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  fallbacks: {
-    background: darkTheme.palette.background.default
-  }
-});
+    ],
+    backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    fallbacks: {
+      background: darkTheme.palette.background.default
+    }
+  };
+};
 
 export default theme;
 export { darkTheme, createBackground };

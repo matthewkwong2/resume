@@ -4,17 +4,36 @@ import { createBackground, darkTheme } from 'theme';
 
 import FactCard from './FactCard';
 import React from 'react';
-import bg from 'assets/img/bg_fun_fact.jpg';
-import bgMd from 'assets/img/bg_fun_fact_md.jpg';
+import bgFallback from 'assets/img/bg_fun_fact.jpg';
+import bgMdFallback from 'assets/img/bg_fun_fact_md.jpg';
+import bgMdWebp from 'assets/img/bg_fun_fact_md.webp';
 import bgPlaceholder from 'assets/img/bg_fun_fact_placeholder.jpg';
-import bgSm from 'assets/img/bg_fun_fact_sm.jpg';
-import bgXs from 'assets/img/bg_fun_fact_xs.jpg';
+import bgSmFallback from 'assets/img/bg_fun_fact_sm.jpg';
+import bgSmWebp from 'assets/img/bg_fun_fact_sm.webp';
+import bgWebp from 'assets/img/bg_fun_fact.webp';
+import bgXsFallback from 'assets/img/bg_fun_fact_xs.jpg';
+import bgXsWebp from 'assets/img/bg_fun_fact_xs.webp';
 import data from 'constants/data';
 import funFact from 'constants/funFact';
 import { useInView } from 'react-intersection-observer';
 
+const bgsWebp = {
+  bg: bgWebp,
+  bgMd: bgMdWebp,
+  bgSm: bgSmWebp,
+  bgXs: bgXsWebp
+};
+
+const bgsFallback = {
+  bg: bgFallback,
+  bgMd: bgMdFallback,
+  bgSm: bgSmFallback,
+  bgXs: bgXsFallback
+};
+
+
 const useStyles = makeStyles(theme => ({
-  root: createBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
+  root: createBackground(theme, bgsWebp, bgsFallback, bgPlaceholder)
 }));
 
 const FunFact = () => {
