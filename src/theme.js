@@ -192,7 +192,7 @@ const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     fallbacks: {
-      background: darkTheme.palette.background.paper
+      background: darkTheme.palette.background.default
     }
   },
   [theme.breakpoints.only('sm')]: {
@@ -206,7 +206,7 @@ const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     fallbacks: {
-      background: darkTheme.palette.background.paper
+      background: darkTheme.palette.background.default
     }
   },
   [theme.breakpoints.between('md', 'lg')]: {
@@ -220,7 +220,7 @@ const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     fallbacks: {
-      background: darkTheme.palette.background.paper
+      background: darkTheme.palette.background.default
     }
   },
   background: [
@@ -233,7 +233,7 @@ const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) 
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   fallbacks: {
-    background: darkTheme.palette.background.paper
+    background: darkTheme.palette.background.default
   }
 });
 
