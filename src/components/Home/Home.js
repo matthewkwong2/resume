@@ -5,7 +5,7 @@ import {
   Toolbar,
   makeStyles
 } from '@material-ui/core';
-import { createFullScreenBackground, darkTheme } from 'theme';
+import { createBackground, darkTheme } from 'theme';
 
 import DownloadResumeButton from './DownloadResumeButton';
 import React from 'react';
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: 0,
     height: '100vh',
-    ...createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
+    ...createBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
   },
   container: {
     display: 'flex',

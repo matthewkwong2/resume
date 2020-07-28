@@ -1,6 +1,6 @@
 import { Container, Grid, ThemeProvider, makeStyles } from '@material-ui/core';
 import { Gift, Globe, Heart, HotCup } from 'components/icons';
-import { createFullScreenBackground, darkTheme } from 'theme';
+import { createBackground, darkTheme } from 'theme';
 
 import FactCard from './FactCard';
 import React from 'react';
@@ -14,7 +14,7 @@ import funFact from 'constants/funFact';
 import { useInView } from 'react-intersection-observer';
 
 const useStyles = makeStyles(theme => ({
-  root: createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
+  root: createBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
 }));
 
 const FunFact = () => {

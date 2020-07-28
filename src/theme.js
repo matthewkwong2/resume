@@ -3,6 +3,7 @@ import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
 import azonix from 'assets/font/azonix.woff';
 import azonix2 from 'assets/font/azonix.woff2';
 import { blue } from '@material-ui/core/colors';
+import { isIOS } from 'api/APIUtils';
 import robotoBold from 'assets/font/roboto-bold.woff';
 import robotoBold2 from 'assets/font/roboto-bold.woff2';
 import robotoLight from 'assets/font/roboto-light.woff';
@@ -180,55 +181,34 @@ const darkTheme = responsiveFontSizes(createMuiTheme({
   }
 }));
 
-const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) => ({
+const createBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) => ({
   [theme.breakpoints.only('xs')]: {
-    background: [
+    backgroundImage: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgXs})`,
       `url(${bgPlaceholder})`
-    ],
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.default
-    }
+    ]
   },
   [theme.breakpoints.only('sm')]: {
-    background: [
+    backgroundImage: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgSm})`,
       `url(${bgPlaceholder})`
-    ],
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.default
-    }
+    ]
   },
   [theme.breakpoints.between('md', 'lg')]: {
-    background: [
+    backgroundImage: [
       `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
       `url(${bgMd})`,
       `url(${bgPlaceholder})`
-    ],
-    backgroundAttachment: 'fixed',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.default
-    }
+    ]
   },
-  background: [
+  backgroundImage: [
     `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
     `url(${bg})`,
     `url(${bgPlaceholder})`
   ],
-  backgroundAttachment: 'fixed',
+  backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
@@ -238,4 +218,4 @@ const createFullScreenBackground = (theme, bg, bgMd, bgSm, bgXs, bgPlaceholder) 
 });
 
 export default theme;
-export { darkTheme, createFullScreenBackground };
+export { darkTheme, createBackground };

@@ -1,5 +1,5 @@
 import { Container, ThemeProvider, makeStyles } from '@material-ui/core';
-import { createFullScreenBackground, darkTheme } from 'theme';
+import { createBackground, darkTheme } from 'theme';
 
 import Carousel from './Carousel';
 import { HexagonSlice5 } from 'mdi-material-ui';
@@ -14,7 +14,7 @@ import nav from 'constants/nav';
 import testimonial from 'constants/testimonial';
 
 const useStyles = makeStyles(theme => ({
-  root: createFullScreenBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
+  root: createBackground(theme, bg, bgMd, bgSm, bgXs, bgPlaceholder)
 }));
 
 const Testimonial = () => {
