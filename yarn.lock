@@ -5020,6 +5020,11 @@ follow-redirects@^1.0.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
   integrity sha512-tmRv0AVuR7ZyouUHLeNSiO6pqulF7dYa3s19c6t+wz9LD69/uSzdMxJ2S91nTI9U3rt/IldxpzMOFejp6f0hjg==
 
+fontsource-rubik@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/fontsource-rubik/-/fontsource-rubik-2.2.6.tgz#8cf50e50187a2c43f175921a995c98fc3e38a610"
+  integrity sha512-DSzR13n3W6nwh0yl2X9ai/ipQj9P7hOqcKzcIL7qa8CH6d6ABy0UV43em11zisAGfjx/rHVahZD0Q09nJUvDWQ==
+
 for-in@^0.1.3:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
