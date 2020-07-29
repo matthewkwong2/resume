@@ -7,7 +7,7 @@ import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import React, { StrictMode } from 'react';
 import { swContentCached, swNewContentAvail } from 'actions';
 
-import App from 'components/App';
+import App from 'App';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import store from 'store';

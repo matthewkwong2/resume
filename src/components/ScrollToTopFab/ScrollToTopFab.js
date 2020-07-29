@@ -2,7 +2,6 @@ import { Fab, Zoom, makeStyles, useScrollTrigger } from '@material-ui/core';
 
 import { ArrowUp } from 'components/icons';
 import React from 'react';
-import nav from 'constants/nav';
 
 const useStyles = makeStyles(theme => ({
   fab: {
@@ -21,10 +20,9 @@ const ScrollToTopFab = () => {
     disableHysteresis: true,
     threshold: 100,
   });
-  const homeSection = document.getElementById(nav.home);
 
   const handleClick = () => {
-    homeSection.scrollIntoView({ behavior: 'smooth' });
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   };
 
   return (
