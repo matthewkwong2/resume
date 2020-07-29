@@ -71,6 +71,11 @@ const theme = responsiveFontSizes(createMuiTheme({
         }
       }
     },
+    MuiFab: {
+      root: {
+        borderRadius: lightBaseTheme.shape.borderRadius
+      }
+    },
     MuiSnackbarContent: {
       root: {
         backgroundColor: darkBaseTheme.palette.background.default
