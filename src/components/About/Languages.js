@@ -9,9 +9,9 @@ const Languages = () => {
   const keys = ['rating'];
   const margin = {
     top: theme.spacing(3),
-    right: theme.spacing(6),
+    right: theme.spacing(6.25),
     bottom: 0,
-    left: theme.spacing(6)
+    left: theme.spacing(6.25)
   };
 
   return (
