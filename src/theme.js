@@ -24,6 +24,11 @@ const darkBaseTheme = createMuiTheme({
 
 const theme = responsiveFontSizes(createMuiTheme({
   overrides: {
+    MuiButton: {
+      root: {
+        textTransform: 'capitalize'
+      }
+    },
     MuiCssBaseline: {
       '@global': {
         '@font-face': [
@@ -118,6 +123,11 @@ const theme = responsiveFontSizes(createMuiTheme({
 
 const darkTheme = responsiveFontSizes(createMuiTheme({
   overrides: {
+    MuiButton: {
+      root: {
+        textTransform: 'capitalize'
+      }
+    },
     MuiDivider: {
       root: {
         backgroundColor: fade(darkBaseTheme.palette.common.white, 0.12 * 3)
