@@ -13,6 +13,9 @@ const Languages = () => {
     bottom: 0,
     left: theme.spacing(6.25)
   };
+  const nivoTheme = {
+    fontFamily: theme.typography.fontFamily
+  };
 
   return (
     <Box height={300} mt={6}>
@@ -26,6 +29,7 @@ const Languages = () => {
         borderWidth={0}
         fillOpacity={1}
         margin={margin}
+        theme={nivoTheme}
       />
     </Box>
   );

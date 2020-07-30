@@ -71,8 +71,8 @@ const theme = responsiveFontSizes(createMuiTheme({
           },
           scrollMarginTop: 56 + lightBaseTheme.spacing(3) + 'px'
         },
-        '.Typewriter': {
-          display: 'inline'
+        '.Typewriter__cursor': {
+          fontWeight: lightBaseTheme.typography.h2.fontWeight
         }
       }
     },

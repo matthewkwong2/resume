@@ -5,9 +5,9 @@ import {
   useMediaQuery,
   useTheme
 } from '@material-ui/core';
+import React, { useEffect, useRef } from 'react';
 
-import React from 'react';
-import Typewriter from 'typewriter-effect';
+import Typewriter from 'typewriter-effect/dist/core';
 import data from 'constants/data';
 import home from 'constants/home';
 
@@ -29,15 +29,18 @@ const Title = () => {
   const classes = useStyles();
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+  const typewriterRef = useRef(null);
 
-  const typewriterOptions = {
-    strings: [
-      `${data.firstName} ${data.lastName}.`,
-      ...data.occupations.map(occupation => `A ${occupation}.`)
-    ],
-    loop: true,
-    autoStart: true
-  };
+  useEffect(() => {
+    new Typewriter(typewriterRef.current, {
+      strings: [
+        `${data.firstName} ${data.lastName}.`,
+        ...data.occupations.map(occupation => `A ${occupation}.`)
+      ],
+      loop: true,
+      autoStart: true
+    });
+  }, []);
 
   return (
     <Box display='flex' flexDirection='column' alignItems='center'>
@@ -55,9 +58,7 @@ const Title = () => {
         className={classes.title}
       >
         {home.titlePrefix}
-        <span className={classes.importantText}>
-          <Typewriter options={typewriterOptions} />
-        </span>
+        <span ref={typewriterRef} className={classes.importantText} />
       </Typography>
     </Box>
   );
