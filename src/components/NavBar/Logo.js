@@ -2,7 +2,6 @@ import { Button, Typography, makeStyles } from '@material-ui/core';
 
 import React from 'react';
 import data from 'constants/data';
-import nav from 'constants/nav';
 
 const useStyles = makeStyles({
   root: {
@@ -15,10 +14,9 @@ const useStyles = makeStyles({
 
 const Logo = () => {
   const classes = useStyles();
-  const homeSection = document.getElementById(nav.home);
 
   const handleClick = () => {
-    homeSection.scrollIntoView({ behavior: 'smooth' });
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
   };
 
   return (
