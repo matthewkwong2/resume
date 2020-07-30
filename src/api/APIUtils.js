@@ -1,5 +1,3 @@
-export const isPercentage = text => /^\d+(\.\d+)?%$/.test(text);
-
 export const isIOS = () => [
   'iPad Simulator',
   'iPhone Simulator',

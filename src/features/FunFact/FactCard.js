@@ -9,7 +9,7 @@ import {
 import CountUp from 'react-countup';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { isPercentage } from 'api/APIUtils';
+import { isPercentage } from 'api/funFact';
 
 const useStyles = makeStyles(theme => ({
   root: {
