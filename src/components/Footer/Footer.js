@@ -13,9 +13,6 @@ import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    // backgroundColor: theme.palette.grey[100]
-  },
   gridContainer: {
     [theme.breakpoints.up('sm')]: {
       paddingLeft: theme.spacing(5),
@@ -32,7 +29,7 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <footer className={classes.root}>
+    <footer>
       <Divider variant='middle' />
       <Container>
         <Grid className={classes.gridContainer} container alignItems='center' justify='space-between'>
