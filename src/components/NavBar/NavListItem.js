@@ -1,4 +1,4 @@
-import { ListItem, ListItemText, Typography, makeStyles } from '@material-ui/core';
+import { ListItem, ListItemText, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import React from 'react';
