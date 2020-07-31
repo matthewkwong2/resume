@@ -1,6 +1,7 @@
 import {
   Box,
   Container,
+  Divider,
   Grid,
   makeStyles,
   useMediaQuery,
@@ -13,7 +14,7 @@ import SocialMedia from 'components/SocialMedia';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.grey[100]
+    // backgroundColor: theme.palette.grey[100]
   },
   gridContainer: {
     [theme.breakpoints.up('sm')]: {
@@ -32,6 +33,7 @@ const Footer = () => {
 
   return (
     <footer className={classes.root}>
+      <Divider variant='middle' />
       <Container>
         <Grid className={classes.gridContainer} container alignItems='center' justify='space-between'>
           <Grid item sm='auto' xs={12}>

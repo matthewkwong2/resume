@@ -20,7 +20,7 @@ const useActiveSection = () => {
     const handleScroll = () => {
       let active = nav.home;
       if (isScrollToBottom()) {
-        setActiveSection(nav.contact);
+        setActiveSection(sections[0]);
       } else {
         for (const sectionId of sections) {
           const section = document.getElementById(sectionId);
