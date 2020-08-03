@@ -5,11 +5,11 @@ import Logo from './Logo';
 import { Menu } from 'components/icons';
 import NavListItem from './NavListItem';
 import nav from 'constants/nav';
-import useActiveSection from 'hooks/useActiveSection';
+import useActiveSectionId from 'hooks/useActiveSectionId';
 
 const NavBarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const activeSection = useActiveSection();
+  const activeSection = useActiveSectionId();
 
   const handleMenuButtonClick = () => {
     setMenuOpen(!menuOpen);

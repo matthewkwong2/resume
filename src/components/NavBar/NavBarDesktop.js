@@ -11,7 +11,7 @@ import Logo from './Logo';
 import NavButton from './NavButton';
 import { darkTheme } from 'theme';
 import nav from 'constants/nav';
-import useActiveSection from 'hooks/useActiveSection';
+import useActiveSectionId from 'hooks/useActiveSectionId';
 
 const NavBarDesktop = () => {
   const theme = useTheme();
@@ -19,7 +19,7 @@ const NavBarDesktop = () => {
     disableHysteresis: true,
     threshold: 0
   });
-  const activeSection = useActiveSection();
+  const activeSection = useActiveSectionId();
 
   const color = trigger ? 'inherit' : theme.props?.MuiAppBar?.color;
   const elevation = trigger ? 4 : theme.props?.MuiAppBar?.elevation;

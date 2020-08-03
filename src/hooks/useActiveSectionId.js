@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import nav from 'constants/nav';
 
-const useActiveSection = () => {
+const useActiveSectionId = () => {
   const [activeSection, setActiveSection] = useState(nav.home);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const useActiveSection = () => {
   return activeSection;
 };
 
-export default useActiveSection;
+export default useActiveSectionId;
