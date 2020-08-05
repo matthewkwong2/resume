@@ -10,7 +10,7 @@
     "@nivo/radar": "^0.62.0",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
-    "fontsource-rubik": "^2.2.6",
+    "fontsource-rubik": "^3.0.3",
     "intersection-observer": "^0.11.0",
     "mdi-material-ui": "^6.17.0",
     "react": "^16.13.1",

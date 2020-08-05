@@ -1,7 +1,7 @@
-import 'fontsource-rubik/latin-300-normal.css';
-import 'fontsource-rubik/latin-400-normal.css';
-import 'fontsource-rubik/latin-500-normal.css';
-import 'fontsource-rubik/latin-700-normal.css';
+import 'fontsource-rubik/300-normal.css';
+import 'fontsource-rubik/400-normal.css';
+import 'fontsource-rubik/500-normal.css';
+import 'fontsource-rubik/700-normal.css';
 
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
 import { isIOS, isWebPSupported } from 'api/APIUtils';
