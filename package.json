@@ -10,7 +10,7 @@
     "@nivo/radar": "^0.62.0",
     "clsx": "^1.1.1",
     "core-js": "^3.6.5",
-    "fontsource-rubik": "^3.0.3",
+    "fontsource-rubik": "^3.0.9",
     "intersection-observer": "^0.11.0",
     "mdi-material-ui": "^6.18.0",
     "react": "^16.13.1",
@@ -26,14 +26,14 @@
     "validate.js": "^0.13.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.3",
-    "@testing-library/react": "^10.4.8",
-    "@testing-library/user-event": "^12.1.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
+    "@testing-library/user-event": "^12.1.2",
     "@welldone-software/why-did-you-render": "^4.3.1",
     "cra-preact": "^0.4.0",
     "gh-pages": "^3.1.0",
     "react-scripts": "^3.4.3",
-    "source-map-explorer": "^2.4.2"
+    "source-map-explorer": "^2.5.0"
   },
   "scripts": {
     "predeploy": "yarn build",
