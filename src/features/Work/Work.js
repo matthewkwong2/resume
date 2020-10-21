@@ -1,6 +1,6 @@
 import Companies from './Companies';
 import { Container } from '@material-ui/core';
-import { HexagonSlice4 } from 'mdi-material-ui'
+import { HexagonSlice4 } from 'mdi-material-ui';
 import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import WorkingExpTimeline from './WorkingExpTimeline';
