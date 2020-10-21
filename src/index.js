@@ -1,4 +1,3 @@
-import 'polyfill';
 import 'wdyr';
 
 import * as serviceWorker from 'serviceWorker';

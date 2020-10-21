@@ -9,9 +9,7 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@nivo/radar": "0.62.0",
     "clsx": "^1.1.1",
-    "core-js": "^3.6.5",
     "fontsource-rubik": "^3.0.10",
-    "intersection-observer": "^0.11.0",
     "mdi-material-ui": "^6.20.0",
     "react": "^17.0.0",
     "react-countup": "^4.3.3",
@@ -21,7 +19,6 @@
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9",
     "redux": "^4.0.5",
-    "smoothscroll-polyfill": "^0.4.4",
     "typewriter-effect": "^2.13.1",
     "validate.js": "^0.13.1"
   },
