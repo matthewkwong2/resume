@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Box } from '@material-ui/core';
 import Endorsement from './Endorsement';
@@ -38,8 +38,8 @@ const Carousel = () => {
         index={index}
         onChangeIndex={handleChangeIndex}
       />
-    </Box >
+    </Box>
   );
 };
 
-export default memo(Carousel);
+export default Carousel;

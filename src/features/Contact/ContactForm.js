@@ -7,14 +7,14 @@ import {
   InputLabel,
   OutlinedInput
 } from '@material-ui/core';
-import React, { createRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { isEmailValid, isValueEmpty } from 'api/contact';
 
 import contact from 'constants/contact';
 import data from 'constants/data';
-import validate from 'validate.js';
 
 const ContactForm = () => {
-  const emailInputRef = createRef();
+  const emailInputRef = useRef(null);
   const [emailInputErrorMessage, setEmailInputErrorMessage] = useState(null);
   const invalidEmail = Boolean(emailInputErrorMessage);
 
@@ -24,18 +24,17 @@ const ContactForm = () => {
     subject: '',
     message: ''
   }));
-  const emailValidationOption = {
-    presence: {
-      allowEmpty: false,
-      message: contact.emailValidationErrorMessage.presence
-    },
-    email: {
-      message: contact.emailValidationErrorMessage.emailFormat
-    }
-  };
 
   const validateEmail = value => {
-    return validate.single(value, emailValidationOption)?.[0];
+    if (isValueEmpty(value)) {
+      return contact.emailValidationErrorMessage.presence;
+    }
+
+    if (!isEmailValid(value)) {
+      return contact.emailValidationErrorMessage.emailFormat;
+    }
+
+    return null;
   };
 
   const handleChange = event => {

@@ -9,18 +9,17 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "@nivo/radar": "0.62.0",
     "clsx": "^1.1.1",
+    "countup.js": "^2.0.7",
     "fontsource-rubik": "^3.0.10",
     "mdi-material-ui": "^6.20.0",
     "react": "^17.0.0",
-    "react-countup": "^4.3.3",
     "react-dom": "^17.0.0",
     "react-intersection-observer": "^8.29.1",
     "react-redux": "^7.2.1",
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9",
     "redux": "^4.0.5",
-    "typewriter-effect": "^2.13.1",
-    "validate.js": "^0.13.1"
+    "typewriter-effect": "^2.13.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",

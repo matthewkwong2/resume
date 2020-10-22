@@ -5,11 +5,16 @@ import {
   fade,
   makeStyles
 } from '@material-ui/core';
+import React, { useEffect, useRef } from 'react';
 
-import CountUp from 'react-countup';
+import { CountUp } from 'countup.js';
 import PropTypes from 'prop-types';
-import React from 'react';
 import { isPercentage } from 'api/funFact';
+
+// import CountUp from 'react-countup';
+
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,24 +40,32 @@ const useStyles = makeStyles(theme => ({
 
 const FactCard = ({ Icon, title, value = 0, startCountDown = false }) => {
   const classes = useStyles();
+  const textRef = useRef(null);
+  const countUp = new CountUp(
+    textRef.current,
+    parseInt(value, 10),
+    {
+      duration: 3,
+      suffix: isPercentage(value) ? '%' : ''
+    }
+  );
+
+  useEffect(() => {
+    if (startCountDown) {
+      countUp.start();
+    }
+  }, [countUp, startCountDown]);
 
   return (
     <Card className={classes.root} variant='outlined'>
       <CardContent className={classes.cardContent}>
         <Icon className={classes.icon} />
-        <Typography color='textPrimary' variant='h3' className={classes.value}>
-          {
-            startCountDown
-              ? (
-                <CountUp
-                  end={parseInt(value, 10)}
-                  duration={3}
-                  suffix={isPercentage(value) ? '%' : null}
-                />
-              )
-              : isPercentage(value) ? '0%' : 0
-          }
-        </Typography>
+        <Typography
+          ref={textRef}
+          color='textPrimary'
+          variant='h3'
+          className={classes.value}
+        />
         <Typography color='textSecondary' variant='body2'>
           {title}
         </Typography>
