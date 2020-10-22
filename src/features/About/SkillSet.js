@@ -12,7 +12,7 @@ const SkillSet = () => {
       <Grid container spacing={6}>
         <Grid item sm={6} xs={12}>
           <div>
-            {data.about.skills.splice(0, mid).map(({ name, rating }) => (
+            {data.about.skills.slice(0, mid).map(({ name, rating }) => (
               <SkillRating
                 key={name}
                 name={name}
@@ -23,7 +23,7 @@ const SkillSet = () => {
         </Grid>
         <Grid item sm={6} xs={12}>
           <div>
-            {data.about.skills.splice(-mid).map(({ name, rating }) => (
+            {data.about.skills.slice(-mid).map(({ name, rating }) => (
               <SkillRating
                 key={name}
                 name={name}
