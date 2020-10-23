@@ -21,7 +21,7 @@ const NavListItem = ({ label, id, active }) => {
   };
 
   const handleClick = () => {
-    section.scrollIntoView();
+    section.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (

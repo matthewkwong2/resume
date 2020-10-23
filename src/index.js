@@ -9,8 +9,11 @@ import { swContentCached, swNewContentAvail } from 'actions';
 import App from 'App';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import smoothscroll from 'smoothscroll-polyfill';
 import store from 'store';
 import theme from 'theme';
+
+smoothscroll.polyfill();
 
 render(
   <StrictMode>

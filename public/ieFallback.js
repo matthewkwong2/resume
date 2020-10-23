@@ -6,9 +6,8 @@ function isIE() {
 }
 
 if (isIE()) {
-  while (document.body.firstChild) {
-    document.body.removeChild(document.body.lastChild);
-  }
+  var root = document.getElementById('root');
+  root.parentNode.removeChild(root);
 
   document.body.style.height = '100%';
   document.body.style.width = '100%';
