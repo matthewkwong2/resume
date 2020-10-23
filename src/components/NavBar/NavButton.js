@@ -25,7 +25,7 @@ const NavButton = ({ label, id, active }) => {
   const section = document.getElementById(id);
 
   const handleClick = () => {
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView();
   };
 
   return (

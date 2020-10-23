@@ -22,7 +22,7 @@ const ScrollToTopFab = () => {
   });
 
   const handleClick = () => {
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    window.scroll(0, 0);
   };
 
   return (
