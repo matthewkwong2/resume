@@ -16,7 +16,7 @@ const EducationalExpTimeline = () => (
         title: subject,
         subheader: school,
         description,
-        file: require(`assets/document/${proof}`)
+        file: require(`assets/document/${proof}`).default
       }))}
     />
   </Box>

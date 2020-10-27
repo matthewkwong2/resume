@@ -3,11 +3,11 @@ import 'wdyr';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
-import React, { StrictMode } from 'react';
 import { swContentCached, swNewContentAvail } from 'actions';
 
 import App from 'App';
 import { Provider } from 'react-redux';
+import { StrictMode } from 'react';
 import { render } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import smoothscroll from 'smoothscroll-polyfill';
