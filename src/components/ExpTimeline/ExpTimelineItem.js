@@ -16,7 +16,6 @@ import {
 
 import { Download } from 'components/icons';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const useStyles = makeStyles({
   card: {

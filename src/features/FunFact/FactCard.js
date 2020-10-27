@@ -5,16 +5,11 @@ import {
   fade,
   makeStyles
 } from '@material-ui/core';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 import { CountUp } from 'countup.js';
 import PropTypes from 'prop-types';
 import { isPercentage } from 'api/funFact';
-
-// import CountUp from 'react-countup';
-
-
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,15 +35,15 @@ const useStyles = makeStyles(theme => ({
 
 const FactCard = ({ Icon, title, value = 0, startCountDown = false }) => {
   const classes = useStyles();
-  const textRef = useRef(null);
-  const countUp = new CountUp(
-    textRef.current,
+  const countUpRef = useRef(null);
+  const countUp = useMemo(() => new CountUp(
+    countUpRef.current,
     parseInt(value, 10),
     {
       duration: 3,
       suffix: isPercentage(value) ? '%' : ''
     }
-  );
+  ), [value]);
 
   useEffect(() => {
     if (startCountDown) {
@@ -61,7 +56,7 @@ const FactCard = ({ Icon, title, value = 0, startCountDown = false }) => {
       <CardContent className={classes.cardContent}>
         <Icon className={classes.icon} />
         <Typography
-          ref={textRef}
+          ref={countUpRef}
           color='textPrimary'
           variant='h3'
           className={classes.value}

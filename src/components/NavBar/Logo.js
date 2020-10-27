@@ -1,6 +1,5 @@
 import { Button, Typography, makeStyles } from '@material-ui/core';
 
-import React from 'react';
 import data from 'constants/data';
 
 const useStyles = makeStyles({

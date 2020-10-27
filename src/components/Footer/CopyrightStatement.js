@@ -1,6 +1,5 @@
 import { Typography, makeStyles } from '@material-ui/core';
 
-import React from 'react';
 import data from 'constants/data';
 import footer from 'constants/footer';
 

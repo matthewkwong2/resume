@@ -1,6 +1,5 @@
 import { Box, Button } from '@material-ui/core';
 
-import React from 'react';
 import home from 'constants/home';
 import resume from 'assets/document/resume.pdf';
 

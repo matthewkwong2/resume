@@ -5,7 +5,7 @@ import {
   useMediaQuery,
   useTheme
 } from '@material-ui/core';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import Typewriter from 'typewriter-effect/dist/core';
 import data from 'constants/data';

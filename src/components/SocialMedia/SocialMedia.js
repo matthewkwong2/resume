@@ -1,7 +1,6 @@
 import { Box, IconButton, makeStyles } from '@material-ui/core';
 import { Facebook, Github, Linkedin } from 'mdi-material-ui';
 
-import React from 'react';
 import data from 'constants/data';
 
 const useStyles = makeStyles(theme => ({

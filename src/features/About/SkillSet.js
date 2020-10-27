@@ -1,6 +1,5 @@
 import { Box, Grid } from '@material-ui/core';
 
-import React from 'react';
 import SkillRating from './SkillRating';
 import data from 'constants/data';
 

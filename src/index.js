@@ -1,6 +1,6 @@
 import 'wdyr';
 
-import * as serviceWorker from 'serviceWorker';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import React, { StrictMode } from 'react';
@@ -9,6 +9,7 @@ import { swContentCached, swNewContentAvail } from 'actions';
 import App from 'App';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import reportWebVitals from './reportWebVitals';
 import smoothscroll from 'smoothscroll-polyfill';
 import store from 'store';
 import theme from 'theme';
@@ -27,8 +28,11 @@ render(
   document.getElementById('root')
 );
 
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
 if (process.env.NODE_ENV === 'development') {
-  serviceWorker.unregister();
+  serviceWorkerRegistration.unregister();
 } else {
   const swConfig = {
     onUpdate: registration => {
@@ -42,5 +46,10 @@ if (process.env.NODE_ENV === 'development') {
     }
   };
 
-  serviceWorker.register(swConfig);
+  serviceWorkerRegistration.register(swConfig);
 }
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

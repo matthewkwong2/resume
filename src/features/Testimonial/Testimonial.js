@@ -3,7 +3,6 @@ import { createBackground, darkTheme } from 'theme';
 
 import Carousel from './Carousel';
 import { HexagonSlice5 } from 'mdi-material-ui';
-import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import bgFallback from 'assets/img/bg_testimonial.jpg';
 import bgMdFallback from 'assets/img/bg_testimonial_md.jpg';

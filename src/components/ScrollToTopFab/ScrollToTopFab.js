@@ -1,7 +1,6 @@
 import { Fab, Zoom, makeStyles, useScrollTrigger } from '@material-ui/core';
 
 import { ArrowUp } from 'components/icons';
-import React from 'react';
 
 const useStyles = makeStyles(theme => ({
   fab: {

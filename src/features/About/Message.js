@@ -1,6 +1,5 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 
-import React from 'react';
 import about from 'constants/about';
 import data from 'constants/data';
 

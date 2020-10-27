@@ -5,8 +5,8 @@ import {
   useScrollTrigger,
   useTheme
 } from '@material-ui/core';
-import React, { Fragment } from 'react';
 
+import { Fragment } from 'react';
 import Logo from './Logo';
 import NavButton from './NavButton';
 import { darkTheme } from 'theme';

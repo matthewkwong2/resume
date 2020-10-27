@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { Snackbar, makeStyles, useScrollTrigger } from '@material-ui/core';
 import { isSwContentCached, isSwNewContentAvail } from 'selectors';
+import { useEffect, useState } from 'react';
 
 import ReloadButton from './ReloadButton';
 import app from 'constants/app';

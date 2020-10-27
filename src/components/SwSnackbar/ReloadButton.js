@@ -1,7 +1,6 @@
 import { Button, ThemeProvider } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-import React from 'react';
 import app from 'constants/app';
 import { darkTheme } from 'theme';
 

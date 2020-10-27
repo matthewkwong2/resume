@@ -1,7 +1,6 @@
 import { Box } from '@material-ui/core';
 import PaginationItem from './PaginationItem';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const Pagination = ({ count = 1, onChangeIndex, index }) => {
   const handleSelectIndex = idx => () => {

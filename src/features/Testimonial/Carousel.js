@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
 import { Box } from '@material-ui/core';
 import Endorsement from './Endorsement';
 import Pagination from './Pagination';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import data from 'constants/data';
+import { useState } from 'react';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 

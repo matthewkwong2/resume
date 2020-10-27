@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-
+import { Fragment } from 'react';
 import { Hidden } from '@material-ui/core';
 import NavBarDesktop from './NavBarDesktop';
 import NavBarMobile from './NavBarMobile';

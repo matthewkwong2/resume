@@ -3,7 +3,6 @@ import { Container, Grid, makeStyles } from '@material-ui/core';
 import ContactForm from './ContactForm';
 import { HexagonSlice6 } from 'mdi-material-ui';
 import PersonalInfo from './PersonalInfo';
-import React from 'react';
 import SectionHeader from 'components/SectionHeader';
 import contact from 'constants/contact';
 import nav from 'constants/nav';

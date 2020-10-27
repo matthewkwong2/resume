@@ -1,7 +1,6 @@
 import { Grid, makeStyles } from '@material-ui/core';
 
 import CompanyLogo from './CompanyLogo';
-import React from 'react';
 import ha from 'assets/img/ha.png';
 import hku from 'assets/img/hku.png';
 import versitech from 'assets/img/versitech.png';

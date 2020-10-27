@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core';
 
 import CopyrightStatement from './CopyrightStatement';
-import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 
 const useStyles = makeStyles(theme => ({

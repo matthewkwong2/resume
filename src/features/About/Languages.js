@@ -1,5 +1,5 @@
 import { Box, useTheme } from '@material-ui/core';
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 
 import { Skeleton } from '@material-ui/lab';
 import data from 'constants/data';

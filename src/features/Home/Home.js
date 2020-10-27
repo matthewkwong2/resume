@@ -8,7 +8,6 @@ import {
 import { createBackground, darkTheme } from 'theme';
 
 import DownloadResumeButton from './DownloadResumeButton';
-import React from 'react';
 import SocialMedia from 'components/SocialMedia';
 import Title from './Title';
 import bgFallback from 'assets/img/bg_home.jpg';

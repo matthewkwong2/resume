@@ -1,6 +1,5 @@
 import { Box } from '@material-ui/core';
 import ExpTimeline from 'components/ExpTimeline';
-import React from 'react';
 import data from 'constants/data';
 
 const EducationalExpTimeline = () => (

@@ -1,7 +1,6 @@
 import { Box, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const useStyles = makeStyles(theme => ({
   root: {

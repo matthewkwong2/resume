@@ -3,7 +3,6 @@ import { Gift, Globe, Heart, HotCup } from 'components/icons';
 import { createBackground, darkTheme } from 'theme';
 
 import FactCard from './FactCard';
-import React from 'react';
 import bgFallback from 'assets/img/bg_fun_fact.jpg';
 import bgMdFallback from 'assets/img/bg_fun_fact_md.jpg';
 import bgMdWebp from 'assets/img/bg_fun_fact_md.webp';

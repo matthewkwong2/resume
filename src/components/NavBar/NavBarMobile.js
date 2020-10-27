@@ -1,11 +1,11 @@
 import { AppBar, Collapse, IconButton, List, Toolbar } from '@material-ui/core';
-import React, { useState } from 'react';
 
 import Logo from './Logo';
 import { Menu } from 'components/icons';
 import NavListItem from './NavListItem';
 import nav from 'constants/nav';
 import useActiveSectionId from 'hooks/useActiveSectionId';
+import { useState } from 'react';
 
 const NavBarMobile = () => {
   const [menuOpen, setMenuOpen] = useState(false);

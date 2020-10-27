@@ -7,8 +7,8 @@ import {
   InputLabel,
   OutlinedInput
 } from '@material-ui/core';
-import React, { useRef, useState } from 'react';
 import { isEmailValid, isValueEmpty } from 'api/contact';
+import { useRef, useState } from 'react';
 
 import contact from 'constants/contact';
 import data from 'constants/data';
