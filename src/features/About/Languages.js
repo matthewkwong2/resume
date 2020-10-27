@@ -1,7 +1,6 @@
 import { Box, useTheme } from '@material-ui/core';
 import { Suspense, lazy } from 'react';
 
-import { Skeleton } from '@material-ui/lab';
 import data from 'constants/data';
 import { useInView } from 'react-intersection-observer';
 
@@ -21,19 +20,12 @@ const Languages = () => {
   };
 
   const { ref, inView } = useInView({
+    rootMargin: '50%',
     triggerOnce: true,
   });
 
-  const radarChartFallback = (
-    <Skeleton
-      variant='rect'
-      height='100%'
-      width='100%'
-    />
-  );
-
   const lazyRadarChart = (
-    <Suspense fallback={radarChartFallback}>
+    <Suspense fallback={null}>
       <RadarChart
         data={data.about.languages}
         indexBy='name'
@@ -51,7 +43,7 @@ const Languages = () => {
 
   return (
     <Box ref={ref} height={300} mt={6}>
-      {inView ? lazyRadarChart : radarChartFallback}
+      {inView ? lazyRadarChart : null}
     </Box>
   );
 };
