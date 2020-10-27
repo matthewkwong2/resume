@@ -49,7 +49,7 @@ const FunFact = () => {
                 Icon={Globe}
                 title={funFact.completedCourses}
                 value={data.funFact.completedCourses}
-                startCountDown={inView}
+                startCountUp={inView}
               />
             </Grid>
             <Grid item md={3} sm={6} xs={12}>
@@ -57,7 +57,7 @@ const FunFact = () => {
                 Icon={Gift}
                 title={funFact.completedProjects}
                 value={data.funFact.completedProjects}
-                startCountDown={inView}
+                startCountUp={inView}
               />
             </Grid>
             <Grid item md={3} sm={6} xs={12}>
@@ -65,7 +65,7 @@ const FunFact = () => {
                 Icon={Heart}
                 title={funFact.happySupervisors}
                 value={data.funFact.happySupervisors}
-                startCountDown={inView}
+                startCountUp={inView}
               />
             </Grid>
             <Grid item md={3} sm={6} xs={12}>
@@ -73,7 +73,7 @@ const FunFact = () => {
                 Icon={HotCup}
                 title={funFact.commitment}
                 value={data.funFact.commitment}
-                startCountDown={inView}
+                startCountUp={inView}
               />
             </Grid>
           </Grid>

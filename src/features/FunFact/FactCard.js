@@ -5,7 +5,7 @@ import {
   fade,
   makeStyles
 } from '@material-ui/core';
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { CountUp } from 'countup.js';
 import PropTypes from 'prop-types';
@@ -33,23 +33,24 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const FactCard = ({ Icon, title, value = 0, startCountDown = false }) => {
+const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
   const classes = useStyles();
   const countUpRef = useRef(null);
-  const countUp = useMemo(() => new CountUp(
-    countUpRef.current,
-    parseInt(value, 10),
-    {
-      duration: 3,
-      suffix: isPercentage(value) ? '%' : ''
-    }
-  ), [value]);
 
   useEffect(() => {
-    if (startCountDown) {
+    if (startCountUp) {
+      const countUp = new CountUp(
+        countUpRef.current,
+        parseInt(value, 10),
+        {
+          duration: 3,
+          suffix: isPercentage(value) ? '%' : ''
+        }
+      );
+
       countUp.start();
     }
-  }, [countUp, startCountDown]);
+  }, [value, startCountUp]);
 
   return (
     <Card className={classes.root} variant='outlined'>
@@ -76,7 +77,7 @@ FactCard.propTypes = {
     PropTypes.number,
     PropTypes.string
   ]).isRequired,
-  startCountDown: PropTypes.bool
+  startCountUp: PropTypes.bool
 };
 
 export default FactCard;
