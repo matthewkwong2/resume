@@ -154,33 +154,27 @@ const darkTheme = responsiveFontSizes(createMuiTheme({
 const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
   const { bg, bgMd, bgSm, bgXs } = isWebPSupported() ? bgsWebp : bgsFallback;
 
-  return {
-    [theme.breakpoints.only('xs')]: {
-      backgroundImage: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgXs})`,
-        `url(${bgPlaceholder})`
-      ]
-    },
-    [theme.breakpoints.only('sm')]: {
-      backgroundImage: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgSm})`,
-        `url(${bgPlaceholder})`
-      ]
-    },
-    [theme.breakpoints.between('md', 'lg')]: {
-      backgroundImage: [
-        `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
-        `url(${bgMd})`,
-        `url(${bgPlaceholder})`
-      ]
-    },
-    backgroundImage: [
-      `linear-gradient(${fade(theme.palette.common.black, .7)}, ${fade(theme.palette.common.black, .7)})`,
+  const getBgImageCSS = bg => {
+    const overlay = fade(theme.palette.common.black, .7);
+
+    return [
+      `linear-gradient(${overlay}, ${overlay})`,
       `url(${bg})`,
       `url(${bgPlaceholder})`
-    ],
+    ];
+  };
+
+  return {
+    [theme.breakpoints.only('xs')]: {
+      backgroundImage: getBgImageCSS(bgXs)
+    },
+    [theme.breakpoints.only('sm')]: {
+      backgroundImage: getBgImageCSS(bgSm)
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      backgroundImage: getBgImageCSS(bgMd)
+    },
+    backgroundImage: getBgImageCSS(bg),
     backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
