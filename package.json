@@ -38,17 +38,23 @@
   },
   "devDependencies": {
     "@welldone-software/why-did-you-render": "^5.0.0",
+    "browserslist-useragent-regexp": "^2.1.1",
+    "endent": "^2.0.1",
     "gh-pages": "^3.1.0",
-    "source-map-explorer": "^2.5.0"
+    "source-map-explorer": "^2.5.0",
+    "yamlparser": "^0.0.2"
   },
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -r https://github.com/matthewkwong2/matthewkwong2.github.io.git -b master -d build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "prestart": "yarn generate-supported-browsers-regex",
     "start": "react-scripts start",
+    "prebuild": "yarn generate-supported-browsers-regex",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-supported-browsers-regex": "node ./generateSupportedBrowsersRegex.js"
   },
   "eslintConfig": {
     "rules": {
