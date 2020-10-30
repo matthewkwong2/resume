@@ -25,21 +25,23 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PaginationItem = ({ active = false, onClick }) => {
+const PaginationItem = ({ active = false, onClick, idx }) => {
   const classes = useStyles();
   const className = clsx(classes.root, { [classes.active]: active });
+
   return (
     <ButtonBase
       className={className}
       onClick={onClick}
-      component='div'
+      aria-label={'go to page ' + idx}
     />
   );
 };
 
 PaginationItem.propTypes = {
   active: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  idx: PropTypes.number
 };
 
 export default PaginationItem;

@@ -7,7 +7,7 @@ const DownloadResumeButton = () => (
   <Box mt={4}>
     <Button
       variant='outlined'
-      color='primary'
+      color='secondary'
       size='large'
       href={resume}
       target='_blank'

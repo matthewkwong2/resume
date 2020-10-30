@@ -1,8 +1,6 @@
-import { Button, ThemeProvider } from '@material-ui/core';
-
+import { Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import app from 'constants/app';
-import { darkTheme } from 'theme';
 
 const ReloadButton = ({ onClose }) => {
   const handleClick = () => {
@@ -11,11 +9,9 @@ const ReloadButton = ({ onClose }) => {
   };
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <Button color='primary' size='small' onClick={handleClick}>
-        {app.reload}
-      </Button>
-    </ThemeProvider>
+    <Button color='secondary' size='small' onClick={handleClick}>
+      {app.reload}
+    </Button>
   );
 };
 

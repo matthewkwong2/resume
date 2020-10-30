@@ -8,21 +8,14 @@ import { isIOS, isWebPSupported } from 'api/APIUtils';
 
 import azonix from 'assets/font/azonix.woff';
 import azonix2 from 'assets/font/azonix.woff2';
-import { blue } from '@material-ui/core/colors';
 
-const lightBaseTheme = createMuiTheme({
-  palette: {
-    type: 'light'
-  }
-});
-
-const darkBaseTheme = createMuiTheme({
+const baseTheme = createMuiTheme({
   palette: {
     type: 'dark'
   }
 });
 
-const theme = responsiveFontSizes(createMuiTheme({
+const themeOptions = {
   overrides: {
     MuiButton: {
       root: {
@@ -59,31 +52,31 @@ const theme = responsiveFontSizes(createMuiTheme({
             scrollMarginTop: 64 + 'px'
           },
           scrollMarginTop: 56 + 'px',
-          paddingTop: lightBaseTheme.spacing(10),
-          paddingBottom: lightBaseTheme.spacing(10)
+          paddingTop: baseTheme.spacing(10),
+          paddingBottom: baseTheme.spacing(10)
         },
         input: {
           '@media (min-width: 0px) and (orientation: landscape)': {
-            scrollMarginTop: 48 + lightBaseTheme.spacing(3) + 'px'
+            scrollMarginTop: 48 + baseTheme.spacing(3) + 'px'
           },
           '@media (min-width: 600px)': {
-            scrollMarginTop: 64 + lightBaseTheme.spacing(3) + 'px'
+            scrollMarginTop: 64 + baseTheme.spacing(3) + 'px'
           },
-          scrollMarginTop: 56 + lightBaseTheme.spacing(3) + 'px'
+          scrollMarginTop: 56 + baseTheme.spacing(3) + 'px'
         },
         '.Typewriter__cursor': {
-          fontWeight: lightBaseTheme.typography.h2.fontWeight
+          fontWeight: baseTheme.typography.h2.fontWeight
         }
       }
     },
     MuiFab: {
       root: {
-        borderRadius: lightBaseTheme.shape.borderRadius
+        borderRadius: baseTheme.shape.borderRadius
       }
     },
     MuiSnackbarContent: {
       root: {
-        backgroundColor: darkBaseTheme.palette.background.default
+        backgroundColor: baseTheme.palette.background.default
       }
     },
     MuiTimeline: {
@@ -112,44 +105,41 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
   palette: {
     primary: {
-      main: darkBaseTheme.palette.background.default
+      main: baseTheme.palette.background.default
     },
-    secondary: blue
+    secondary: {
+      main: baseTheme.palette.common.white
+    }
   },
   typography: {
     fontFamily: '"Rubik", "Helvetica", "Arial", sans-serif'
   }
-}));
+};
 
-const darkTheme = responsiveFontSizes(createMuiTheme({
+const darkThemeOptions = {
+  ...themeOptions,
   overrides: {
-    MuiButton: {
-      root: {
-        textTransform: 'capitalize'
-      }
-    },
+    ...themeOptions.overrides,
     MuiDivider: {
       root: {
-        backgroundColor: fade(darkBaseTheme.palette.common.white, 0.12 * 3)
+        backgroundColor: fade(baseTheme.palette.common.white, 0.12 * 3)
       }
     }
   },
   props: {
+    ...themeOptions.props,
     MuiSvgIcon: {
-      htmlColor: darkBaseTheme.palette.text.primary
+      htmlColor: baseTheme.palette.common.white
     }
   },
   palette: {
-    primary: {
-      main: darkBaseTheme.palette.common.white
-    },
-    secondary: blue,
+    ...themeOptions.palette,
     type: 'dark'
-  },
-  typography: {
-    fontFamily: '"Rubik", "Helvetica", "Arial", sans-serif'
   }
-}));
+};
+
+const theme = responsiveFontSizes(createMuiTheme(themeOptions));
+const darkTheme = responsiveFontSizes(createMuiTheme(darkThemeOptions));
 
 const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
   const { bg, bgMd, bgSm, bgXs } = isWebPSupported() ? bgsWebp : bgsFallback;
@@ -178,10 +168,7 @@ const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
     backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    fallbacks: {
-      background: darkTheme.palette.background.default
-    }
+    backgroundPosition: 'center'
   };
 };
 

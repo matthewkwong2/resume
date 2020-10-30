@@ -14,6 +14,7 @@ const Pagination = ({ count = 1, onChangeIndex, index }) => {
           key={idx}
           active={idx === index}
           onClick={handleSelectIndex(idx)}
+          idx={idx}
         />
       ))}
     </Box>
