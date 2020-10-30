@@ -8,7 +8,7 @@ import supportedBrowsers from 'supportedBrowsers';
 const isBrowserSupported = supportedBrowsers.test(navigator.userAgent);
 
 if (isBrowserSupported) {
-  import('main');
+  require('main');
 } else {
   require('fallback');
 }
