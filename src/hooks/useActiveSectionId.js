@@ -5,17 +5,14 @@ import nav from 'constants/nav';
 const useActiveSectionId = () => {
   const [activeSection, setActiveSection] = useState(nav.home);
 
+  const isScrollToBottom = () =>
+    window.innerHeight + window.scrollY >= document.body.offsetHeight;
+  const isSectionActive = section => section
+    && section.offsetTop < document.documentElement.scrollTop
+    + document.documentElement.clientHeight / 8;
+
   useEffect(() => {
-    const isScrollToBottom = () =>
-      window.innerHeight + window.scrollY >= document.body.offsetHeight;
-
-    const isSectionActive = section =>
-      section
-      && section.offsetTop <
-      document.documentElement.scrollTop
-      + document.documentElement.clientHeight / 8;
-
-    const sections = Object.keys(nav).map(key => nav[key]).reverse();
+    const sections = Object.values(nav).reverse();
 
     const handleScroll = () => {
       let active = nav.home;
@@ -34,7 +31,7 @@ const useActiveSectionId = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
