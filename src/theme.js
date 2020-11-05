@@ -165,10 +165,13 @@ const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
       backgroundImage: getBgImageCSS(bgMd)
     },
     backgroundImage: getBgImageCSS(bg),
-    backgroundAttachment: isIOS() ? 'scroll' : 'fixed',
+    backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    '@supports (-webkit-touch-callout: inherit)': {
+      backgroundAttachment: 'scroll',
+    }
   };
 };
 
