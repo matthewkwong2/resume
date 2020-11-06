@@ -4,10 +4,10 @@ import 'fontsource-rubik/500-normal.css';
 import 'fontsource-rubik/700-normal.css';
 
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
-import { isIOS, isWebPSupported } from 'api/APIUtils';
 
 import azonix from 'assets/font/azonix.woff';
 import azonix2 from 'assets/font/azonix.woff2';
+import { isWebPSupported } from 'api/APIUtils';
 
 const baseTheme = createMuiTheme({
   palette: {
