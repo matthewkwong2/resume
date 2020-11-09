@@ -170,7 +170,7 @@ const createBackground = (theme, bgsWebp, bgsFallback, bgPlaceholder) => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     '@supports (-webkit-touch-callout: inherit)': {
-      backgroundAttachment: 'scroll',
+      backgroundAttachment: 'scroll'
     }
   };
 };
