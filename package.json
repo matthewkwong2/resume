@@ -52,9 +52,12 @@
     "start": "react-scripts start",
     "prebuild": "cross-env NODE_ENV=production yarn generate-supported-browsers",
     "build": "react-scripts build",
+    "postbuild": "yarn defer-css & yarn preload-font",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-supported-browsers": "node ./generateSupportedBrowsers.js"
+    "generate-supported-browsers": "node ./generateSupportedBrowsers.js",
+    "defer-css": "node ./deferCSS.js",
+    "preload-font": "node ./preloadFont.js"
   },
   "eslintConfig": {
     "rules": {
