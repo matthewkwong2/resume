@@ -51,7 +51,7 @@
     "prestart": "cross-env NODE_ENV=development yarn generate-supported-browsers",
     "start": "react-scripts start",
     "prebuild": "cross-env NODE_ENV=production yarn generate-supported-browsers",
-    "build": "react-scripts build",
+    "build": "cra-preact build",
     "postbuild": "yarn defer-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
