@@ -1,8 +1,8 @@
-import '@fontsource/rubik/300-normal.css';
-import '@fontsource/rubik/400-normal.css';
-import '@fontsource/rubik/500-normal.css';
-import '@fontsource/rubik/700-normal.css';
-import '@fontsource/rubik/variable-normal.css';
+import '@fontsource/rubik/300.css';
+import '@fontsource/rubik/400.css';
+import '@fontsource/rubik/500.css';
+import '@fontsource/rubik/700.css';
+import '@fontsource/rubik/variable.css';
 
 import { createMuiTheme, fade, responsiveFontSizes } from '@material-ui/core';
 
