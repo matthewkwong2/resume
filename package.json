@@ -77,7 +77,12 @@
       "last 2 versions",
       "Firefox ESR",
       "not dead",
-      "not IE 11"
+      "not IE 11",
+      "edge >= 85",
+      "firefox >= 78",
+      "chrome >=84",
+      "safari >= 13",
+      "ios_saf >= 12.1"
     ],
     "development": [
       "last 1 chrome version",
