@@ -1,6 +1,6 @@
 import Companies from './Companies';
 import { Container } from '@material-ui/core';
-import { HexagonSlice4 } from 'mdi-material-ui';
+import { HexagonSlice3 } from 'mdi-material-ui';
 import SectionHeader from 'components/SectionHeader';
 import WorkingExpTimeline from './WorkingExpTimeline';
 import nav from 'constants/nav';
@@ -11,7 +11,7 @@ const Work = () => (
     <Container>
       <SectionHeader
         title={work.title}
-        Icon={HexagonSlice4}
+        Icon={HexagonSlice3}
       />
       <WorkingExpTimeline />
       <Companies />

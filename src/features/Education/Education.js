@@ -1,6 +1,6 @@
 import { Container } from '@material-ui/core';
 import EducationalExpTimeline from './EducationalExpTimeline';
-import { HexagonSlice3 } from 'mdi-material-ui';
+import { HexagonSlice2 } from 'mdi-material-ui';
 import SectionHeader from 'components/SectionHeader';
 import education from 'constants/education';
 import nav from 'constants/nav';
@@ -10,7 +10,7 @@ const Education = () => (
     <Container>
       <SectionHeader
         title={education.title}
-        Icon={HexagonSlice3}
+        Icon={HexagonSlice2}
       />
       <EducationalExpTimeline />
     </Container>

@@ -6,6 +6,7 @@ import { Fragment } from 'react';
 import FunFact from 'features/FunFact';
 import Home from 'features/Home';
 import NavBar from 'components/NavBar';
+import Project from 'features/Project';
 import ScrollToTopFab from 'components/ScrollToTopFab';
 import SwSnackbar from 'components/SwSnackbar';
 import Testimonial from 'features/Testimonial';
@@ -19,6 +20,7 @@ const App = () => (
     <FunFact />
     <Education />
     <Work />
+    <Project />
     <Testimonial />
     <Contact />
     <Footer />
