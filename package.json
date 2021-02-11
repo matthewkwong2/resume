@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@fontsource/rubik": "^4.2.0",
+    "@fontsource/rubik": "^4.2.1",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
@@ -55,7 +55,9 @@
     "postbuild": "yarn defer-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "postinstall": "yarn react-spring-issue-1078",
     "generate-supported-browsers": "node ./generateSupportedBrowsers.js",
+    "react-spring-issue-1078": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./react_spring_bug_fix_patch.ps1",
     "defer-css": "node ./deferCSS.js"
   },
   "eslintConfig": {
