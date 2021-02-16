@@ -52,13 +52,15 @@
     "start": "react-scripts start",
     "prebuild": "cross-env NODE_ENV=production yarn generate-supported-browsers",
     "build": "cra-preact build",
-    "postbuild": "yarn defer-css",
+    "postbuild": "yarn defer-css && yarn preload-fonts && yarn page404-import-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "yarn react-spring-issue-1078",
     "generate-supported-browsers": "node ./generateSupportedBrowsers.js",
     "react-spring-issue-1078": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./react_spring_bug_fix_patch.ps1",
-    "defer-css": "node ./deferCSS.js"
+    "defer-css": "node ./deferCSS.js",
+    "preload-fonts": "node ./preloadFonts.js",
+    "page404-import-css": "node ./miscPagesImportCSS.js"
   },
   "eslintConfig": {
     "rules": {
