@@ -1,37 +1,13 @@
-import { ButtonBase, makeStyles } from '@material-ui/core';
-
+import { ButtonBase } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: 12,
-    height: 6,
-    backgroundColor: theme.palette.text.primary,
-    opacity: 0.5,
-    borderRadius: 6,
-    marginLeft: theme.spacing(.5),
-    marginRight: theme.spacing(.5),
-    transition: theme.transitions.create('all', {
-      duration: theme.transitions.duration.standard,
-    }),
-    '&:hover': {
-      opacity: .87
-    }
-  },
-  active: {
-    width: 20,
-    opacity: .87
-  }
-}));
+import useSx from './usePaginationItemSx';
 
 const PaginationItem = ({ active = false, onClick, idx }) => {
-  const classes = useStyles();
-  const className = clsx(classes.root, { [classes.active]: active });
+  const sx = useSx({ active });
 
   return (
     <ButtonBase
-      className={className}
+      sx={sx.root}
       onClick={onClick}
       aria-label={'go to page ' + idx}
     />

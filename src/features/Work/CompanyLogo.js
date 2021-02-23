@@ -1,20 +1,15 @@
 import { Box } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core';
-
-const useStyles = makeStyles({
-  img: {
-    filter: 'grayscale(100%)'
-  }
-});
+import useSx from './useCompanyLogoSx';
 
 const CompanyLogo = ({ src, alt = '', href }) => {
-  const classes = useStyles();
+  const sx = useSx();
 
   const image = (
-    <img
+    <Box
+      component='img'
+      sx={sx.img}
       src={src}
-      className={classes.img}
       alt={alt}
       height={100}
       loading='lazy'
@@ -22,7 +17,7 @@ const CompanyLogo = ({ src, alt = '', href }) => {
   );
 
   return (
-    <Box display='flex' justifyContent='center'>
+    <Box sx={sx.root}>
       {
         href
           ? (

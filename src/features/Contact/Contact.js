@@ -1,30 +1,24 @@
-import { Container, Grid, makeStyles } from '@material-ui/core';
+import { Box, Container, Grid } from '@material-ui/core';
 
 import ContactForm from './ContactForm';
 import { HexagonSlice6 } from 'mdi-material-ui';
 import PersonalInfo from './PersonalInfo';
 import SectionHeader from 'components/SectionHeader';
-import contact from 'constants/contact';
+import constants from 'constants/app';
 import nav from 'constants/nav';
-
-const useStyles = makeStyles(theme => ({
-  gridContainer: {
-    marginTop: theme.spacing(3),
-    paddingTop: theme.spacing(3)
-  }
-}));
+import useSx from './useContactSx';
 
 const Contact = () => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <section id={nav.contact}>
-      <Container>
-        <SectionHeader
-          title={contact.title}
-          Icon={HexagonSlice6}
-        />
-        <Grid className={classes.gridContainer} container spacing={2}>
+    <Container component='section' id={nav.contact.id}>
+      <SectionHeader
+        heading={constants.getInTouch}
+        Icon={HexagonSlice6}
+      />
+      <Box sx={sx.gridContainer}>
+        <Grid container spacing={2}>
           <Grid item md={4} xs={12}>
             <PersonalInfo />
           </Grid>
@@ -32,8 +26,8 @@ const Contact = () => {
             <ContactForm />
           </Grid>
         </Grid>
-      </Container>
-    </section>
+      </Box>
+    </Container>
   );
 };
 

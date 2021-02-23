@@ -6,34 +6,31 @@ import NavListItem from './NavListItem';
 import nav from 'constants/nav';
 import useActiveSectionId from 'hooks/useActiveSectionId';
 import { useState } from 'react';
+import useSx from './useNavBarSx';
 
 const NavBarMobile = () => {
+  const sx = useSx();
   const [menuOpen, setMenuOpen] = useState(false);
-  const activeSection = useActiveSectionId();
+  const activeSectionId = useActiveSectionId();
 
-  const handleMenuButtonClick = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const handleMenuToggle = () => setMenuOpen(!menuOpen);
 
   return (
-    <AppBar color='inherit' elevation={4}>
+    <AppBar color='secondary' elevation={4}>
       <Toolbar>
-        <Logo />
-        <IconButton
-          onClick={handleMenuButtonClick}
-          aria-label={menuOpen ? 'close menu' : 'open menu'}
-        >
+        <Logo sx={sx.logo} />
+        <IconButton onClick={handleMenuToggle} aria-label='toggle menu'>
           <Menu />
         </IconButton>
       </Toolbar>
       <Collapse in={menuOpen} timeout='auto' unmountOnExit>
-        <List component='nav' aria-label='navigation list'>
-          {Object.keys(nav).map(key => (
+        <List component='nav' aria-label='nav list'>
+          {Object.values(nav).map(({ id, name }) => (
             <NavListItem
-              key={nav[key]}
-              label={nav[key]}
-              id={nav[key]}
-              active={activeSection === nav[key]}
+              key={id}
+              id={id}
+              label={name}
+              active={activeSectionId === id}
             />
           ))}
         </List>

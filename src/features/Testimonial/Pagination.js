@@ -1,15 +1,15 @@
 import { Box } from '@material-ui/core';
 import PaginationItem from './PaginationItem';
 import PropTypes from 'prop-types';
+import useSx from './usePaginationSx';
 
 const Pagination = ({ count = 1, onChangeIndex, index }) => {
-  const handleSelectIndex = idx => () => {
-    onChangeIndex(idx);
-  };
+  const sx = useSx();
+  const handleSelectIndex = idx => () => onChangeIndex && onChangeIndex(idx);
 
   return (
-    <Box display='flex'>
-      {[...new Array(count)].map((_, idx) => (
+    <Box sx={sx.root}>
+      {[...Array(count)].map((_, idx) => (
         <PaginationItem
           key={idx}
           active={idx === index}

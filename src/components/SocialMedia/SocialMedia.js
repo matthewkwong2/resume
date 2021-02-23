@@ -1,25 +1,17 @@
-import { Box, IconButton, makeStyles } from '@material-ui/core';
+import { Box, IconButton } from '@material-ui/core';
 import { Facebook, Github, Linkedin } from 'mdi-material-ui';
 
+import PropTypes from 'prop-types';
 import data from 'constants/data';
+import useSx from './useSocialMediaSx';
 
-const useStyles = makeStyles(theme => ({
-  iconButton: {
-    '&:not(:first-child):not(:last-child)': {
-      marginLeft: theme.spacing(.5),
-      marginRight: theme.spacing(.5)
-    }
-  }
-}));
-
-
-const SocialMedia = () => {
-  const classes = useStyles();
+const SocialMedia = ({ sx: sxProp }) => {
+  const sx = useSx();
 
   return (
-    <Box display='flex'>
+    <Box sx={{ ...sx.root, ...sxProp }}>
       <IconButton
-        className={classes.iconButton}
+        sx={sx.iconButton}
         href={data.socialMedia.facebookHref}
         aria-label='navigate to Facebook profile'
         target='_blank'
@@ -28,7 +20,7 @@ const SocialMedia = () => {
         <Facebook />
       </IconButton>
       <IconButton
-        className={classes.iconButton}
+        sx={sx.iconButton}
         href={data.socialMedia.linkedinHref}
         aria-label='navigate to Linkedin profile'
         target='_blank'
@@ -37,7 +29,7 @@ const SocialMedia = () => {
         <Linkedin />
       </IconButton>
       <IconButton
-        className={classes.iconButton}
+        sx={sx.iconButton}
         href={data.socialMedia.gitHubHref}
         aria-label='navigate to Github profile'
         target='_blank'
@@ -47,6 +39,10 @@ const SocialMedia = () => {
       </IconButton>
     </Box>
   );
+};
+
+SocialMedia.propTypes = {
+  sx: PropTypes.object
 };
 
 export default SocialMedia;

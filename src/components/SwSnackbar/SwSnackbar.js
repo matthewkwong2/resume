@@ -7,6 +7,8 @@ import app from 'constants/app';
 import clsx from 'clsx';
 import { useSelector } from 'react-redux';
 
+// TODO convert to sx prop
+
 const useStyles = makeStyles(theme => ({
   root: {
     transition: theme.transitions.create('bottom', {
@@ -14,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     })
   },
   hasFab: {
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('md')]: {
       bottom: theme.spacing(9)
     }
   }
@@ -47,6 +49,7 @@ const SwSnackbar = () => {
     swNewContentAvail
       ? <ReloadButton onClose={handleClose} />
       : null;
+
   const className = clsx(classes.root, {
     [classes.hasFab]: trigger
   });

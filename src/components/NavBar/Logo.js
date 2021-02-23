@@ -1,30 +1,26 @@
-import { Button, Typography, makeStyles } from '@material-ui/core';
+import { Button, Typography, } from '@material-ui/core';
 
+import PropTypes from 'prop-types';
 import data from 'constants/data';
+import { memo } from 'react';
+import useSx from './useLogoSx';
 
-const useStyles = makeStyles({
-  root: {
-    marginRight: 'auto'
-  },
-  typography: {
-    fontFamily: 'Azonix'
-  }
-});
+const Logo = ({ sx: sxProp }) => {
+  const sx = useSx();
 
-const Logo = () => {
-  const classes = useStyles();
-
-  const handleClick = () => {
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-  };
+  const handleClick = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 
   return (
-    <Button className={classes.root} onClick={handleClick}>
-      <Typography className={classes.typography} variant='h5'>
+    <Button sx={sxProp} onClick={handleClick}>
+      <Typography sx={sx.text} variant='h5'>
         {data.firstName}
       </Typography>
     </Button>
   );
 };
 
-export default Logo;
+Logo.proTypes = {
+  sx: PropTypes.object
+};
+
+export default memo(Logo);

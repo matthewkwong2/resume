@@ -1,33 +1,22 @@
-import { Card, CardContent, CardMedia, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-
-const useStyles = makeStyles({
-  card: {
-    height: '100%'
-  },
-  cardMedia: {
-    height: 222
-  }
-});
+import useSx from './useProjectCardSx';
 
 const ProjectCard = ({ image, title, date, description }) => {
-  const classes = useStyles();
+  const sx = useSx();
+
   return (
-    <Card className={classes.card} elevation={0}>
-      <CardMedia
-        className={classes.cardMedia}
-        image={image}
-        title={title}
-      />
+    <Card sx={sx.card} elevation={0}>
+      <CardMedia sx={sx.cardMedia} image={image} title={title} />
       <CardContent>
-        <Typography align='center' gutterBottom variant='h5'>
+        <Typography sx={sx.title} variant='h5' gutterBottom>
           {title}
         </Typography>
-        <Typography align='center' gutterBottom variant='body1' >
+        <Typography sx={sx.date} gutterBottom>
           {date}
         </Typography>
-        <Typography align='center' variant='body1' color='textSecondary'>
+        <Typography sx={sx.description}>
           {description}
         </Typography>
       </CardContent>

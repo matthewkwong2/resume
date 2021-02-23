@@ -1,24 +1,22 @@
 import 'wdyr';
+import 'polyfill';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
-import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import { swContentCached, swNewContentAvail } from 'actions';
 
 import App from 'App';
+import { CssBaseline } from '@material-ui/core';
 import { Provider } from 'react-redux';
 import { StrictMode } from 'react';
+import ThemeProvider from 'components/ThemeProvider';
 import { render } from 'react-dom';
-import reportWebVitals from './reportWebVitals';
-import smoothscroll from 'smoothscroll-polyfill';
+import reportWebVitals from 'reportWebVitals';
 import store from 'store';
-import theme from 'theme';
-
-smoothscroll.polyfill();
 
 render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider mode='light'>
       <CssBaseline />
       <Provider store={store}>
         <App />

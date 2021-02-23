@@ -1,42 +1,35 @@
-import { Grid, makeStyles } from '@material-ui/core';
-
 import CompanyLogo from './CompanyLogo';
+import { Grid } from '@material-ui/core';
+import data from 'constants/data';
 import ha from 'assets/img/ha.png';
 import hku from 'assets/img/hku.png';
+import useSx from './useCompaniesSx';
 import versitech from 'assets/img/versitech.png';
-import work from 'constants/work';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    marginTop: theme.spacing(3),
-    paddingTop: theme.spacing(3)
-  }
-}));
 
 const Companies = () => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <Grid className={classes.root} container spacing={2} justify='space-evenly'>
+    <Grid sx={sx.root} container spacing={2}>
       <Grid item sm='auto' xs={12}>
         <CompanyLogo
           src={ha}
-          alt={work.company.ha.name}
-          href={work.company.ha.href}
+          alt={data.work.company.ha.name}
+          href={data.work.company.ha.href}
         />
       </Grid>
       <Grid item sm='auto' xs={12}>
         <CompanyLogo
           src={hku}
-          alt={work.company.hku.name}
-          href={work.company.hku.href}
+          alt={data.work.company.hku.name}
+          href={data.work.company.hku.href}
         />
       </Grid>
       <Grid item sm='auto' xs={12}>
         <CompanyLogo
           src={versitech}
-          alt={work.company.versitech.name}
-          href={work.company.versitech.href}
+          alt={data.work.company.versitech.name}
+          href={data.work.company.versitech.href}
         />
       </Grid>
     </Grid>

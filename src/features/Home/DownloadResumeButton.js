@@ -1,21 +1,18 @@
-import { Box, Button } from '@material-ui/core';
-
-import home from 'constants/home';
+import { Button } from '@material-ui/core';
+import constants from 'constants/app';
 import resume from 'assets/document/resume.pdf';
 
-const DownloadResumeButton = () => (
-  <Box mt={4}>
-    <Button
-      variant='outlined'
-      color='secondary'
-      size='large'
-      href={resume}
-      target='_blank'
-      rel='noopener noreferrer'
-    >
-      {home.downloadCVButtonText}
-    </Button>
-  </Box>
+const DownloadResumeButton = ({ sx }) => (
+  <Button
+    sx={sx}
+    variant='outlined'
+    size='large'
+    href={resume}
+    target='_blank'
+    rel='noopener noreferrer'
+  >
+    {constants.downloadResumeButtonText}
+  </Button>
 );
 
 export default DownloadResumeButton;

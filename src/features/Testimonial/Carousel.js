@@ -5,18 +5,18 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import data from 'constants/data';
 import { useState } from 'react';
+import useSx from './useCarouselSx';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const Carousel = () => {
+  const sx = useSx();
   const [index, setIndex] = useState(0);
 
-  const handleChangeIndex = idx => {
-    setIndex(idx);
-  };
+  const handleChangeIndex = index => setIndex(index);
 
   return (
-    <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
+    <Box sx={sx.root}>
       <AutoPlaySwipeableViews
         index={index}
         onChangeIndex={handleChangeIndex}

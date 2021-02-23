@@ -2,7 +2,6 @@ import About from 'features/About';
 import Contact from 'features/Contact';
 import Education from 'features/Education';
 import Footer from 'components/Footer';
-import { Fragment } from 'react';
 import FunFact from 'features/FunFact';
 import Home from 'features/Home';
 import NavBar from 'components/NavBar';
@@ -13,7 +12,7 @@ import Testimonial from 'features/Testimonial';
 import Work from 'features/Work';
 
 const App = () => (
-  <Fragment>
+  <>
     <NavBar />
     <Home />
     <About />
@@ -26,7 +25,7 @@ const App = () => (
     <Footer />
     <SwSnackbar />
     <ScrollToTopFab />
-  </Fragment>
+  </>
 );
 
 export default App;

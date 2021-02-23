@@ -1,30 +1,19 @@
-import { ListItem, ListItemText, makeStyles } from '@material-ui/core';
+import { ListItem, ListItemText } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-
-const useStyles = makeStyles({
-  navListItemTextPrimary: {
-    textTransform: 'capitalize',
-    fontWeight: 500
-  }
-});
+import { memo } from 'react';
+import useSx from './useNavListItemSx';
 
 const NavListItem = ({ label, id, active }) => {
-  const classes = useStyles();
-  const color = active ? 'textPrimary' : 'textSecondary';
+  const sx = useSx({ active });
   const section = document.getElementById(id);
 
-  const primaryTypographyProps = {
-    color,
-    className: classes.navListItemTextPrimary
-  };
+  const primaryTypographyProps = { sx: sx.textPrimary };
 
-  const handleClick = () => {
-    section.scrollIntoView({ behavior: 'smooth' });
-  };
+  const handleClick = () => section.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <ListItem button className={classes.navListItem} onClick={handleClick}>
+    <ListItem button onClick={handleClick}>
       <ListItemText
         primary={label}
         primaryTypographyProps={primaryTypographyProps}
@@ -41,4 +30,4 @@ NavListItem.propTypes = {
   active: PropTypes.bool.isRequired
 };
 
-export default NavListItem;
+export default memo(NavListItem);

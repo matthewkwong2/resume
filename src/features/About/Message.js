@@ -1,49 +1,23 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 
-import about from 'constants/about';
+import constants from 'constants/app';
 import data from 'constants/data';
-
-const useStyles = makeStyles({
-  occupations: {
-    fontWeight: 'normal'
-  },
-  intro: {
-    maxWidth: 850
-  }
-});
+import useSx from './useMessageSx';
 
 const Message = () => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <Box display='flex' flexDirection='column' alignItems='center' mt={3} pt={3}>
-      <Typography
-        align='center'
-        color='textPrimary'
-        variant='h5'
-        component='h1'
-        gutterBottom
-      >
-        {about.helloPrefix}
+    <Box sx={sx.root}>
+      <Typography sx={sx.hello} variant='h5' component='h1' gutterBottom>
+        {constants.helloPrefix}
         {data.firstName + ' ' + data.lastName}
-        {about.helloSuffix}
+        {constants.helloSuffix}
       </Typography>
-      <Typography
-        align='center'
-        className={classes.occupations}
-        color='textSecondary'
-        variant='h6'
-        component='h2'
-        gutterBottom
-      >
+      <Typography sx={sx.occupation} variant='h6' component='h2' gutterBottom>
         {data.occupations.join('　•　')}
       </Typography>
-      <Typography
-        align='center'
-        className={classes.intro}
-        color='textSecondary'
-        variant='body1'
-      >
+      <Typography sx={sx.intro}>
         {data.about.intro}
       </Typography>
     </Box>

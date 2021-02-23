@@ -10,10 +10,10 @@ const Languages = () => {
   const theme = useTheme();
   const keys = ['rating'];
   const margin = {
-    top: theme.spacing(3),
-    right: theme.spacing(6.25),
+    top: 24,
+    right: 45,
     bottom: 0,
-    left: theme.spacing(6.25)
+    left: 45
   };
   const nivoTheme = {
     fontFamily: theme.typography.fontFamily

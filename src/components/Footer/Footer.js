@@ -1,46 +1,22 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  makeStyles,
-  useMediaQuery,
-  useTheme
-} from '@material-ui/core';
+import { Container, Divider, Grid } from '@material-ui/core';
 
 import CopyrightStatement from './CopyrightStatement';
 import SocialMedia from 'components/SocialMedia';
-
-const useStyles = makeStyles(theme => ({
-  gridContainer: {
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: theme.spacing(5),
-      paddingRight: theme.spacing(5)
-    },
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3)
-  }
-}));
+import useSx from './useFooterSx';
 
 const Footer = () => {
-  const theme = useTheme();
-  const smUp = useMediaQuery(theme.breakpoints.up('sm'));
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
     <footer>
       <Divider variant='middle' />
       <Container>
-        <Grid className={classes.gridContainer} container alignItems='center' justify='space-between'>
+        <Grid sx={sx.gridContainer} container>
           <Grid item sm='auto' xs={12}>
-            <Box display='flex' justifyContent={smUp ? 'flex-start' : 'center'}>
-              <CopyrightStatement />
-            </Box>
+            <CopyrightStatement />
           </Grid>
           <Grid item sm='auto' xs={12}>
-            <Box display='flex' justifyContent={smUp ? 'flex-end' : 'center'}>
-              <SocialMedia />
-            </Box>
+            <SocialMedia />
           </Grid>
         </Grid>
       </Container>

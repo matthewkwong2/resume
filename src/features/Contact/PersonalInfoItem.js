@@ -1,45 +1,18 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    '&:not(:first-child):not(:last-child)': {
-      marginTop: theme.spacing(3),
-      marginBottom: theme.spacing(3)
-    }
-  },
-  title: {
-    fontWeight: 500,
-    marginTop: theme.spacing(2)
-  }
-}));
+import useSx from './usePersonalInfoItemSx';
 
 const PersonalInfoItem = ({ Icon, title, value }) => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <Box
-      display='flex'
-      flexDirection='column'
-      alignItems='center'
-      className={classes.root}
-    >
+    <Box sx={sx.root}>
       <Icon fontSize='large' color='action' />
-      <Typography
-        className={classes.title}
-        color='textPrimary'
-        variant='body1'
-        gutterBottom
-      >
+      <Typography sx={sx.title} gutterBottom>
         {title}
       </Typography>
-      <Typography
-        align='center'
-        color='textSecondary'
-        variant='body1'
-        gutterBottom
-      >
+      <Typography sx={sx.value} gutterBottom>
         {value}
       </Typography>
     </Box>

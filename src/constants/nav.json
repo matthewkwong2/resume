@@ -1,9 +1,30 @@
 {
-  "home": "home",
-  "about": "about",
-  "education": "education",
-  "work": "work",
-  "project": "project",
-  "testimonial": "testimonial",
-  "contact": "contact"
+  "home": {
+    "id": "home",
+    "name": "home"
+  },
+  "about": {
+    "id": "about",
+    "name": "about"
+  },
+  "education": {
+    "id": "education",
+    "name": "education"
+  },
+  "work": {
+    "id": "work",
+    "name": "work"
+  },
+  "project": {
+    "id": "project",
+    "name": "project"
+  },
+  "testimonial": {
+    "id": "testimonial",
+    "name": "testimonial"
+  },
+  "contact": {
+    "id": "contact",
+    "name": "contact"
+  }
 }

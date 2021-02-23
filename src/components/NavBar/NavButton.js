@@ -1,38 +1,21 @@
-import { Button, makeStyles } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    '&:not(:first-child):not(:last-child)': {
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1)
-    }
-  },
-  active: {
-    height: 3,
-    width: theme.spacing(2),
-    backgroundColor: theme.palette.text.primary,
-    position: 'absolute',
-    bottom: 0,
-    left: `calc(50% - ${theme.spacing(1)}px)`
-  }
-}));
+import { memo } from 'react';
+import useSx from './useNavButtonSx';
 
 const NavButton = ({ label, id, active }) => {
-  const classes = useStyles();
+  const sx = useSx();
   const section = document.getElementById(id);
 
-  const handleClick = () => {
-    section.scrollIntoView({ behavior: 'smooth' });
-  };
+  const handleClick = () => section.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <Button className={classes.root} onClick={handleClick}>
+    <Button sx={sx.root} onClick={handleClick}>
       {label}
       {
         active
-          ? <span className={classes.active} />
+          ? <Box component='span' sx={sx.active} />
           : null
       }
     </Button>
@@ -45,4 +28,4 @@ NavButton.propTypes = {
   active: PropTypes.bool.isRequired
 };
 
-export default NavButton;
+export default memo(NavButton);

@@ -1,28 +1,23 @@
-import { Box, useMediaQuery, useTheme } from '@material-ui/core';
-
 import ExpTimelineItem from './ExpTimelineItem';
 import PropTypes from 'prop-types';
 import { Timeline } from '@material-ui/lab';
+import { useMediaQuery } from '@material-ui/core';
 
 const ExpTimeline = ({ data = [] }) => {
-  const theme = useTheme();
-  const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-
+  const smDown = useMediaQuery(theme => theme.breakpoints.down('sm'));
   return (
-    <Box width='100%' maxWidth={1200}>
-      <Timeline align={smDown ? 'left' : 'alternate'}>
-        {data.map(({ period, title, subheader, description, file }, idx) => (
-          <ExpTimelineItem
-            key={idx}
-            period={period}
-            title={title}
-            subheader={subheader}
-            description={description}
-            file={file}
-          />
-        ))}
-      </Timeline>
-    </Box>
+    <Timeline align={smDown ? 'left' : 'alternate'}>
+      {data.map(({ period, title, subheader, description, file }, idx) => (
+        <ExpTimelineItem
+          key={idx}
+          period={period}
+          title={title}
+          subheader={subheader}
+          description={description}
+          file={file}
+        />
+      ))}
+    </Timeline>
   );
 };
 

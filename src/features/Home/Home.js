@@ -1,74 +1,26 @@
-import {
-  Box,
-  Container,
-  ThemeProvider,
-  Toolbar,
-  makeStyles
-} from '@material-ui/core';
-import { createBackground, darkTheme } from 'theme';
+import { Box, Container, Toolbar } from '@material-ui/core';
 
 import DownloadResumeButton from './DownloadResumeButton';
 import SocialMedia from 'components/SocialMedia';
+import ThemeProvider from 'components/ThemeProvider';
 import Title from './Title';
-import bgFallback from 'assets/img/bg_home.jpg';
-import bgMdFallback from 'assets/img/bg_home_md.jpg';
-import bgMdWebp from 'assets/img/bg_home_md.webp';
-import bgPlaceholder from 'assets/img/bg_home_placeholder.jpg';
-import bgSmFallback from 'assets/img/bg_home_sm.jpg';
-import bgSmWebp from 'assets/img/bg_home_sm.webp';
-import bgWebp from 'assets/img/bg_home.webp';
-import bgXsFallback from 'assets/img/bg_home_xs.jpg';
-import bgXsWebp from 'assets/img/bg_home_xs.webp';
 import nav from 'constants/nav';
-
-const bgsWebp = {
-  bg: bgWebp,
-  bgMd: bgMdWebp,
-  bgSm: bgSmWebp,
-  bgXs: bgXsWebp
-};
-
-const bgsFallback = {
-  bg: bgFallback,
-  bgMd: bgMdFallback,
-  bgSm: bgSmFallback,
-  bgXs: bgXsFallback
-};
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: 0,
-    height: '100vh',
-    ...createBackground(theme, bgsWebp, bgsFallback, bgPlaceholder)
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1
-  }
-}));
-
+import useSx from './useHomeSx';
 
 const Home = () => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <section id={nav.home} className={classes.root}>
+    <Box component='section' sx={sx.root} id={nav.home.id}>
       <Toolbar />
-      <ThemeProvider theme={darkTheme}>
-        <Container className={classes.container}>
+      <ThemeProvider mode='dark'>
+        <Container sx={sx.container}>
           <Title />
-          <Box pt={3}>
-            <SocialMedia />
-          </Box>
-          <DownloadResumeButton />
+          <SocialMedia sx={sx.socialMedia} />
+          <DownloadResumeButton sx={sx.downloadResumeButton} />
         </Container>
       </ThemeProvider>
-    </section>
+    </Box>
   );
 };
 

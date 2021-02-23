@@ -1,31 +1,28 @@
-import { Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 
+import constants from 'constants/app';
 import data from 'constants/data';
-import footer from 'constants/footer';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    [theme.breakpoints.down('xs')]: {
-      textAlign: 'center'
-    }
-  },
-  lastName: {
-    textTransform: 'uppercase'
-  }
-}));
+import useSx from './useCopyrightStatementSx';
 
 const CopyrightStatement = () => {
-  const classes = useStyles();
-  const today = new Date();
+  const sx = useSx();
+  const prefix = constants.copyrightStatementPrefix;
+  const year = new Date().getFullYear();
+  const name = (
+    <>
+      <Box component='span' sx={sx.lastName}>
+        {`${data.lastName}, `}
+      </Box>
+      {`${data.firstName} ${data.middleName}`}
+    </>
+  );
+  const suffix = constants.copyrightStatementSuffix;
 
   return (
-    <Typography className={classes.root} color='textSecondary' variant='body2'>
-      {footer.copyrightStatementPrefix}
-      {today.getFullYear() + ' '}
-      <span className={classes.lastName}>{data.lastName + ', '}</span>
-      {data.firstName + ' '}
-      {data.middleName}
-      {footer.copyrightStatementSuffix}
+    <Typography sx={sx.root} variant='body2'>
+      {`${prefix} ${year} `}
+      {name}
+      {suffix}
     </Typography>
   );
 };

@@ -122,7 +122,43 @@
         "description": "After completing a compulsory C++ course, I was being invited by the instructor to be a volunteer teaching assistant of that course. I assisted her during the tutorial section, answering students questions.",
         "proof": "hku_eng_ta.pdf"
       }
-    ]
+    ],
+    "company": {
+      "ha": {
+        "name": "Hospital Authority",
+        "href": "https://www.ha.org.hk"
+      },
+      "hku": {
+        "name": "The University of Hong Kong",
+        "href": "https://www.hku.hk"
+      },
+      "versitech": {
+        "name": "Versitech Limited",
+        "href": "https://www.versitech.hku.hk"
+      }
+    }
+  },
+  "project": {
+    "mysql": {
+      "title": "MySQL",
+      "date": "July 2019",
+      "description": "Maintaining 2 system architectures: source-replica replication and MySQL InnoDB Cluster. Provide guidance and suggestions to project teams accordingly."
+    },
+    "delphix": {
+      "title": "Delphix",
+      "date": "March 2020",
+      "description": "A test run of the data virtualization platform. Analyze, install and maintain the system and incorporate it into existing systems based on the requirements and limitations."
+    },
+    "tsis": {
+      "title": "TSIS",
+      "date": "January 2021",
+      "description": "A complete overhaul of a decade-old web application using React, Express and MySQL. This web portal displays info of databases instances managed by our team."
+    },
+    "timeOffApplication": {
+      "title": "Time Off Application System",
+      "date": "January 2021",
+      "description": "A QoL web application developed using React, Express and MySQL to minimize the manual procedures while team mates apply for time-offs."
+    }
   },
   "testimonial": {
     "references": [

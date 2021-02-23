@@ -4,21 +4,19 @@ import Languages from './Languages';
 import Message from './Message';
 import SectionHeader from 'components/SectionHeader';
 import SkillSet from './SkillSet';
-import about from 'constants/about';
+import constants from 'constants/app';
 import nav from 'constants/nav';
 
 const About = () => (
-  <section id={nav.about}>
-    <Container>
-      <SectionHeader
-        title={about.title}
-        Icon={HexagonSlice1}
-      />
-      <Message />
-      <Languages />
-      <SkillSet />
-    </Container>
-  </section>
+  <Container component='section' id={nav.about.id}>
+    <SectionHeader
+      heading={constants.aboutMe}
+      Icon={HexagonSlice1}
+    />
+    <Message />
+    <Languages />
+    <SkillSet />
+  </Container>
 );
 
 export default About;

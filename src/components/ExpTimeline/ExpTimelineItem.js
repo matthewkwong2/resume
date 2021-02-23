@@ -1,45 +1,12 @@
-import {
-  Card,
-  CardActions,
-  CardContent,
-  IconButton,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
-import {
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineSeparator
-} from '@material-ui/lab';
+import { Card, CardActions, CardContent, IconButton, Typography } from '@material-ui/core';
+import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@material-ui/lab';
 
 import { Download } from 'components/icons';
 import PropTypes from 'prop-types';
+import useSx from './useExpTimelineItemSx';
 
-const useStyles = makeStyles({
-  card: {
-    backgroundColor: 'transparent'
-  },
-  period: {
-    fontSize: 14,
-  },
-  subheader: {
-    marginBottom: 12,
-  },
-  download: {
-    marginLeft: 'auto'
-  },
-});
-
-const ExpTimelineItem = ({
-  period,
-  title,
-  subheader,
-  description,
-  file = '#'
-}) => {
-  const classes = useStyles();
+const ExpTimelineItem = ({ period, title, subheader, description, file = '#' }) => {
+  const sx = useSx();
 
   return (
     <TimelineItem>
@@ -48,27 +15,18 @@ const ExpTimelineItem = ({
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
-        <Card className={classes.card} variant='outlined'>
+        <Card sx={sx.card} variant='outlined'>
           <CardContent>
-            <Typography
-              className={classes.period}
-              color='textSecondary'
-              gutterBottom
-              noWrap
-            >
+            <Typography sx={sx.period} gutterBottom noWrap>
               {period}
             </Typography>
             <Typography variant='h6'>
               {title}
             </Typography>
-            <Typography
-              className={classes.subheader}
-              color='textSecondary'
-              variant='body1'
-            >
+            <Typography sx={sx.subheader}>
               {subheader}
             </Typography>
-            <Typography color='textPrimary' variant='body2'>
+            <Typography sx={sx.description} variant='body2'>
               {description}
             </Typography>
           </CardContent>
@@ -77,7 +35,7 @@ const ExpTimelineItem = ({
               ? (
                 <CardActions disableSpacing>
                   <IconButton
-                    className={classes.download}
+                    sx={sx.downloadButton}
                     aria-label='show more'
                     href={file}
                     target='_blank'

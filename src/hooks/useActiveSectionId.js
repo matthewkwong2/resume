@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import nav from 'constants/nav';
 
 const useActiveSectionId = () => {
-  const [activeSection, setActiveSection] = useState(nav.home);
+  const [activeSectionId, setActiveSectionId] = useState(nav.home.id);
 
   const isScrollToBottom = () =>
     window.innerHeight + window.scrollY >= document.body.offsetHeight;
@@ -12,14 +12,14 @@ const useActiveSectionId = () => {
     + document.documentElement.clientHeight / 8;
 
   useEffect(() => {
-    const sections = Object.values(nav).reverse();
+    const sectionIds = Object.values(nav).map(({ id }) => id).reverse();
 
     const handleScroll = () => {
-      let active = nav.home;
+      let active = nav.home.id;
       if (isScrollToBottom()) {
-        setActiveSection(sections[0]);
+        setActiveSectionId(sectionIds[0]);
       } else {
-        for (const sectionId of sections) {
+        for (const sectionId of sectionIds) {
           const section = document.getElementById(sectionId);
 
           if (isSectionActive(section)) {
@@ -27,7 +27,7 @@ const useActiveSectionId = () => {
             break;
           }
         }
-        setActiveSection(active);
+        setActiveSectionId(active);
       }
     };
 
@@ -37,7 +37,7 @@ const useActiveSectionId = () => {
     };
   }, []);
 
-  return activeSection;
+  return activeSectionId;
 };
 
 export default useActiveSectionId;

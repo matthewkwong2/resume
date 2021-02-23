@@ -1,41 +1,14 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  fade,
-  makeStyles
-} from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import { useEffect, useRef } from 'react';
 
 import { CountUp } from 'countup.js';
 import PropTypes from 'prop-types';
-import { isPercentage } from 'api/funFact';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: 'transparent',
-    borderColor: fade(theme.palette.common.white, .23 * 2),
-    height: '100%'
-  },
-  cardContent: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%'
-  },
-  icon: {
-    fontSize: 40,
-    marginBottom: theme.spacing(2)
-  },
-  value: {
-    marginBottom: theme.spacing(.5)
-  }
-}));
+import { isPercentage } from 'utils';
+import useSx from './useFactCardSx';
 
 const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
-  const classes = useStyles();
-  const countUpRef = useRef(null);
+  const sx = useSx();
+  const countUpRef = useRef();
 
   useEffect(() => {
     if (startCountUp) {
@@ -53,16 +26,11 @@ const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
   }, [value, startCountUp]);
 
   return (
-    <Card className={classes.root} variant='outlined'>
-      <CardContent className={classes.cardContent}>
-        <Icon className={classes.icon} />
-        <Typography
-          ref={countUpRef}
-          color='textPrimary'
-          variant='h3'
-          className={classes.value}
-        />
-        <Typography color='textSecondary' variant='body2'>
+    <Card sx={sx.root} variant='outlined'>
+      <CardContent sx={sx.cardContent}>
+        <Icon sx={sx.icon} />
+        <Typography ref={countUpRef} sx={sx.value} variant='h3' />
+        <Typography sx={sx.title} variant='body2'>
           {title}
         </Typography>
       </CardContent>

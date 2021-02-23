@@ -1,57 +1,46 @@
-import {
-  AppBar,
-  ThemeProvider,
-  Toolbar,
-  useScrollTrigger,
-  useTheme
-} from '@material-ui/core';
+import { AppBar, Toolbar, useScrollTrigger, useTheme } from '@material-ui/core';
 
-import { Fragment } from 'react';
 import Logo from './Logo';
 import NavButton from './NavButton';
-import { darkTheme } from 'theme';
+import ThemeProvider from 'components/ThemeProvider';
 import nav from 'constants/nav';
 import useActiveSectionId from 'hooks/useActiveSectionId';
+import useSx from './useNavBarSx';
 
 const NavBarDesktop = () => {
+  const sx = useSx();
   const theme = useTheme();
+  const appBarDefaultProps = {
+    color: theme.components.MuiAppBar.defaultProps.color,
+    elevation: theme.components.MuiAppBar.defaultProps.elevation
+  };
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0
   });
-  const activeSection = useActiveSectionId();
 
-  const color = trigger ? 'inherit' : theme.props?.MuiAppBar?.color;
-  const elevation = trigger ? 4 : theme.props?.MuiAppBar?.elevation;
+  const activeSectionId = useActiveSectionId();
 
-  const navBarContent = (
-    <Fragment>
-      <Logo />
-      <nav>
-        {Object.keys(nav).map(key => (
-          <NavButton
-            key={nav[key]}
-            id={nav[key]}
-            label={nav[key]}
-            active={activeSection === nav[key]}
-          />
-        ))}
-      </nav>
-    </Fragment>
-  );
+  const color = trigger ? 'secondary' : appBarDefaultProps.color;
+  const elevation = trigger ? 4 : appBarDefaultProps.elevation;
 
   return (
     <AppBar color={color} elevation={elevation}>
       <Toolbar>
-        {
-          trigger
-            ? navBarContent
-            : (
-              <ThemeProvider theme={darkTheme}>
-                {navBarContent}
-              </ThemeProvider>
-            )
-        }
+        <ThemeProvider mode={trigger ? 'light' : 'dark'}>
+          <Logo sx={sx.logo} />
+          <nav>
+            {Object.values(nav).map(({ id, name }) => (
+              <NavButton
+                key={id}
+                id={id}
+                label={name}
+                active={activeSectionId === id}
+              />
+            ))}
+          </nav>
+        </ThemeProvider>
       </Toolbar>
     </AppBar>
   );

@@ -1,19 +1,13 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  FormHelperText,
-  Grid,
-  InputLabel,
-  OutlinedInput
-} from '@material-ui/core';
-import { isEmailValid, isValueEmpty } from 'api/contact';
+import { Button, Grid, TextField } from '@material-ui/core';
+import { isEmailValid, isValueEmpty } from 'utils';
 import { useRef, useState } from 'react';
 
-import contact from 'constants/contact';
+import constants from 'constants/app';
 import data from 'constants/data';
+import useSx from './useContactFormSx';
 
 const ContactForm = () => {
+  const sx = useSx();
   const emailInputRef = useRef(null);
   const [emailInputErrorMessage, setEmailInputErrorMessage] = useState(null);
   const invalidEmail = Boolean(emailInputErrorMessage);
@@ -27,11 +21,11 @@ const ContactForm = () => {
 
   const validateEmail = value => {
     if (isValueEmpty(value)) {
-      return contact.emailValidationErrorMessage.presence;
+      return constants.emailValidationErrorMessage.presence;
     }
 
     if (!isEmailValid(value)) {
-      return contact.emailValidationErrorMessage.emailFormat;
+      return constants.emailValidationErrorMessage.emailFormat;
     }
 
     return null;
@@ -70,63 +64,52 @@ const ContactForm = () => {
     <form onSubmit={handleSubmitMessage} noValidate>
       <Grid container spacing={4}>
         <Grid item sm={6} xs={12}>
-          <FormControl variant='outlined' fullWidth>
-            <InputLabel htmlFor='name'>{contact.contactFormField.name}</InputLabel>
-            <OutlinedInput
-              id='name'
-              autoComplete='name'
-              label={contact.contactFormField.name}
-              onChange={handleChange}
-            />
-          </FormControl>
+          <TextField
+            id='name'
+            name='name'
+            fullWidth
+            label={constants.name}
+            autoComplete='name'
+            onChange={handleChange}
+          />
         </Grid>
         <Grid item sm={6} xs={12}>
-          <FormControl variant='outlined' fullWidth required error={invalidEmail}>
-            <InputLabel htmlFor='email'>{contact.contactFormField.email}</InputLabel>
-            <OutlinedInput
-              inputRef={emailInputRef}
-              id='email'
-              name='from'
-              autoComplete='email'
-              label={contact.contactFormField.email}
-              onChange={handleChange}
-              aria-describedby='email-text'
-            />
-            <FormHelperText id='email-text'>
-              {invalidEmail ? emailInputErrorMessage : contact.required}
-            </FormHelperText>
-          </FormControl>
+          <TextField
+            id='email'
+            name='from'
+            fullWidth
+            required
+            label={constants.email}
+            autoComplete='email'
+            onChange={handleChange}
+            error={invalidEmail}
+            helperText={invalidEmail ? emailInputErrorMessage : constants.required}
+          />
         </Grid>
         <Grid item xs={12}>
-          <FormControl variant='outlined' fullWidth>
-            <InputLabel htmlFor='subject'>{contact.contactFormField.subject}</InputLabel>
-            <OutlinedInput
-              id='subject'
-              name='subject'
-              label={contact.contactFormField.subject}
-              onChange={handleChange}
-            />
-          </FormControl>
+          <TextField
+            id='subject'
+            name='subject'
+            fullWidth
+            label={constants.subject}
+            onChange={handleChange}
+          />
         </Grid>
         <Grid item xs={12}>
-          <FormControl variant='outlined' fullWidth>
-            <InputLabel htmlFor='message'>{contact.contactFormField.message}</InputLabel>
-            <OutlinedInput
-              id='message'
-              name='body'
-              label={contact.contactFormField.message}
-              onChange={handleChange}
-              multiline
-              rows={9}
-            />
-          </FormControl>
+          <TextField
+            id='message'
+            name='body'
+            fullWidth
+            label={constants.message}
+            onChange={handleChange}
+            multiline
+            rows={9}
+          />
         </Grid>
       </Grid>
-      <Box display='flex' justifyContent='flex-end' mt={2}>
-        <Button type='submit' color='primary' variant='contained' size='large'>
-          {contact.sendMessage}
-        </Button>
-      </Box>
+      <Button sx={sx.submitButton} type='submit' variant='contained' size='large'>
+        {constants.sendMessage}
+      </Button>
     </form>
   );
 };

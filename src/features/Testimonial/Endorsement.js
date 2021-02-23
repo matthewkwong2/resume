@@ -1,45 +1,23 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import { User } from 'components/icons';
-
-const useStyles = makeStyles(theme => ({
-  userIcon: {
-    fontSize: 60
-  },
-  name: {
-    marginTop: theme.spacing(3)
-  },
-  comment: {
-    marginTop: theme.spacing(3),
-    fontSize: 18,
-    maxWidth: 580
-  }
-}));
+import { memo } from 'react';
+import useSx from './useEndorsementSx';
 
 const Endorsement = ({ name, company, comment }) => {
-  const classes = useStyles();
+  const sx = useSx();
 
   return (
-    <Box
-      py={3}
-      display='flex'
-      flexDirection='column'
-      alignItems='center'
-    >
-      <User className={classes.userIcon} />
-      <Typography className={classes.name} color='textPrimary' variant='h6'>
+    <Box sx={sx.root}>
+      <User sx={sx.userIcon} />
+      <Typography sx={sx.name} variant='h6'>
         {name}
       </Typography>
-      <Typography color='textPrimary' variant='body1'>
+      <Typography sx={sx.company}>
         {company}
       </Typography>
-      <Typography
-        className={classes.comment}
-        align='center'
-        color='textPrimary'
-        variant='body1'
-      >
+      <Typography sx={sx.comment}>
         {comment}
       </Typography>
     </Box>
@@ -52,4 +30,4 @@ Endorsement.propTypes = {
   comment: PropTypes.string
 };
 
-export default Endorsement;
+export default memo(Endorsement);

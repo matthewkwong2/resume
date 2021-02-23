@@ -1,41 +1,32 @@
 import { Box, LinearProgress, Typography, makeStyles } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
+import useSx from './useSkillRatingSx';
+
+// TODO convert to sx prop
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    '&:not(:first-child):not(:last-child)': {
-      marginTop: theme.spacing(6),
-      marginBottom: theme.spacing(6)
-    }
-  },
-  skillName: {
-    flexGrow: 1,
-    fontWeight: 'bold'
-  },
-  progressBar2: {
-    backgroundColor: theme.palette.grey[100]
+  rating: {
+    backgroundColor: '#eceff4'
   }
 }));
 
 const SkillRating = ({ name, rating }) => {
   const classes = useStyles();
-  const linearProgressClasses = {
-    colorPrimary: classes.progressBar2
-  };
+  const sx = useSx();
 
   return (
-    <Box className={classes.root}>
-      <Box display='flex'>
-        <Typography color='textPrimary' variant='body1' className={classes.skillName}>
+    <Box sx={sx.root}>
+      <Box sx={sx.ratingContainer}>
+        <Typography sx={sx.skillName}>
           {name}
         </Typography>
-        <Typography color='textSecondary' variant='body1'>
+        <Typography sx={sx.ratingText}>
           {Math.round(rating) + '%'}
         </Typography>
       </Box>
       <LinearProgress
-        classes={linearProgressClasses}
+        className={classes.rating}
         variant='determinate'
         color='primary'
         value={rating}
