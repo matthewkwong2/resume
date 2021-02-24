@@ -1,5 +1,7 @@
 import { Box, Typography } from '@material-ui/core';
 
+import { CircleSmall } from 'mdi-material-ui';
+import { Fragment } from 'react';
 import constants from 'constants/app';
 import data from 'constants/data';
 import useSx from './useMessageSx';
@@ -14,9 +16,16 @@ const Message = () => {
         {data.firstName + ' ' + data.lastName}
         {constants.helloSuffix}
       </Typography>
-      <Typography sx={sx.occupation} variant='h6' component='h2' gutterBottom>
-        {data.occupations.join('　•　')}
-      </Typography>
+      <Box sx={sx.occupationContainer}>
+        {data.occupations.map((occupation, index) => (
+          <Fragment key={occupation}>
+            {index !== 0 && <CircleSmall sx={sx.dot} />}
+            <Typography sx={sx.occupation} variant='h6' component='h2'>
+              {occupation}
+            </Typography>
+          </Fragment>
+        ))}
+      </Box>
       <Typography sx={sx.intro}>
         {data.about.intro}
       </Typography>

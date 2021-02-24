@@ -7,9 +7,10 @@ import useSx from './useSocialMediaSx';
 
 const SocialMedia = ({ sx: sxProp }) => {
   const sx = useSx();
+  const rootSx = { ...sx.root, ...sxProp };
 
   return (
-    <Box sx={{ ...sx.root, ...sxProp }}>
+    <Box sx={rootSx}>
       <IconButton
         sx={sx.iconButton}
         href={data.socialMedia.facebookHref}

@@ -1,4 +1,4 @@
-import { Button, Typography, } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 import data from 'constants/data';
@@ -8,10 +8,10 @@ import useSx from './useLogoSx';
 const Logo = ({ sx: sxProp }) => {
   const sx = useSx();
 
-  const handleClick = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  const handleScrollToTop = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 
   return (
-    <Button sx={sxProp} onClick={handleClick}>
+    <Button sx={sxProp} onClick={handleScrollToTop}>
       <Typography sx={sx.text} variant='h5'>
         {data.firstName}
       </Typography>

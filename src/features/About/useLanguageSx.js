@@ -2,7 +2,8 @@ import { useMemo } from 'react';
 
 const useSx = props => useMemo(() => ({
   root: {
-    p: 4
+    height: 300,
+    mt: 6
   }
 }), []);
 

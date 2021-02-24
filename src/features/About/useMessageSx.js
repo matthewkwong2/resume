@@ -12,8 +12,19 @@ const useSx = props => useMemo(() => ({
     textAlign: 'center',
     color: 'text.primary'
   },
+  occupationContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    mb: 1,
+    '@media (max-width: 355px)': {
+      flexDirection: 'column'
+    }
+  },
+  dot: {
+    mx: 1,
+    color: 'text.secondary'
+  },
   occupation: {
-    textAlign: 'center',
     fontWeight: 400,
     color: 'text.secondary',
   },

@@ -32,10 +32,6 @@ const SwSnackbar = () => {
   const swNewContentAvail = useSelector(isSwNewContentAvail);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    setOpen(swContentCached || swNewContentAvail);
-  }, [swContentCached, swNewContentAvail]);
-
   const handleClose = (_, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -50,9 +46,7 @@ const SwSnackbar = () => {
       ? <ReloadButton onClose={handleClose} />
       : null;
 
-  const className = clsx(classes.root, {
-    [classes.hasFab]: trigger
-  });
+  const className = clsx(classes.root, { [classes.hasFab]: trigger });
   const anchorOrigin = {
     vertical: 'bottom',
     horizontal: 'left',
@@ -62,6 +56,10 @@ const SwSnackbar = () => {
     : swNewContentAvail
       ? app.swNewContentAvailMessage
       : null;
+
+  useEffect(() => {
+    setOpen(swContentCached || swNewContentAvail);
+  }, [swContentCached, swNewContentAvail]);
 
   return (
     <Snackbar

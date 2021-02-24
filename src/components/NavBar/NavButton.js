@@ -8,10 +8,10 @@ const NavButton = ({ label, id, active }) => {
   const sx = useSx();
   const section = document.getElementById(id);
 
-  const handleClick = () => section.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollToSection = () => section.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <Button sx={sx.root} onClick={handleClick}>
+    <Button sx={sx.root} onClick={handleScrollToSection}>
       {label}
       {
         active

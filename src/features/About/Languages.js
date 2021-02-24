@@ -1,32 +1,19 @@
 import { Box, useTheme } from '@material-ui/core';
-import { Suspense, lazy } from 'react';
 
+import { ResponsiveRadar } from '@nivo/radar';
 import data from 'constants/data';
-import { useInView } from 'react-intersection-observer';
-
-const RadarChart = lazy(() => import('components/RadarChart'));
+import useSx from './useLanguageSx';
 
 const Languages = () => {
+  const sx = useSx();
   const theme = useTheme();
   const keys = ['rating'];
-  const margin = {
-    top: 24,
-    right: 45,
-    bottom: 0,
-    left: 45
-  };
-  const nivoTheme = {
-    fontFamily: theme.typography.fontFamily
-  };
+  const margin = { top: 24, right: 45, bottom: 0, left: 45 };
+  const nivoTheme = { fontFamily: theme.typography.fontFamily };
 
-  const { ref, inView } = useInView({
-    rootMargin: '50%',
-    triggerOnce: true,
-  });
-
-  const lazyRadarChart = (
-    <Suspense fallback={null}>
-      <RadarChart
+  return (
+    <Box sx={sx.root}>
+      <ResponsiveRadar
         data={data.about.languages}
         indexBy='name'
         keys={keys}
@@ -38,12 +25,6 @@ const Languages = () => {
         margin={margin}
         theme={nivoTheme}
       />
-    </Suspense>
-  );
-
-  return (
-    <Box ref={ref} height={300} mt={6}>
-      {inView ? lazyRadarChart : null}
     </Box>
   );
 };

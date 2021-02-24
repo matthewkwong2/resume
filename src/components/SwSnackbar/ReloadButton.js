@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import app from 'constants/app';
 
 const ReloadButton = ({ onClose }) => {
-  const handleClick = () => {
+  const handleReload = () => {
     onClose();
     window.location.reload();
   };
 
   return (
-    <Button color='secondary' size='small' onClick={handleClick}>
+    <Button color='secondary' size='small' onClick={handleReload}>
       {app.reload}
     </Button>
   );

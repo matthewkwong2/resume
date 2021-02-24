@@ -10,10 +10,10 @@ const NavListItem = ({ label, id, active }) => {
 
   const primaryTypographyProps = { sx: sx.textPrimary };
 
-  const handleClick = () => section.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollToSection = () => section.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <ListItem button onClick={handleClick}>
+    <ListItem button onClick={handleScrollToSection}>
       <ListItemText
         primary={label}
         primaryTypographyProps={primaryTypographyProps}

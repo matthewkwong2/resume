@@ -10,7 +10,7 @@ const ScrollToTopFab = () => {
     threshold: 100,
   });
 
-  const handleClick = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  const handleScrollToTop = () => window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 
   return (
     <Zoom in={trigger}>
@@ -18,7 +18,7 @@ const ScrollToTopFab = () => {
         sx={sx.fab}
         size='small'
         color='primary'
-        onClick={handleClick}
+        onClick={handleScrollToTop}
         aria-label='scroll to top'
       >
         <ArrowUp sx={sx.icon} />

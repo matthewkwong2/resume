@@ -2,34 +2,32 @@ import { Box, Grid } from '@material-ui/core';
 
 import SkillRating from './SkillRating';
 import data from 'constants/data';
+import useSx from './useSkillSetSx';
 
 const SkillSet = () => {
+  const sx = useSx();
   const mid = Math.ceil(data.about.skills.length / 2);
 
   return (
-    <Box overflow='hidden' mt={6}>
+    <Box sx={sx.root}>
       <Grid container spacing={6}>
         <Grid item sm={6} xs={12}>
-          <div>
-            {data.about.skills.slice(0, mid).map(({ name, rating }) => (
-              <SkillRating
-                key={name}
-                name={name}
-                rating={rating}
-              />
-            ))}
-          </div>
+          {data.about.skills.slice(0, mid).map(({ name, rating }) => (
+            <SkillRating
+              key={name}
+              name={name}
+              rating={rating}
+            />
+          ))}
         </Grid>
         <Grid item sm={6} xs={12}>
-          <div>
-            {data.about.skills.slice(-mid).map(({ name, rating }) => (
-              <SkillRating
-                key={name}
-                name={name}
-                rating={rating}
-              />
-            ))}
-          </div>
+          {data.about.skills.slice(-mid).map(({ name, rating }) => (
+            <SkillRating
+              key={name}
+              name={name}
+              rating={rating}
+            />
+          ))}
         </Grid>
       </Grid>
     </Box>
