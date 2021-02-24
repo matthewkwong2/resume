@@ -10,7 +10,7 @@ const Companies = () => {
   const sx = useSx();
 
   return (
-    <Grid sx={sx.root} container spacing={2}>
+    <Grid sx={sx.root} container spacing={6}>
       <Grid item sm='auto' xs={12}>
         <CompanyLogo
           src={ha}

@@ -8,7 +8,7 @@ const Languages = () => {
   const sx = useSx();
   const theme = useTheme();
   const keys = ['rating'];
-  const margin = { top: 24, right: 45, bottom: 0, left: 45 };
+  const margin = { top: 24, right: 50, bottom: 0, left: 50 };
   const nivoTheme = { fontFamily: theme.typography.fontFamily };
 
   return (

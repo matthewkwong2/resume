@@ -4,9 +4,10 @@ import { Timeline } from '@material-ui/lab';
 import { useMediaQuery } from '@material-ui/core';
 
 const ExpTimeline = ({ data = [] }) => {
-  const smDown = useMediaQuery(theme => theme.breakpoints.down('sm'));
+  const mdDown = useMediaQuery(theme => theme.breakpoints.down('md'));
+
   return (
-    <Timeline align={smDown ? 'left' : 'alternate'}>
+    <Timeline align={mdDown ? 'left' : 'alternate'}>
       {data.map(({ period, title, subheader, description, file }, idx) => (
         <ExpTimelineItem
           key={idx}

@@ -37,8 +37,8 @@
         "rating": 30
       },
       {
-        "name": "MongoDB",
-        "rating": 50
+        "name": "Oracle Database",
+        "rating": 30
       },
       {
         "name": "Delphix",
@@ -64,7 +64,7 @@
   },
   "funFact": {
     "completedCourses": 13,
-    "completedProjects": 5,
+    "completedProjects": 7,
     "happySupervisors": 2,
     "commitment": "120%"
   },
@@ -177,6 +177,6 @@
   "contact": {
     "phone": "+852 6095 4241",
     "email": "matthewkwong2@gmail.com",
-    "address": "Sha Tin, Hong Kong"
+    "address": "Sha Tin, Hong Kong SAR"
   }
 }
