@@ -41,6 +41,16 @@ module.exports = {
         react: 'preact/compat',
         'react-dom': 'preact/compat',
       }))
+    },
+    configure: {
+      module: {
+        rules: [
+          {
+            test: /react-spring/,
+            sideEffects: true
+          }
+        ]
+      }
     }
   }
 };

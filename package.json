@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "homepage": "https://mwskwong.com",
-  "version": "2.0.0",
+  "version": "3.0.0-alpha.1",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -13,6 +13,7 @@
     "@nivo/core": "^0.67.0",
     "@nivo/radar": "^0.67.0",
     "countup.js": "^2.0.7",
+    "html-critical-webpack-plugin": "^2.1.0",
     "mdi-material-ui": "^6.22.0",
     "preact": "^10.5.12",
     "react": "^17.0.1",
@@ -55,14 +56,12 @@
     "start": "craco start",
     "prebuild": "cross-env NODE_ENV=production yarn generate-supported-browsers",
     "build": "craco build",
-    "postbuild": "yarn defer-css && yarn page404-import-css",
+    "postbuild": "yarn defer-css && yarn misc-page-import-css",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "postinstall": "yarn react-spring-issue-1078",
     "generate-supported-browsers": "node ./generateSupportedBrowsers.js",
-    "react-spring-issue-1078": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./react_spring_bug_fix_patch.ps1",
     "defer-css": "node ./deferCSS.js",
-    "page404-import-css": "node ./miscPagesImportCSS.js"
+    "misc-page-import-css": "node ./miscPagesImportCSS.js"
   },
   "eslintConfig": {
     "rules": {

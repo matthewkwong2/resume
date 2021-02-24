@@ -1,6 +1,3 @@
-// <link href="/static/css/3.48c5d965.chunk.css" rel="preload" as="style">
-// <link href="/static/css/3.48c5d965.chunk.css" media="print" onload="this.media='all'" rel="stylesheet">
-
 const fs = require('fs');
 const glob = require('glob');
 

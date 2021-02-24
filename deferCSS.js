@@ -7,6 +7,6 @@ fs.writeFileSync(
   index,
   indexContent.replace(
     /(<link href=)(".*")( rel="stylesheet">)/,
-    '$1$2 rel="preload" as="style">$1$2 media="print" onload="this.media=\'all\'"$3'
+    '$1$2 rel="preload" as="style" onload="this.onload=null;this.rel=\'stylesheet\'"><noscript>$1$2$3</noscript>'
   )
 );
