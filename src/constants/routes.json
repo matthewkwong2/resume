@@ -1,0 +1,10 @@
+{
+  "main": {
+    "path": "/",
+    "title": "Matthew Kwong - System DBA & Front-End Developer"
+  },
+  "noMatch": {
+    "path": "*",
+    "title": "Page Not Found - Matthew Kwong"
+  }
+}

@@ -84,7 +84,14 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
           background: 'rgba(166, 175, 189, .3)'
         },
         html: {
-          scrollBehavior: 'smooth'
+          scrollBehavior: 'smooth',
+          height: '100%'
+        },
+        body: {
+          height: '100%'
+        },
+        '#root': {
+          height: '100%'
         },
         section: {
           '@media (min-width: 0px) and (orientation: landscape)': {
@@ -180,6 +187,9 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
     background: {
       default: '#fbfbfc',
       paper: '#ffffff'
+    },
+    text: {
+      primary: mode === 'light' ? '#2e3440' : '#fff'
     },
     mode
   },

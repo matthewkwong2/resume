@@ -14,6 +14,7 @@ const useSx = props => useMemo(() => ({
     textAlign: 'center'
   },
   description: {
+    textAlign: 'center',
     color: 'text.secondary'
   }
 }), []);
