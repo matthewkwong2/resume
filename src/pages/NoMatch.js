@@ -2,6 +2,7 @@ import { Button, Container, Typography } from '@material-ui/core';
 import { useEffect, useMemo } from 'react';
 
 import { Link } from 'react-router-dom';
+import constants from 'constants/app';
 import routes from 'constants/routes';
 
 const useSx = props => useMemo(() => ({
@@ -10,11 +11,12 @@ const useSx = props => useMemo(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100%'
+    height: '100vh'
   },
   404: {
     textAlign: 'center',
-    color: 'text.primary'
+    color: 'text.primary',
+    fontFamily: 'Azonix'
   },
   message: {
     textAlign: 'center',
@@ -35,10 +37,10 @@ const NoMatch = () => {
   return (
     <Container sx={sx.root}>
       <Typography sx={sx[404]} variant='h1'>
-        404
+        {constants['404']}
       </Typography>
       <Typography sx={sx.message}>
-        The page you were looking for does not exist.
+        {constants['404Message']}
       </Typography>
       <Button
         sx={sx.backHome}
@@ -47,7 +49,7 @@ const NoMatch = () => {
         size='large'
         to={routes.main.path}
       >
-        Go Home
+        {constants.goHome}
       </Button>
     </Container>
   );

@@ -11,7 +11,6 @@ const CompanyLogo = ({ src, alt = '', href }) => {
       sx={sx.img}
       src={src}
       alt={alt}
-      height={100}
       loading='lazy'
     />
   );

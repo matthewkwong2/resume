@@ -6,7 +6,9 @@ const useSx = props => useMemo(() => ({
     justifyContent: 'center'
   },
   img: {
-    filter: 'grayscale(100%)'
+    filter: 'grayscale(100%)',
+    height: 100,
+    width: 'auto'
   }
 }), []);
 

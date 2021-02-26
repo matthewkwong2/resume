@@ -3,6 +3,7 @@ import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem, Timeline
 
 import { Download } from 'components/icons';
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 import useSx from './useExpTimelineItemSx';
 
 const ExpTimelineItem = ({ period, title, subheader, description, file = '#' }) => {
@@ -61,4 +62,4 @@ ExpTimelineItem.propTypes = {
   file: PropTypes.string
 };
 
-export default ExpTimelineItem;
+export default memo(ExpTimelineItem);

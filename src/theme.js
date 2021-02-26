@@ -84,14 +84,7 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
           background: 'rgba(166, 175, 189, .3)'
         },
         html: {
-          scrollBehavior: 'smooth',
-          height: '100%'
-        },
-        body: {
-          height: '100%'
-        },
-        '#root': {
-          height: '100%'
+          scrollBehavior: 'smooth'
         },
         section: {
           '@media (min-width: 0px) and (orientation: landscape)': {

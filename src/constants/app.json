@@ -31,5 +31,8 @@
   "required": "*Required",
   "callMe": "Call Me On",
   "emailMe": "Email Me At",
-  "findMe": "Find Me At"
+  "findMe": "Find Me At",
+  "404": "404",
+  "404Message": "The page you were looking for does not exist.",
+  "goHome": "go home"
 }

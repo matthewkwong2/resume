@@ -23,7 +23,7 @@ const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
 
       countUp.start();
     }
-  }, [value, startCountUp]);
+  }, [startCountUp, value]);
 
   return (
     <Card sx={sx.root} variant='outlined'>

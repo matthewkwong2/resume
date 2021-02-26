@@ -12,7 +12,8 @@ const useSx = props => useMemo(() => ({
     bgcolor: 'text.primary',
     position: 'absolute',
     bottom: 0,
-    left: theme => `calc(50% - ${theme.spacing(1)})`
+    left: theme => `calc(50% - ${theme.spacing(1)})`,
+    borderRadius: '1px'
   }
 }), []);
 
