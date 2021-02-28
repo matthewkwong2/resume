@@ -1,21 +1,31 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-
-import Fallback from 'Fallback';
-import routes from 'constants/routes';
-
-const Main = lazy(() => import('pages/Main'));
-const NoMatch = lazy(() => import('pages/NoMatch'));
+import About from 'features/About';
+import Contact from 'features/Contact';
+import Education from 'features/Education';
+import Footer from 'components/Footer';
+import FunFact from 'features/FunFact';
+import Home from 'features/Home';
+import NavBar from 'components/NavBar';
+import Project from 'features/Project';
+import ScrollToTopFab from 'components/ScrollToTopFab';
+import SwSnackbar from 'components/SwSnackbar';
+import Testimonial from 'features/Testimonial';
+import Work from 'features/Work';
 
 const App = () => (
-  <BrowserRouter>
-    <Suspense fallback={<Fallback />}>
-      <Routes>
-        <Route path={routes.main.path} element={<Main />} />
-        <Route path={routes.noMatch.path} element={<NoMatch />} />
-      </Routes>
-    </Suspense>
-  </BrowserRouter>
+  <>
+    <NavBar />
+    <Home />
+    <About />
+    <FunFact />
+    <Education />
+    <Work />
+    <Project />
+    <Testimonial />
+    <Contact />
+    <Footer />
+    <SwSnackbar />
+    <ScrollToTopFab />
+  </>
 );
 
 export default App;

@@ -5,12 +5,36 @@ import ProjectCard from './ProjectCard';
 import SectionHeader from 'components/SectionHeader';
 import constants from 'constants/app';
 import data from 'constants/data';
-import delphix from 'assets/img/delphix.png';
-import mysql from 'assets/img/mysql.png';
+import delphixPng from 'assets/img/delphix/delphix.png';
+import delphixWebp from 'assets/img/delphix/delphix.webp';
+import mysqlPng from 'assets/img//mysql/mysql.png';
+import mysqlWebp from 'assets/img/mysql/mysql.webp';
 import nav from 'constants/nav';
-import timeOffApplication from 'assets/img/time_off_application.png';
-import tsis from 'assets/img/tsis.png';
+import timeOffApplicationPng from 'assets/img/timeOffApplication/timeOffApplication.png';
+import timeOffApplicationWebp from 'assets/img/timeOffApplication/timeOffApplication.webp';
+import tsisPng from 'assets/img/tsis/tsis.png';
+import tsisWebp from 'assets/img/tsis/tsis.webp';
 import useSx from './useProjectSx';
+
+const mysql = {
+  png: mysqlPng,
+  webp: mysqlWebp
+};
+
+const delphix = {
+  png: delphixPng,
+  webp: delphixWebp
+};
+
+const tsis = {
+  png: tsisPng,
+  webp: tsisWebp
+};
+
+const timeOffApplication = {
+  png: timeOffApplicationPng,
+  webp: timeOffApplicationWebp
+};
 
 const Project = () => {
   const sx = useSx();

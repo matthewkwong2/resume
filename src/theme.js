@@ -73,12 +73,12 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
           fontStyle: 'normal',
           fontWeight: 400,
           fontDisplay: 'swap',
-          src: [
-            ['local("Azonix")'],
-            ['local("Azonix-Regular")'],
-            [`url(${azonix2})`, 'format("woff2")'],
-            [`url(${azonix})`, 'format("woff")']
-          ]
+          src: `
+            local("Azonix"),
+            local("Azonix-Regular"),
+            url("${azonix}") format("woff"),
+            url("${azonix2}") format("woff2")
+          `
         },
         '::selection': {
           background: 'rgba(166, 175, 189, .3)'
