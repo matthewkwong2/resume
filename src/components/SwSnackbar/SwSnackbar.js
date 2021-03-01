@@ -47,10 +47,7 @@ const SwSnackbar = () => {
       : null;
 
   const className = clsx(classes.root, { [classes.hasFab]: trigger });
-  const anchorOrigin = {
-    vertical: 'bottom',
-    horizontal: 'left',
-  };
+
   const message = swContentCached
     ? app.swContentCachedMessage
     : swNewContentAvail
@@ -64,7 +61,6 @@ const SwSnackbar = () => {
   return (
     <Snackbar
       className={className}
-      anchorOrigin={anchorOrigin}
       open={open}
       autoHideDuration={autoHideDuration}
       onClose={handleClose}
