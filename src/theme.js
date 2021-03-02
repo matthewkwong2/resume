@@ -76,8 +76,8 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
           src: `
             local("Azonix"),
             local("Azonix-Regular"),
-            url("${azonix}") format("woff"),
-            url("${azonix2}") format("woff2")
+            url("${azonix2}") format("woff2"),
+            url("${azonix}") format("woff")
           `
         },
         '::selection': {

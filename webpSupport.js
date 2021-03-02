@@ -16,7 +16,9 @@ console.log(getUserAgentRegExp({
     "UCAndroid >= 12.12",
     "Samsung >= 4",
     "QQAndroid >= 10.4",
-    "Baidu >=7.12"
+    "Baidu >=7.12",
+    "unreleased versions"
   ],
-  allowHigherVersions: true
+  ignoreMinor: true,
+  ignorePatch: true
 }));
