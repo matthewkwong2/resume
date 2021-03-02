@@ -5,6 +5,8 @@ import ProjectCard from './ProjectCard';
 import SectionHeader from 'components/SectionHeader';
 import constants from 'constants/app';
 import data from 'constants/data';
+import dbPwdManagerPng from 'assets/img/dbPwdManager/dbPwdManager.png';
+import dbPwdManagerWebp from 'assets/img/dbPwdManager/dbPwdManager.webp';
 import delphixPng from 'assets/img/delphix/delphix.png';
 import delphixWebp from 'assets/img/delphix/delphix.webp';
 import mysqlPng from 'assets/img//mysql/mysql.png';
@@ -19,6 +21,11 @@ import useSx from './useProjectSx';
 const mysql = {
   png: mysqlPng,
   webp: mysqlWebp
+};
+
+const dbPwdManager = {
+  png: dbPwdManagerPng,
+  webp: dbPwdManagerWebp
 };
 
 const delphix = {
@@ -53,6 +60,14 @@ const Project = () => {
               title={data.project.mysql.title}
               date={data.project.mysql.date}
               description={data.project.mysql.description}
+            />
+          </Grid>
+          <Grid item md={4} sm={6} xs={12}>
+            <ProjectCard
+              image={dbPwdManager}
+              title={data.project.dbPwdManager.title}
+              date={data.project.dbPwdManager.date}
+              description={data.project.dbPwdManager.description}
             />
           </Grid>
           <Grid item md={4} sm={6} xs={12}>

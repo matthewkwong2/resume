@@ -149,6 +149,11 @@
       "date": "March 2020",
       "description": "A test run of the data virtualization platform. Analyze, install and maintain the system and incorporate it into existing systems based on the requirements and limitations."
     },
+    "dbPwdManager": {
+      "title": "Database Password Manager",
+      "date": "December 2020",
+      "description": "A simple Java program that allows users to update database user passwords in a centralized manner. So far, it supports SAP ASE, Oracle Database, MS SQL and MySQL."
+    },
     "tsis": {
       "title": "TSIS",
       "date": "January 2021",
