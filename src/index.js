@@ -13,6 +13,9 @@ import ThemeProvider from 'components/ThemeProvider';
 import { render } from 'react-dom';
 import reportWebVitals from 'reportWebVitals';
 import store from 'store';
+import { webPSupported } from 'utils';
+
+webPSupported();
 
 render(
   <StrictMode>

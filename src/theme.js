@@ -8,7 +8,6 @@ import { alpha, createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 
 import azonix from 'assets/font/azonix.woff';
 import azonix2 from 'assets/font/azonix.woff2';
-import { isWebPSupported } from 'utils';
 
 const initTheme = createMuiTheme();
 
@@ -196,24 +195,30 @@ const createTheme = mode => responsiveFontSizes(createMuiTheme({
 }));
 
 export const createBackground = ({ webp, jpg, placeholder }) => {
-  const { xs, sm, md, lgUp } = isWebPSupported() ? webp : jpg;
+  const overlay = alpha('#000', .7);
 
-  const getBgImageCSS = bg => {
-    const overlay = alpha('#000', .7);
-
-    return `
-      linear-gradient(${overlay}, ${overlay}),
-      url(${bg}),
-      url(${placeholder})
-    `;
-  };
+  const getBgImageCSS = bg => `
+    linear-gradient(${overlay}, ${overlay}),
+    url(${bg}),
+    url(${placeholder})
+  `;
 
   return {
-    backgroundImage: {
-      xs: getBgImageCSS(xs),
-      sm: getBgImageCSS(sm),
-      md: getBgImageCSS(md),
-      lg: getBgImageCSS(lgUp),
+    '.no-webp &': {
+      backgroundImage: {
+        xs: getBgImageCSS(jpg.xs),
+        sm: getBgImageCSS(jpg.sm),
+        md: getBgImageCSS(jpg.md),
+        lg: getBgImageCSS(jpg.lgUp),
+      }
+    },
+    '.webp &': {
+      backgroundImage: {
+        xs: getBgImageCSS(webp.xs),
+        sm: getBgImageCSS(webp.sm),
+        md: getBgImageCSS(webp.md),
+        lg: getBgImageCSS(webp.lgUp),
+      }
     },
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
