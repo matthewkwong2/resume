@@ -29,7 +29,10 @@ const ProjectCard = ({ image, title, date, description }) => {
 };
 
 ProjectCard.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.shape({
+    png: PropTypes.string,
+    webp: PropTypes.string
+  }),
   title: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string
