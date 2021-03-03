@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 const useSx = props => useMemo(() => ({
   text: {
-    fontFamily: 'Azonix'
+    fontFamily: '"Azonix", sans-serif'
   }
 }), []);
 

@@ -1,4 +1,4 @@
-import { Snackbar, makeStyles, useScrollTrigger } from '@material-ui/core';
+import { NoSsr, Snackbar, makeStyles, useScrollTrigger } from '@material-ui/core';
 import { isSwContentCached, isSwNewContentAvail } from 'selectors';
 import { useEffect, useState } from 'react';
 
@@ -59,14 +59,16 @@ const SwSnackbar = () => {
   }, [swContentCached, swNewContentAvail]);
 
   return (
-    <Snackbar
-      className={className}
-      open={open}
-      autoHideDuration={autoHideDuration}
-      onClose={handleClose}
-      message={message}
-      action={action}
-    />
+    <NoSsr>
+      <Snackbar
+        className={className}
+        open={open}
+        autoHideDuration={autoHideDuration}
+        onClose={handleClose}
+        message={message}
+        action={action}
+      />
+    </NoSsr>
   );
 };
 

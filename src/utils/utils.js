@@ -2,7 +2,7 @@ const webpSupportRegex = /((CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS)[
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i;
 const percentRegex = /^\d+(\.\d+)?%$/;
 
-export const webPSupported = () => {
+export const webPSupport = () => {
   const isSupported = webpSupportRegex.test(navigator.userAgent);
 
   if (isSupported) {

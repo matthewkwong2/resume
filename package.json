@@ -14,7 +14,6 @@
     "@nivo/radar": "^0.67.0",
     "countup.js": "^2.0.7",
     "mdi-material-ui": "^6.22.0",
-    "preact": "^10.5.12",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-intersection-observer": "^8.31.0",
@@ -44,6 +43,7 @@
     "@welldone-software/why-did-you-render": "^6.0.5",
     "browserslist-useragent-regexp": "^3.0.0",
     "gh-pages": "^3.1.0",
+    "react-snap": "^1.23.0",
     "source-map-explorer": "^2.5.2"
   },
   "scripts": {
@@ -52,10 +52,11 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "yarn defer-css",
+    "postbuild": "yarn pre-render && yarn defer-css",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "defer-css": "node ./deferCSS.js"
+    "defer-css": "node ./deferCSS.js",
+    "pre-render": "react-snap"
   },
   "eslintConfig": {
     "rules": {
@@ -83,5 +84,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactSnap": {
+    "skipThirdPartyRequests": true
   }
 }

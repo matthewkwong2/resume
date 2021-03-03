@@ -36,10 +36,6 @@ module.exports = {
     alias: {
       ...whenDev(() => ({
         'react-redux': 'react-redux/lib'
-      })),
-      ...whenProd(() => ({
-        react: 'preact/compat',
-        'react-dom': 'preact/compat',
       }))
     },
     configure: {

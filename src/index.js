@@ -3,6 +3,7 @@ import 'polyfill';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
+import { hydrate, render } from 'react-dom';
 import { swContentCached, swNewContentAvail } from 'actions';
 
 import App from 'App';
@@ -10,14 +11,14 @@ import { CssBaseline } from '@material-ui/core';
 import { Provider } from 'react-redux';
 import { StrictMode } from 'react';
 import ThemeProvider from 'components/ThemeProvider';
-import { render } from 'react-dom';
 import reportWebVitals from 'reportWebVitals';
 import store from 'store';
-import { webPSupported } from 'utils';
+import { webPSupport } from 'utils';
 
-webPSupported();
+navigator.userAgent !== 'ReactSnap' && webPSupport();
 
-render(
+const rootEl = document.getElementById('root');
+const content = (
   <StrictMode>
     <ThemeProvider mode='light'>
       <CssBaseline />
@@ -25,9 +26,13 @@ render(
         <App />
       </Provider>
     </ThemeProvider>
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
+if (rootEl.hasChildNodes()) {
+  hydrate(content, rootEl);
+} else {
+  render(content, rootEl);
+}
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

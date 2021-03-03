@@ -4,8 +4,6 @@ if (process.env.NODE_ENV === 'development') {
   const ReactRedux = require('react-redux');
 
   whyDidYouRender(React, {
-    // include: [/.*/],
-    // exclude: [/TouchRipple/],
     trackAllPureComponents: true,
     trackExtraHooks: [
       [ReactRedux, 'useSelector']
