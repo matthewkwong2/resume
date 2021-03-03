@@ -220,6 +220,10 @@ export const createBackground = ({ webp, jpg, placeholder }) => {
         lg: getBgImageCSS(webp.lgUp),
       }
     },
+    backgroundImage: `
+      linear-gradient(${overlay}, ${overlay}),
+      url(${placeholder})
+    `,
     backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
