@@ -1,16 +1,86 @@
-import { Hidden } from '@material-ui/core';
-import NavBarDesktop from './NavBarDesktop';
-import NavBarMobile from './NavBarMobile';
+import { AppBar, Collapse, IconButton, List, Toolbar, useScrollTrigger, useTheme } from '@material-ui/core';
 
-const NavBar = () => (
-  <>
-    <Hidden mdDown>
-      <NavBarDesktop />
-    </Hidden>
-    <Hidden mdUp>
-      <NavBarMobile />
-    </Hidden>
-  </>
-);
+import { Hidden } from '@material-ui/core';
+import Logo from './Logo';
+import { Menu } from 'components/icons';
+import NavButton from './NavButton';
+import NavListItem from './NavListItem';
+import ThemeProvider from 'components/ThemeProvider';
+import nav from 'constants/nav';
+import useActiveSectionId from 'hooks/useActiveSectionId';
+import { useState } from 'react';
+import useSx from './useNavBarSx';
+
+const NavBar = () => {
+  const sx = useSx();
+  const theme = useTheme();
+  const appBarDefaultProps = {
+    color: theme.components.MuiAppBar.defaultProps.color,
+    elevation: theme.components.MuiAppBar.defaultProps.elevation
+  };
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
+  const activeSectionId = useActiveSectionId();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuEnter, setMenuEnter] = useState(false);
+
+  const color = trigger || menuEnter ? 'secondary' : appBarDefaultProps.color;
+  const elevation = trigger || menuEnter ? 4 : appBarDefaultProps.elevation;
+
+  const handleMenuToggle = () => setMenuOpen(!menuOpen);
+  const handleMenuEnter = () => setMenuEnter(true);
+  const handleMenuExited = () => setMenuEnter(false);
+
+  return (
+    <AppBar color={color} elevation={elevation}>
+      <Toolbar>
+        <ThemeProvider mode={trigger || menuEnter ? 'light' : 'dark'}>
+          <Logo sx={sx.logo} />
+          <Hidden mdDown>
+            <nav>
+              {Object.values(nav).map(({ id, name }) => (
+                <NavButton
+                  key={id}
+                  id={id}
+                  label={name}
+                  active={activeSectionId === id}
+                />
+              ))}
+            </nav>
+          </Hidden>
+          <Hidden mdUp>
+            <IconButton onClick={handleMenuToggle} aria-label='toggle menu'>
+              <Menu />
+            </IconButton>
+          </Hidden>
+        </ThemeProvider>
+      </Toolbar>
+      <Hidden mdUp>
+        <Collapse
+          in={menuOpen}
+          timeout='auto'
+          unmountOnExit
+          onEnter={handleMenuEnter}
+          onExited={handleMenuExited}
+        >
+          <List sx={sx.navList} component='nav' aria-label='nav list'>
+            {Object.values(nav).map(({ id, name }) => (
+              <NavListItem
+                key={id}
+                id={id}
+                label={name}
+                active={activeSectionId === id}
+              />
+            ))}
+          </List>
+        </Collapse>
+      </Hidden>
+    </AppBar>
+  );
+};
 
 export default NavBar;
