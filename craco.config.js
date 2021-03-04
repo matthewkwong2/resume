@@ -1,4 +1,4 @@
-const { whenDev, whenProd } = require('@craco/craco');
+const { whenDev } = require('@craco/craco');
 
 module.exports = {
   babel: {
