@@ -84,11 +84,12 @@
     ]
   },
   "reactSnap": {
-    "fixWebpackChunksIssue": false,
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
-    "skipThirdPartyRequests": true
+    "fixWebpackChunksIssue": false,
+    "skipThirdPartyRequests": true,
+    "asyncScriptTags": true
   }
 }
