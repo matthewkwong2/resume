@@ -47,8 +47,6 @@
     "source-map-explorer": "^2.5.2"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -r https://github.com/matthewkwong2/matthewkwong2.github.io.git -b master -d build",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "craco start",
     "build": "craco build",
