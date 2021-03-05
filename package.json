@@ -89,6 +89,7 @@
       "--disable-setuid-sandbox"
     ],
     "fixWebpackChunksIssue": false,
-    "skipThirdPartyRequests": true
+    "skipThirdPartyRequests": true,
+    "asyncScriptTags": true
   }
 }
