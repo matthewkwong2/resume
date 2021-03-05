@@ -6,6 +6,11 @@ import PropTypes from 'prop-types';
 import { isPercentage } from 'utils';
 import useSx from './useFactCardSx';
 
+const defaultValue = {
+  number: 0,
+  percentage: '0%'
+};
+
 const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
   const sx = useSx();
   const countUpRef = useRef();
@@ -29,7 +34,9 @@ const FactCard = ({ Icon, title, value = 0, startCountUp = false }) => {
     <Card sx={sx.root} variant='outlined'>
       <CardContent sx={sx.cardContent}>
         <Icon sx={sx.icon} />
-        <Typography ref={countUpRef} sx={sx.value} variant='h3' />
+        <Typography ref={countUpRef} sx={sx.value} variant='h3'>
+          {isPercentage(value) ? defaultValue.percentage : defaultValue.number}
+        </Typography>
         <Typography sx={sx.title} variant='body2'>
           {title}
         </Typography>
