@@ -1,6 +1,10 @@
 const { getUserAgentRegExp } = require('browserslist-useragent-regexp');
+const fs = require('fs');
 
-console.log(getUserAgentRegExp({
+const utils = './src/utils/utils.js';
+const utilsContent = fs.readFileSync(utils, 'utf-8');
+
+const regex = getUserAgentRegExp({
   browsers: [
     "edge >= 18",
     "Firefox >= 65",
@@ -19,6 +23,13 @@ console.log(getUserAgentRegExp({
     "Baidu >=7.12",
     "unreleased versions"
   ],
-  ignoreMinor: true,
-  ignorePatch: true
-}));
+  allowHigherVersions: true
+});
+
+fs.writeFileSync(
+  utils,
+  utilsContent.replace(
+    /^const webpSupportRegex = .+;$/m,
+    `const webpSupportRegex = ${regex};`
+  )
+);
